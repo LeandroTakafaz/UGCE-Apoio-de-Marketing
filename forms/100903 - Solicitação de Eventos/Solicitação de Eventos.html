@@ -116,66 +116,6 @@
 
 		<!-- Fim do Painel -->
 
-		<div>
-			<!-- Abas -->
-			<ul class="nav nav-tabs" role="tablist">
-				<li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-				<li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-				<li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-				<li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
-			</ul>
-		  
-			<!-- Conteúdo das abas -->
-			<div class="tab-content">
-			  <div id="home" class="tab-pane fade in active">
-				<h3>HOME</h3>
-				<table>
-				  <tr>
-					<th>Nome</th>
-					<th>Sobrenome</th> 
-					<th>Idade</th>
-				  </tr>
-				  <tr>
-					<td>Jill</td>
-					<td>Smith</td> 
-					<td>35</td>
-				  </tr>
-				  <tr>
-					<td>Eve</td>
-					<td>Jackson</td> 
-					<td>27</td>
-				  </tr>
-				</table>
-			  </div>
-			  <div id="profile" class="tab-pane fade">
-				<h3>Perfil</h3>
-				<table border="1">
-				  <tr>
-					<th>Materia</th>
-					<th>Pontuação</th> 
-				  </tr>
-				  <tr>
-					<td>Matematica</td>
-					<td>95</td> 
-				  </tr>
-				  <tr>
-					<td>Ciencias</td>
-					<td>98</td> 
-				  </tr>
-				</table>
-			  </div>
-			</div>
-		  </div>
-		    
-		  <script>
-			$(document).ready(function(){
-			  $('#myTab a').click(function(e) {
-				e.preventDefault();
-				$(this).tab('show');
-			  });
-			});
-			</script>
-
 		<!-- Painel Dados da Solicitação -->
 		<div class="panel panel-info">
 			<div class="panel-heading">
@@ -193,6 +133,91 @@
 							<option value="evento">Apoio em Evento</option>
 							<option value="servico">Apoio em Serviço</option>
 						</select>
+					</div>
+
+					<div>
+						<!-- Abas -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="active"><a href="#eventos" role="tab" data-toggle="tab">Eventos Digitais</a></li>
+							<li><a href="#projetos" role="tab" data-toggle="tab">Projetos</a></li>
+							<li><a href="#landingPage" role="tab" data-toggle="tab">Landing Page</a></li>
+							<li><a href="#logo" role="tab" data-toggle="tab">Logo/Identidade Visual</a></li>
+						</ul>
+			
+						<!-- Conteúdo das abas -->
+						<div class="tab-content">
+							<div id="eventos" class="tab-pane fade in active">
+								<h3>Eventos Digitais</h3>
+								<table>
+									<tr>
+										<th>Nome</th>
+										<th>Sobrenome</th>
+										<th>Idade</th>
+									</tr>
+									<tr>
+										<td>Jill</td>
+										<td>Smith</td>
+										<td>35</td>
+									</tr>
+									<tr>
+										<td>Eve</td>
+										<td>Jackson</td>
+										<td>27</td>
+									</tr>
+								</table>
+							</div>
+							<div id="projetos" class="tab-pane fade">
+								<h3>Projetos</h3>
+								<table border="1">
+									<tr>
+										<th>Materia</th>
+										<th>Pontuação</th>
+									</tr>
+									<tr>
+										<td>Matematica</td>
+										<td>95</td>
+									</tr>
+									<tr>
+										<td>Ciencias</td>
+										<td>98</td>
+									</tr>
+								</table>
+							</div>
+							<div id="landingPage" class="tab-pane fade">
+								<h3>Landing Page</h3>
+								<table border="1">
+									<tr>
+										<th>Materia</th>
+										<th>Pontuação</th>
+									</tr>
+									<tr>
+										<td>Matematica</td>
+										<td>95</td>
+									</tr>
+									<tr>
+										<td>Ciencias</td>
+										<td>98</td>
+									</tr>
+								</table>
+							</div>
+							<div id="logo" class="tab-pane fade">
+								<h3>Logo/Identidade Visual</h3>
+								<table border="1">
+									<tr>
+										<th>Materia</th>
+										<th>Pontuação</th>
+									</tr>
+									<tr>
+										<td>Matematica</td>
+										<td>95</td>
+									</tr>
+									<tr>
+										<td>Ciencias</td>
+										<td>98</td>
+									</tr>
+								</table>
+							</div>
+						</div>
 					</div>
 
 					<div class="col-md-2"><label style="text-align: center;"><input type="checkbox" name="Portal"
@@ -391,146 +416,150 @@
 				</div>
 
 
-		</div>
-
-		<!-- Fim do Painel -->
-
-		<!-- Painel ??? -->
-
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				<h3 class="panel-title">Solicitação</h3>
 			</div>
-			<div class="panel-body">
-				<div class="form-group table-responsive">
-					<div class="table">
-						<tbody>
-							<!--<tr>
+
+			<!-- Fim do Painel -->
+
+			<!-- Painel ??? -->
+
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Solicitação</h3>
+				</div>
+				<div class="panel-body">
+					<div class="form-group table-responsive">
+						<div class="table">
+							<tbody>
+								<!--<tr>
 									<td><button type="button" class="addItem" id="addItem" onclick="addItens();">Inserir Solicitação <b>+</b></button></td>
 									
 								</tr>-->
-							<tr>
-								<td>
-									<table id="dadosItem" tablename="dadosItem" class="table table-hover"
-										noaddbutton="true" nodeletebutton="true">
-										<thead>
-											<tr>
-												<td></td>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<span class="fluig-style-guide fs-display-block fs-md-space">
-														<i type="button"
-															class="fluigicon fluigicon-trash fluigicon-md delItem"
-															id="delItem" name="delItem"
-															onclick="Javascript:fnCustomDeleteItem(this);"
-															style="cursor:pointer"></i>
-													</span>
-												</td>
-												<td>
-													<div class="form-group">
-														<label for="tipo_solicitacao">Tipo de Solicitação <span
-																class="Obrigatorio"><strong>*</strong></span>:</label>
-														<input class="form-control" name="tipo_solicitacao"
-															id="tipo_solicitacao">
+								<tr>
+									<td>
+										<table id="dadosItem" tablename="dadosItem" class="table table-hover"
+											noaddbutton="true" nodeletebutton="true">
+											<thead>
+												<tr>
+													<td></td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<span class="fluig-style-guide fs-display-block fs-md-space">
+															<i type="button"
+																class="fluigicon fluigicon-trash fluigicon-md delItem"
+																id="delItem" name="delItem"
+																onclick="Javascript:fnCustomDeleteItem(this);"
+																style="cursor:pointer"></i>
+														</span>
+													</td>
+													<td>
+														<div class="form-group">
+															<label for="tipo_solicitacao">Tipo de Solicitação <span
+																	class="Obrigatorio"><strong>*</strong></span>:</label>
+															<input class="form-control" name="tipo_solicitacao"
+																id="tipo_solicitacao">
 
-													</div>
-												</td>
-												<td>
-													<div class="form-group">
-														<label for="detalhes">Detalhes da Solicitação</label>
-														<textarea rows=2 name="detalhe" id="detalhe"
-															class="form-control"></textarea>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
+														</div>
+													</td>
+													<td>
+														<div class="form-group">
+															<label for="detalhes">Detalhes da Solicitação</label>
+															<textarea rows=2 name="detalhe" id="detalhe"
+																class="form-control"></textarea>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- Fim do Painel Misterioso -->
+			<!-- Fim do Painel Misterioso -->
 
-		<!-- Painel Detalhes da Demanda -->
+			<!-- Painel Detalhes da Demanda -->
 
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				<h3 class="panel-title"><i class="material-icons" style="font-size:32px">add_to_queue</i> Detalhes da
-					Demanda</h3>
-			</div>
-			<div class="panel-body">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="material-icons" style="font-size:32px">add_to_queue</i> Detalhes
+						da
+						Demanda</h3>
+				</div>
+				<div class="panel-body">
 
-				<div class="table-responsive">
-					<table class="table">
-						<thead>
-							<tr>
-								<td>
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<td>
 
-								</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="col-md-2">
-										<button type="button" class="waves-effect waves-light btn btn-info"
-											id="addRateio" onclick="addRateioz();">Inserir Dotação Orçamentária
-											<b>+</b></button>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<table id="dadosrateio" tablename="dadosrateio" class="table table-hover"
-										noaddbutton="true" nodeletebutton="true">
-										<thead>
-											<tr>
-												<td></td>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<span class="fluig-style-guide fs-display-block fs-md-space">
-														<i type="button"
-															class="fluigicon fluigicon-trash fluigicon-md delRateio"
-															id="deleta_rateio" name="deleta_rateio"
-															onclick="Javascript:fnCustomDelete(this);"
-															style="cursor:pointer">
-														</i>
-													</span>
-												</td>
-												<td>
+									</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="col-md-2">
+											<button type="button" class="waves-effect waves-light btn btn-info"
+												id="addRateio" onclick="addRateioz();">Inserir Dotação Orçamentária
+												<b>+</b></button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<table id="dadosrateio" tablename="dadosrateio" class="table table-hover"
+											noaddbutton="true" nodeletebutton="true">
+											<thead>
+												<tr>
+													<td></td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<span class="fluig-style-guide fs-display-block fs-md-space">
+															<i type="button"
+																class="fluigicon fluigicon-trash fluigicon-md delRateio"
+																id="deleta_rateio" name="deleta_rateio"
+																onclick="Javascript:fnCustomDelete(this);"
+																style="cursor:pointer">
+															</i>
+														</span>
+													</td>
+													<td>
 
-													<div class="form-group row">
+														<div class="form-group row">
 
-														<div class="col-md-4">
-															<label for="slc_FonteRecursos">Fonte de Recurso:</label>
-															<select class="form-control" name="slc_FonteRecursos"
-																id="slc_FonteRecursos">
-																<option value="0" selected disabled>Selecione</option>
-																<option value="CSO">Contribuição Social Ordinária - CSO
-																</option>
-																<option value="CSN">Contribuição Social Nacional - CSN
-																</option>
-															</select>
+															<div class="col-md-4">
+																<label for="slc_FonteRecursos">Fonte de Recurso:</label>
+																<select class="form-control" name="slc_FonteRecursos"
+																	id="slc_FonteRecursos">
+																	<option value="0" selected disabled>Selecione
+																	</option>
+																	<option value="CSO">Contribuição Social Ordinária -
+																		CSO
+																	</option>
+																	<option value="CSN">Contribuição Social Nacional -
+																		CSN
+																	</option>
+																</select>
+															</div>
 														</div>
-													</div>
 
-													<div class="form-group row">
+														<div class="form-group row">
 
-														<div class="col-md-9" style="display: none;">
-															<label for="txt_projeto">Projeto<span
-																	class="Obrigatorio"><strong>*</strong></span>:</label>
-															<input type="zoom" id="txt_projeto" name="txt_projeto"
-																data-zoom="{
+															<div class="col-md-9" style="display: none;">
+																<label for="txt_projeto">Projeto<span
+																		class="Obrigatorio"><strong>*</strong></span>:</label>
+																<input type="zoom" id="txt_projeto" name="txt_projeto"
+																	data-zoom="{
 																			'displayKey':'NOME',
 																			'datasetId':'dsprojeto',
 																			'maximumSelectionLength':'1',
@@ -547,29 +576,30 @@
 																			]
 																			}">
 
-														</div>
+															</div>
 
-														<div class="col-md-9 projetov"></div>
+															<div class="col-md-9 projetov"></div>
 
-														<input type="hidden" name="txt_codprojeto" id="txt_codprojeto">
+															<input type="hidden" name="txt_codprojeto"
+																id="txt_codprojeto">
 
-														<div class="col-md-2">
-															<label for="txt_saldo">Saldo:</label>
-															<div class="input-group">
-																<input class="form-control mm" type="text"
-																	name="txt_saldo" id="txt_saldo" readonly>
-																<span class="input-group-addon">$</span>
+															<div class="col-md-2">
+																<label for="txt_saldo">Saldo:</label>
+																<div class="input-group">
+																	<input class="form-control mm" type="text"
+																		name="txt_saldo" id="txt_saldo" readonly>
+																	<span class="input-group-addon">$</span>
+																</div>
 															</div>
 														</div>
-													</div>
 
-													<div class="form-group row">
+														<div class="form-group row">
 
-														<div class="col-md-9" style="display: none;">
-															<label for="txt_acao">Ação<span
-																	class="Obrigatorio"><strong>*</strong></span>:</label>
-															<input type="zoom" class="form-control" id="txt_acao"
-																name="txt_acao" data-zoom="{
+															<div class="col-md-9" style="display: none;">
+																<label for="txt_acao">Ação<span
+																		class="Obrigatorio"><strong>*</strong></span>:</label>
+																<input type="zoom" class="form-control" id="txt_acao"
+																	name="txt_acao" data-zoom="{
 																			'displayKey':'NOME',
 																			'datasetId':'dsacao',
 																			'maximumSelectionLength':'1',
@@ -589,25 +619,25 @@
 																			]
 																			}">
 
+															</div>
+
+															<div class="col-md-9 acaov"></div>
+
+															<input type="hidden" name="txt_codacao" id="txt_codacao">
+															<div class="col-md-2">
+																<label for="txt_valorUtil">Valor utilizado :</label>
+																<input type="text" class="form-control"
+																	name="txt_valorUtil" id="txt_valorUtil"
+																	onchange="formatarMoeda(this);validateValor()">
+
+															</div>
 														</div>
-
-														<div class="col-md-9 acaov"></div>
-
-														<input type="hidden" name="txt_codacao" id="txt_codacao">
-														<div class="col-md-2">
-															<label for="txt_valorUtil">Valor utilizado :</label>
-															<input type="text" class="form-control" name="txt_valorUtil"
-																id="txt_valorUtil"
-																onchange="formatarMoeda(this);validateValor()">
-
-														</div>
-													</div>
-													<div class="form-group row">
-														<div class="col-md-9" style="display: none;">
-															<label for="txt_recursos">Unidade<span
-																	class="Obrigatorio"><strong>*</strong></span>:</label>
-															<input type="zoom" class="form-control" id="txt_recursos"
-																name="txt_recursos" data-zoom="{
+														<div class="form-group row">
+															<div class="col-md-9" style="display: none;">
+																<label for="txt_recursos">Unidade<span
+																		class="Obrigatorio"><strong>*</strong></span>:</label>
+																<input type="zoom" class="form-control"
+																	id="txt_recursos" name="txt_recursos" data-zoom="{
 																			'displayKey':'NOME',
 																			'datasetId':'dsunidade',
 																			'maximumSelectionLength':'1',
@@ -624,162 +654,164 @@
 																			]
 																			}">
 
+															</div>
+															<div class="col-md-9 unidadev"></div>
+															<input type="hidden" name="txt_codrecurso"
+																id="txt_codrecurso">
 														</div>
-														<div class="col-md-9 unidadev"></div>
-														<input type="hidden" name="txt_codrecurso" id="txt_codrecurso">
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-				<hr>
-				<div class="form-group table-responsive">
-					<div class="table">
-						<thead>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="col-md-3">
-										<div class="form-group" id="input1">
-
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group" id="input2">
-
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="col-md-2">
-										<div class="form-group row">
-											<div class="bs-docs-popover-hover">
-												<button type="button" class="btn btn-info" data-comp-show-modal="small"
-													id="addItem" onclick="adicionarItem();">Inserir Solicitação
-													<b>+</b></button>
-											</div>
-
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="col-md-7">
-										<table class="table table-bordered table-striped table-hover certa"
-											noaddbutton="true" nodeletebutton="true">
-											<thead>
-												<tr>
-													<td class="col-md-3">Serviço</td>
-													<td class="col-md-6">Detalhes</td>
-													<td class="col-md-1">Remove</td>
+													</td>
 												</tr>
-											</thead>
-
-											<tbody>
 											</tbody>
-
 										</table>
-									</div>
-								</td>
-							</tr>
-						</tbody>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<hr>
+					<div class="form-group table-responsive">
+						<div class="table">
+							<thead>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="col-md-3">
+											<div class="form-group" id="input1">
+
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group" id="input2">
+
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="col-md-2">
+											<div class="form-group row">
+												<div class="bs-docs-popover-hover">
+													<button type="button" class="btn btn-info"
+														data-comp-show-modal="small" id="addItem"
+														onclick="adicionarItem();">Inserir Solicitação
+														<b>+</b></button>
+												</div>
+
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="col-md-7">
+											<table class="table table-bordered table-striped table-hover certa"
+												noaddbutton="true" nodeletebutton="true">
+												<thead>
+													<tr>
+														<td class="col-md-3">Serviço</td>
+														<td class="col-md-6">Detalhes</td>
+														<td class="col-md-1">Remove</td>
+													</tr>
+												</thead>
+
+												<tbody>
+												</tbody>
+
+											</table>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- Fim do Painel -->
+			<!-- Fim do Painel -->
 
-		<script>
-			String.prototype.isEmpty = function () {
-				return (!this || 0 === this.length);
-			};
-
-			function email() {
-
-				var settings = {
-					"url": "https://mywebhm.am.sebrae.com.br/api/public/alert/customEmailSender",
-					"method": "POST",
-					"timeout": 20000,
-					"headers": {
-						"Content-Type": "application/json"
-					},
-					"data": JSON.stringify({
-						"to": "atic.6@am.sebrae.com.br",
-						"from": "intranet.am@am.sebrae.com.br",
-						"subject": "teste",
-						"templateId": "GestorResponsavel",
-						"dialectId": "pt_BR",
-						"param": {}
-					}),
+			<script>
+				String.prototype.isEmpty = function () {
+					return (!this || 0 === this.length);
 				};
 
-				$.ajax(settings).done(function (response) {
-					console.log(response);
-				});
+				function email() {
 
-			}
-			var beforeSendValidate = function (numState, nextState) {
-				/*campo.value = editor.getData();
-				console.log(campo.value)*/
-				var erromsg = "";
-				//var lastState = document.getElementById("hdn_lastState").value;
+					var settings = {
+						"url": "https://mywebhm.am.sebrae.com.br/api/public/alert/customEmailSender",
+						"method": "POST",
+						"timeout": 20000,
+						"headers": {
+							"Content-Type": "application/json"
+						},
+						"data": JSON.stringify({
+							"to": "atic.6@am.sebrae.com.br",
+							"from": "intranet.am@am.sebrae.com.br",
+							"subject": "teste",
+							"templateId": "GestorResponsavel",
+							"dialectId": "pt_BR",
+							"param": {}
+						}),
+					};
 
-				console.log("-beforeSendValidate-");
-				console.log("lastState: " + document.getElementById("hdn_lastState").value);
-				console.log("numState: " + numState);
-				console.log("nextState: " + nextState);
-				//console.log("value: " + voto);
-				console.log("validate button")
+					$.ajax(settings).done(function (response) {
+						console.log(response);
+					});
 
-				if (document.getElementById("hdn_lastState").value == 10 && numState == 14 && nextState != 10) {
-					erromsg += "Atenção! a solicitação deve retornar para <strong>'Aprovação e Análise do Superior'</strong>.\n"
 				}
+				var beforeSendValidate = function (numState, nextState) {
+					/*campo.value = editor.getData();
+					console.log(campo.value)*/
+					var erromsg = "";
+					//var lastState = document.getElementById("hdn_lastState").value;
 
-				else if (document.getElementById("hdn_lastState").value == 5 && numState == 14 && nextState != 5) {
-					erromsg += "Atenção! a solicitação deve retornar para Atividade <strong>'UMCE - Recebe/Analisa'</strong>.\n"
-				}
-				else if (numState == 5 && nextState == 24) {
-					if (document.getElementById('respDemanda').value == '') {
-						erromsg += "Atenção! Informe o <strong>Responsavel</strong> da Atividade.\n"
-					}
-				}
-				else if (document.getElementById("hdn_lastState").value == 24 && numState == 14 && nextState != 24) {
-					erromsg += "Atenção! a solicitação deve retornar para Atividade <strong>'UMCE - Encaminhar Demanda'</strong>.\n"
-				}
-				else {
-					document.getElementById("hdn_lastState").value = numState;
+					console.log("-beforeSendValidate-");
 					console.log("lastState: " + document.getElementById("hdn_lastState").value);
 					console.log("numState: " + numState);
+					console.log("nextState: " + nextState);
+					//console.log("value: " + voto);
+					console.log("validate button")
+
+					if (document.getElementById("hdn_lastState").value == 10 && numState == 14 && nextState != 10) {
+						erromsg += "Atenção! a solicitação deve retornar para <strong>'Aprovação e Análise do Superior'</strong>.\n"
+					}
+
+					else if (document.getElementById("hdn_lastState").value == 5 && numState == 14 && nextState != 5) {
+						erromsg += "Atenção! a solicitação deve retornar para Atividade <strong>'UMCE - Recebe/Analisa'</strong>.\n"
+					}
+					else if (numState == 5 && nextState == 24) {
+						if (document.getElementById('respDemanda').value == '') {
+							erromsg += "Atenção! Informe o <strong>Responsavel</strong> da Atividade.\n"
+						}
+					}
+					else if (document.getElementById("hdn_lastState").value == 24 && numState == 14 && nextState != 24) {
+						erromsg += "Atenção! a solicitação deve retornar para Atividade <strong>'UMCE - Encaminhar Demanda'</strong>.\n"
+					}
+					else {
+						document.getElementById("hdn_lastState").value = numState;
+						console.log("lastState: " + document.getElementById("hdn_lastState").value);
+						console.log("numState: " + numState);
+					}
+
+					if (numState == 10 && nextState == 14) {
+						email()
+					}
+
+					if (erromsg.trim().isEmpty() == false) { throw "\n" + erromsg; }
 				}
 
-				if (numState == 10 && nextState == 14) {
-					email()
-				}
+			</script>
 
-				if (erromsg.trim().isEmpty() == false) { throw "\n" + erromsg; }
-			}
-
-		</script>
-
-		<div class="form-group">
-			<div class="col-md-10" style="text-align:left;background-color: rgb(84, 164, 221);">
-				<img src="atic-branco.png" title="Logo do ATIC REAL OFFICIAL" width="80" height="37">
+			<div class="form-group">
+				<div class="col-md-10" style="text-align:left;background-color: rgb(84, 164, 221);">
+					<img src="atic-branco.png" title="Logo do ATIC REAL OFFICIAL" width="80" height="37">
+				</div>
+				<div class="col-md-2" style="text-align:right;background-color:rgb(84, 164, 221)">
+					<img src="sebrae-branco.png" title="Logo do SEBRAE" width="80" height="37">
+				</div>
 			</div>
-			<div class="col-md-2" style="text-align:right;background-color:rgb(84, 164, 221)">
-				<img src="sebrae-branco.png" title="Logo do SEBRAE" width="80" height="37">
-			</div>
-		</div>
 
 	</form>
 </body>
@@ -801,6 +833,15 @@
 	});
 	//FLUIGC.popover('.bs-docs-popover-hover',{ trigger: 'hover', placement: 'auto'});
 	console.log(document.getElementById('SolicitacaoEvento'))
+</script>
+
+<script>
+	$(document).ready(function () {
+		$('#myTab a').click(function (e) {
+			e.preventDefault();
+			$(this).tab('show');
+		});
+	});
 </script>
 
 </html>
