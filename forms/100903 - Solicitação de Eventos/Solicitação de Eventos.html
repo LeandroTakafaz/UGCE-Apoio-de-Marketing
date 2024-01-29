@@ -125,16 +125,6 @@
 
 			<div class="panel-body">
 
-				<div class="form-group row">
-					<div class="col-md-2">
-						<label for="tp_apoio">Tipo de Apoio: <span class="Obrigatorio"><strong>*</strong></span></label>
-						<select name="tp_apoio" id="tp_apoio" class="form-control">
-							<option value="0" selected disabled>Selecione uma opção</option>
-							<option value="evento">Apoio em Evento</option>
-							<option value="servico">Apoio em Serviço</option>
-						</select>
-					</div>
-
 					<div>
 						<!-- Abas -->
 						<ul class="nav nav-tabs" role="tablist">
@@ -148,23 +138,38 @@
 						<div class="tab-content">
 							<div id="eventos" class="tab-pane fade in active">
 								<h3>Eventos Digitais</h3>
-								<table>
-									<tr>
-										<th>Nome</th>
-										<th>Sobrenome</th>
-										<th>Idade</th>
-									</tr>
-									<tr>
-										<td>Jill</td>
-										<td>Smith</td>
-										<td>35</td>
-									</tr>
-									<tr>
-										<td>Eve</td>
-										<td>Jackson</td>
-										<td>27</td>
-									</tr>
-								</table>
+								<div class="form-group row">
+									<div class="col-md-3">
+										<label for="nomeEvento">Nome do Evento:</label>
+										<input type="text" name="nomeEvento" id="nomeEvento" class="form-control">
+									</div>
+									<div class="col-md-2">
+										<label for="dtEvtInicio">Data Inicial do Evento:</label>
+										<input type="datetime-local" name="dtEvtInicio" id="dtEvtInicio" class="form-control">
+									</div>
+									<div class="col-md-2">
+										<label for="dtEvtFinal">Data Final do Evento do Evento:</label>
+										<input type="datetime-local" name="dtEvtFinal" id="dtEvtFinal" class="form-control">
+									</div>
+									<div class="col-md-3">
+										<label for="publico">Público-Alvo:</label>
+										<input type="text" name="publico" id="publico" class="form-control">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-md-2">
+										<label for="CidUF">Cidade/Uf: <span class="Obrigatorio"></label>
+										<input type="text" name="CidUF" id="CidUF" class="form-control">
+									</div>
+									<div class="col-md-3">
+										<label for="LocalEvento">Local do Evento: </label>
+										<input type="text" name="LocalEvento" id="LocalEvento" class="form-control">
+									</div>
+									<div class="col-md-2">
+										<label for="meta">Meta de Inscrição: </label>
+										<input type="number" name="meta" id="meta" class="form-control">
+									</div>
+								</div>
 							</div>
 							<div id="projetos" class="tab-pane fade">
 								<h3>Projetos</h3>
@@ -288,10 +293,6 @@
 					<div class="form-group">
 						<div class="row">
 							<div class="col-md-3">
-								<label for="publico">Público-Alvo:</label>
-								<input type="text" name="publico" id="publico" class="form-control">
-							</div>
-							<div class="col-md-3">
 								<label for="deadline">DeadLine: <span
 										class="Obrigatorio"><strong>*</strong></span></label>
 								<input type="text" class="form-control" name="deadline" id="deadline">
@@ -316,12 +317,6 @@
 
 				<div class="form-group" id="apoio_evento">
 					<div class="form-group row">
-						<div class="col-md-4">
-							<label for="NomeEvento">Nome do Evento: <span
-									class="Obrigatorio"><strong>*</strong></span></label>
-							<input type="text" name="NomeEvento" id="NomeEvento" class="form-control">
-
-						</div>
 						<div class="col-md-2">
 							<label for="InterExt">Interno ou Externo? <span
 									class="Obrigatorio"><strong>*</strong></span></label>
@@ -330,16 +325,6 @@
 								<option>Interno</option>
 								<option>Externo</option>
 							</select>
-						</div>
-					</div>
-					<div class="form-group row">
-						<div class="col-md-2">
-							<label for="CidUF">Cidade/Uf: <span class="Obrigatorio"></label>
-							<input type="text" name="CidUF" id="CidUF" class="form-control">
-						</div>
-						<div class="col-md-4">
-							<label for="LocalEvento">Local do Evento: </label>
-							<input type="text" name="LocalEvento" id="LocalEvento" class="form-control">
 						</div>
 					</div>
 					<div class="form-group">
