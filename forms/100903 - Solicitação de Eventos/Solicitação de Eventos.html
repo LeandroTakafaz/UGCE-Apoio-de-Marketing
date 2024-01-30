@@ -130,6 +130,7 @@
 					<ul class="nav nav-tabs" role="tablist">
 						<li class="active"><a href="#eventos" role="tab" data-toggle="tab">Eventos Digitais</a></li>
 						<li><a href="#projetos" role="tab" data-toggle="tab">Projetos</a></li>
+						<li><a href="#coffee" role="tab" data-toggle="tab">Coffee Break</a></li>
 						<li><a href="#landingPage" role="tab" data-toggle="tab">Landing Page</a></li>
 						<li><a href="#logo" role="tab" data-toggle="tab">Logo/Identidade Visual</a></li>
 					</ul>
@@ -166,13 +167,13 @@
 									<label for="LocalEvento">Local do Evento: </label>
 									<input type="text" name="LocalEvento" id="LocalEvento" class="form-control">
 								</div>
-								<div class="col-md-2">
-									<label for="metaEvento">Meta de Inscrição: </label>
-									<input type="number" name="metaEvento" id="metaEvento" class="form-control">
-								</div>
 								<div class="col-md-5">
 									<label for="linkEvento">Link da Inscrição: </label>
 									<input type="text" name="linkEvento" id="linkEvento" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="metaEvento">Meta de Inscrição: </label>
+									<input type="number" name="metaEvento" id="metaEvento" class="form-control">
 								</div>
 								<div class="col-md-2" id="responsavel">
 									<label for="respDemanda">Responsável: <span
@@ -234,10 +235,24 @@
 									</script>
 								</div>
 							</div>
+
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="identidade">Estilo Visual Desejado: </label>
+									<input type="text" name="identidade" id="identidade" class="form-control">
+								</div>
+								<div class="col-md-5">
+									<label for="mensagem">Mensagem-Chave: </label>
+									<input type="text" name="mensagem" id="mensagem" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="coresEvento">Cores Preferenciais: </label>
+									<input type="text" name="coresEvento" id="coresEvento" class="form-control">
+								</div>
+							</div>
 							<div class="form-group row">
 								<div class="col-md-6">
-									<label for="Detalhes">Descrição e Justificativa
-										do Ato:</label>
+									<label for="Detalhes">Programação/Palestrantes:</label>
 									<textarea rows="5" name="Detalhes" id="Detalhes"
 										class="form-control"></textarea>
 								</div>
@@ -245,6 +260,23 @@
 						</div>
 						<div id="projetos" class="tab-pane fade">
 							<h3>Projetos</h3>
+							<table border="1">
+								<tr>
+									<th>Materia</th>
+									<th>Pontuação</th>
+								</tr>
+								<tr>
+									<td>Matematica</td>
+									<td>95</td>
+								</tr>
+								<tr>
+									<td>Ciencias</td>
+									<td>98</td>
+								</tr>
+							</table>
+						</div>
+						<div id="coffee" class="tab-pane fade">
+							<h3>Coffee Break</h3>
 							<table border="1">
 								<tr>
 									<th>Materia</th>
