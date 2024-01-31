@@ -125,6 +125,13 @@
 
 			<div class="panel-body">
 
+				<div class="form-group row">
+					<div class="col-md-3">
+						<label for="servico">Selecione o Tipo de Serviço: </label>
+						<input type="checkbox" name="servico" id="servico" class="">
+					</div>
+				</div>
+
 				<div>
 					<!-- Abas -->
 					<ul class="nav nav-tabs" role="tablist">
@@ -185,12 +192,12 @@
 
 							<div class="form-group row">
 								<div class="col-md-3">
-									<label for="identidade">Estilo Visual Desejado: </label>
-									<input type="text" name="identidade" id="identidade" class="form-control">
+									<label for="identidadeEvento">Estilo Visual Desejado: </label>
+									<input type="text" name="identidadeEvento" id="identidadeEvento" class="form-control">
 								</div>
 								<div class="col-md-5">
-									<label for="mensagem">Mensagem-Chave: </label>
-									<input type="text" name="mensagem" id="mensagem" class="form-control">
+									<label for="mensagemEvento">Mensagem-Chave: </label>
+									<input type="text" name="mensagemEvento" id="mensagemEvento" class="form-control">
 								</div>
 								<div class="col-md-2">
 									<label for="coresEvento">Cores Preferenciais: </label>
@@ -217,10 +224,6 @@
 									<input type="text" name="objetivoCampanha" id="objetivoCampanha" class="form-control">
 								</div>
 								<div class="col-md-2">
-									<label for="publicoProjeto">Público-Alvo:</label>
-									<input type="text" name="publicoProjeto" id="publicoProjeto" class="form-control">
-								</div>
-								<div class="col-md-2">
 									<label for="dtProjInicio">Data Inicial do Projeto:</label>
 									<input type="datetime-local" name="dtProjInicio" id="dtProjInicio"
 										class="form-control">
@@ -237,11 +240,25 @@
 								</div>
 								<div class="col-md-3">
 									<label for="quantProjeto">Meta Quantitativa: </label>
-									<input type="text" name="quantProjeto" id="quantProjeto" class="form-control">
+									<input type="number" name="quantProjeto" id="quantProjeto" class="form-control">
 								</div>
 								<div class="col-md-4">
 									<label for="canalProjeto">Canais de Atendimento: </label>
 									<input type="text" name="canalProjeto" id="canalProjeto" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="publicoProjeto">Público-Alvo:</label>
+									<input type="text" name="publicoProjeto" id="publicoProjeto" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="identidadeProjeto">Estilo Visual Desejado: </label>
+									<input type="text" name="identidadeProjeto" id="identidadeProjeto" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="coresProjeto">Cores Preferenciais: </label>
+									<input type="text" name="coresProjeto" id="coresProjeto" class="form-control">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -271,20 +288,47 @@
 						</div>
 						<div id="landingPage" class="tab-pane fade">
 							<h3>Landing Page</h3>
-							<table border="1">
-								<tr>
-									<th>Materia</th>
-									<th>Pontuação</th>
-								</tr>
-								<tr>
-									<td>Matematica</td>
-									<td>95</td>
-								</tr>
-								<tr>
-									<td>Ciencias</td>
-									<td>98</td>
-								</tr>
-							</table>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="nomeLanding">Nome do Projeto/Programa:</label>
+									<input type="text" name="nomeLanding" id="nomeLanding" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="objetivoLanding">Objetivo da Landing Page: <span class="Obrigatorio"></label>
+									<input type="text" name="objetivoLanding" id="objetivoLanding" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="metasLanding">Metas de Conversão: </label>
+									<input type="text" name="metasLanding" id="metasLanding" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="canalProjeto">Canais de Atendimento: </label>
+									<input type="text" name="canalProjeto" id="canalProjeto" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="publicoProjeto">Público-Alvo:</label>
+									<input type="text" name="publicoProjeto" id="publicoProjeto" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="identidadeProjeto">Estilo Visual Desejado: </label>
+									<input type="text" name="identidadeProjeto" id="identidadeProjeto" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="coresProjeto">Cores Preferenciais: </label>
+									<input type="text" name="coresProjeto" id="coresProjeto" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-6">
+									<label for="descProjeto">Descrição do Projeto/Programa:</label>
+									<textarea rows="5" name="descProjeto" id="descProjeto"
+										class="form-control"></textarea>
+								</div>
+							</div>
 						</div>
 						<div id="logo" class="tab-pane fade">
 							<h3>Logo/Identidade Visual</h3>
