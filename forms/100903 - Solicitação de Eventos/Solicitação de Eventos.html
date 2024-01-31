@@ -145,8 +145,8 @@
 									<input type="text" name="nomeEvento" id="nomeEvento" class="form-control">
 								</div>
 								<div class="col-md-3">
-									<label for="publico">Público-Alvo:</label>
-									<input type="text" name="publico" id="publico" class="form-control">
+									<label for="publicoEvento">Público-Alvo:</label>
+									<input type="text" name="publicoEvento" id="publicoEvento" class="form-control">
 								</div>
 								<div class="col-md-2">
 									<label for="CidUF">Cidade/Uf: <span class="Obrigatorio"></label>
@@ -158,7 +158,7 @@
 										class="form-control">
 								</div>
 								<div class="col-md-2">
-									<label for="dtEvtFinal">Data Final do Evento do Evento:</label>
+									<label for="dtEvtFinal">Data Final do Evento:</label>
 									<input type="datetime-local" name="dtEvtFinal" id="dtEvtFinal" class="form-control">
 								</div>
 							</div>
@@ -180,59 +180,6 @@
 											class="Obrigatorio"><strong>*</strong></span></label>
 									<input name="respDemanda" id="respDemanda" class="form-control"
 										onchange="matriculaResp()">
-									<script>
-										function umce() {
-											var source = []
-											var ds_mat = DatasetFactory.getDataset("colleague", null, null, null);
-
-											console.log("sdfsdfsdfsdfsdfsdfsdfsdfsdaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-											for (var i = 0; i < ds_mat.values.length; i++) {
-												if (ds_mat.values[i]['groupId'] == "UARI" && ds_mat.values[i]['active'] == "true") {
-													console.log("sdfsdfsdfsdfsdfsdfsdfsdfsdaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-													source.push({
-														company: ds_mat.values[i]['colleagueName'],
-														id: ds_mat.values[i]['colleagueName']
-													})
-												}
-											}
-
-											return source
-										}
-
-										var settingsExampleArray = {
-											source: umce(),
-											displayKey: 'company',
-											multiSelect: false,
-											style: {
-												autocompleteTagClass: 'tag-blue',
-												tableSelectedLineClass: 'info'
-											},
-											table: {
-												header: [{
-													'title': 'Colaboradores',
-													'size': 'col-xs-9',
-													'dataorder': 'company',
-													'standard': true
-												}],
-												renderContent: ['company']
-											}
-										};
-										var Now = window.parent.ECM.workflowView.sequence;
-										var Visualizacao = window.parent.ECM.workflowView.stateDescription;
-										var nome = document.getElementById('respDemanda').value
-										console.log("teste: " + nome)
-										if (Now == 5 && Visualizacao != "Detalhes da Solicitação") {
-											var filter = FLUIGC.filter('#respDemanda', settingsExampleArray);
-											if (document.getElementById('hdn_lastState').value == '24') {
-												var item = {
-													company: nome,
-													id: nome
-												}
-												filter.add(item);
-											}
-										}
-
-									</script>
 								</div>
 							</div>
 
@@ -252,28 +199,58 @@
 							</div>
 							<div class="form-group row">
 								<div class="col-md-6">
-									<label for="Detalhes">Programação/Palestrantes:</label>
-									<textarea rows="5" name="Detalhes" id="Detalhes"
+									<label for="progEvento">Programação/Palestrantes:</label>
+									<textarea rows="5" name="progEvento" id="progEvento"
 										class="form-control"></textarea>
 								</div>
 							</div>
 						</div>
 						<div id="projetos" class="tab-pane fade">
 							<h3>Projetos</h3>
-							<table border="1">
-								<tr>
-									<th>Materia</th>
-									<th>Pontuação</th>
-								</tr>
-								<tr>
-									<td>Matematica</td>
-									<td>95</td>
-								</tr>
-								<tr>
-									<td>Ciencias</td>
-									<td>98</td>
-								</tr>
-							</table>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="nomeProjeto">Nome do Projeto/Programa:</label>
+									<input type="text" name="nomeProjeto" id="nomeProjeto" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="objetivoCampanha">Objetivo da Campanha: <span class="Obrigatorio"></label>
+									<input type="text" name="objetivoCampanha" id="objetivoCampanha" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="publicoProjeto">Público-Alvo:</label>
+									<input type="text" name="publicoProjeto" id="publicoProjeto" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="dtProjInicio">Data Inicial do Projeto:</label>
+									<input type="datetime-local" name="dtProjInicio" id="dtProjInicio"
+										class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="dtProjFinal">Data Final do Projeto:</label>
+									<input type="datetime-local" name="dtProjFinal" id="dtProjFinal" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="qualiProjeto">Meta Qualitativa: </label>
+									<input type="text" name="qualiProjeto" id="qualiProjeto" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="quantProjeto">Meta Quantitativa: </label>
+									<input type="text" name="quantProjeto" id="quantProjeto" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="canalProjeto">Canais de Atendimento: </label>
+									<input type="text" name="canalProjeto" id="canalProjeto" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-6">
+									<label for="descProjeto">Descrição do Projeto/Programa:</label>
+									<textarea rows="5" name="descProjeto" id="descProjeto"
+										class="form-control"></textarea>
+								</div>
+							</div>
 						</div>
 						<div id="coffee" class="tab-pane fade">
 							<h3>Coffee Break</h3>
@@ -520,64 +497,7 @@
 						</tbody>
 					</table>
 				</div>
-
 				<hr>
-				<div class="form-group table-responsive">
-					<div class="table">
-						<thead>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="col-md-3">
-										<div class="form-group" id="input1">
-
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="form-group" id="input2">
-
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="col-md-2">
-										<div class="form-group row">
-											<div class="bs-docs-popover-hover">
-												<button type="button" class="btn btn-info" data-comp-show-modal="small"
-													id="addItem" onclick="adicionarItem();">Inserir Solicitação
-													<b>+</b></button>
-											</div>
-
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="col-md-7">
-										<table class="table table-bordered table-striped table-hover certa"
-											noaddbutton="true" nodeletebutton="true">
-											<thead>
-												<tr>
-													<td class="col-md-3">Serviço</td>
-													<td class="col-md-6">Detalhes</td>
-													<td class="col-md-1">Remove</td>
-												</tr>
-											</thead>
-
-											<tbody>
-											</tbody>
-
-										</table>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</div>
-				</div>
 			</div>
 		</div>
 
@@ -693,6 +613,59 @@
 			$(this).tab('show');
 		});
 	});
+</script>
+<script>
+	function umce() {
+		var source = []
+		var ds_mat = DatasetFactory.getDataset("colleague", null, null, null);
+
+		console.log("sdfsdfsdfsdfsdfsdfsdfsdfsdaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+		for (var i = 0; i < ds_mat.values.length; i++) {
+			if (ds_mat.values[i]['groupId'] == "UARI" && ds_mat.values[i]['active'] == "true") {
+				console.log("sdfsdfsdfsdfsdfsdfsdfsdfsdaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+				source.push({
+					company: ds_mat.values[i]['colleagueName'],
+					id: ds_mat.values[i]['colleagueName']
+				})
+			}
+		}
+
+		return source
+	}
+
+	var settingsExampleArray = {
+		source: umce(),
+		displayKey: 'company',
+		multiSelect: false,
+		style: {
+			autocompleteTagClass: 'tag-blue',
+			tableSelectedLineClass: 'info'
+		},
+		table: {
+			header: [{
+				'title': 'Colaboradores',
+				'size': 'col-xs-9',
+				'dataorder': 'company',
+				'standard': true
+			}],
+			renderContent: ['company']
+		}
+	};
+	var Now = window.parent.ECM.workflowView.sequence;
+	var Visualizacao = window.parent.ECM.workflowView.stateDescription;
+	var nome = document.getElementById('respDemanda').value
+	console.log("teste: " + nome)
+	if (Now == 5 && Visualizacao != "Detalhes da Solicitação") {
+		var filter = FLUIGC.filter('#respDemanda', settingsExampleArray);
+		if (document.getElementById('hdn_lastState').value == '24') {
+			var item = {
+				company: nome,
+				id: nome
+			}
+			filter.add(item);
+		}
+	}
+
 </script>
 
 </html>
