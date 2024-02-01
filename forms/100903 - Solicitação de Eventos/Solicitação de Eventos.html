@@ -126,9 +126,17 @@
 			<div class="panel-body">
 
 				<div class="form-group row">
-					<div class="col-md-3">
-						<label for="servico">Selecione o Tipo de Serviço: </label>
-						<input type="checkbox" name="servico" id="servico" class="">
+					<div class="col-md-5">
+						<input type="checkbox" id="Eventos" name="Eventos">
+						<label for="Eventos">Eventos Digitais</label>
+						<input type="checkbox" id="Projetos" name="Projetos">
+						<label for="Projetos">Projetos</label>
+						<input type="checkbox" id="CoffeeBreak" name="CoffeeBreak">
+						<label for="CoffeeBreak">Coffee Break</label>
+						<input type="checkbox" id="LandingPage" name="LandingPage">
+						<label for="LandingPage">Landing Page</label>
+						<input type="checkbox" id="LogoIdentidadeVisual" name="LogoIdentidadeVisual">
+						<label for="LogoIdentidadeVisual">Logo/Identidade Visual</label>
 					</div>
 				</div>
 
@@ -271,81 +279,118 @@
 						</div>
 						<div id="coffee" class="tab-pane fade">
 							<h3>Coffee Break</h3>
-							<table border="1">
-								<tr>
-									<th>Materia</th>
-									<th>Pontuação</th>
-								</tr>
-								<tr>
-									<td>Matematica</td>
-									<td>95</td>
-								</tr>
-								<tr>
-									<td>Ciencias</td>
-									<td>98</td>
-								</tr>
-							</table>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="nomeBreak">Nome do Evento:</label>
+									<input type="text" name="nomeBreak" id="nomeBreak" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="dataBreak">Data do Evento:</label>
+									<input type="date" name="dataBreak" id="dataBreak" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="quantBreak">Quantidade de Pessoas:</label>
+									<input type="number" name="quantBreak" id="quantBreak" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-2">
+									<label for="horaInicioBreak">Hora Inicial do Evento:</label>
+									<input type="time" name="horaInicioBreak" id="horaInicioBreak" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="horaFinalBreak">Hora Final do Evento:</label>
+									<input type="time" name="horaFinalBreak" id="horaFinalBreak" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="horarioBreak">Horário do Coffee Break:</label>
+									<input type="time" name="horarioBreak" id="horarioBreak" class="form-control">
+								</div>
+							</div>
 						</div>
 						<div id="landingPage" class="tab-pane fade">
 							<h3>Landing Page</h3>
 							<div class="form-group row">
 								<div class="col-md-3">
-									<label for="nomeLanding">Nome do Projeto/Programa:</label>
+									<label for="nomeLanding">Nome do Projeto:</label>
 									<input type="text" name="nomeLanding" id="nomeLanding" class="form-control">
 								</div>
 								<div class="col-md-3">
 									<label for="objetivoLanding">Objetivo da Landing Page: <span class="Obrigatorio"></label>
 									<input type="text" name="objetivoLanding" id="objetivoLanding" class="form-control">
 								</div>
-							</div>
-							<div class="form-group row">
 								<div class="col-md-3">
 									<label for="metasLanding">Metas de Conversão: </label>
 									<input type="text" name="metasLanding" id="metasLanding" class="form-control">
 								</div>
-								<div class="col-md-4">
-									<label for="canalProjeto">Canais de Atendimento: </label>
-									<input type="text" name="canalProjeto" id="canalProjeto" class="form-control">
+								<div class="col-md-3">
+									<label for="publicoLanding">Público-Alvo:</label>
+									<input type="text" name="publicoLanding" id="publicoLanding" class="form-control">
 								</div>
 							</div>
 							<div class="form-group row">
 								<div class="col-md-3">
-									<label for="publicoProjeto">Público-Alvo:</label>
-									<input type="text" name="publicoProjeto" id="publicoProjeto" class="form-control">
+									<label for="tituloLanding">Título da Landing Page: </label>
+									<input type="text" name="tituloLanding" id="tituloLanding" class="form-control">
 								</div>
 								<div class="col-md-3">
-									<label for="identidadeProjeto">Estilo Visual Desejado: </label>
-									<input type="text" name="identidadeProjeto" id="identidadeProjeto" class="form-control">
+									<label for="actionLanding">Call-to-Action Principal: </label>
+									<input type="text" name="actionLanding" id="actionLanding" class="form-control">
 								</div>
 								<div class="col-md-2">
-									<label for="coresProjeto">Cores Preferenciais: </label>
-									<input type="text" name="coresProjeto" id="coresProjeto" class="form-control">
-								</div>
-							</div>
-							<div class="form-group row">
-								<div class="col-md-6">
-									<label for="descProjeto">Descrição do Projeto/Programa:</label>
-									<textarea rows="5" name="descProjeto" id="descProjeto"
-										class="form-control"></textarea>
+									<label for="coresLanding">Cores Preferenciais: </label>
+									<input type="text" name="coresLanding" id="coresLanding" class="form-control">
 								</div>
 							</div>
 						</div>
 						<div id="logo" class="tab-pane fade">
 							<h3>Logo/Identidade Visual</h3>
-							<table border="1">
-								<tr>
-									<th>Materia</th>
-									<th>Pontuação</th>
-								</tr>
-								<tr>
-									<td>Matematica</td>
-									<td>95</td>
-								</tr>
-								<tr>
-									<td>Ciencias</td>
-									<td>98</td>
-								</tr>
-							</table>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="nomeLogo">Nome do Evento/Projeto:</label>
+									<input type="text" name="nomeLogo" id="nomeLogo" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="chaveLogo">Palavras-Chave que Representam a Marca:</label>
+									<input type="text" name="chaveLogo" id="chaveLogo" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="mensagemLogo">Mensagem ou Próposito da Marca:</label>
+									<input type="text" name="mensagemLogo" id="mensagemLogo" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-2">
+									<label for="tipoServico">Tipo de Serviço Solicitado:</label>
+									<select name="tipoServico" id="tipoServico" class="form-control">
+										<option value="logo">Criação de Logo</option>
+										<option value="identidade">Identidade Visual Completa</option>
+									  </select>
+								</div>
+								<div class="col-md-2">
+									<label for="designLogo">Estilo de Design Desejado:</label>
+									<input type="text" name="designLogo" id="designLogo" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="coresLogo">Cores Preferenciais:</label>
+									<input type="text" name="coresLogo" id="coresLogo" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="visualLogo">Elementos Visuais Importantes:</label>
+									<input type="text" name="visualLogo" id="visualLogo" class="form-control">
+								</div>
+								<div class="col-md-1">
+									<label for="tipografiaLogo">Tipografia:</label>
+									<input type="text" name="tipografiaLogo" id="tipografiaLogo" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-6">
+									<label for="descLogo">Descrição do Evento/Projeto:</label>
+									<textarea rows="5" name="descLogo" id="descLogo"
+										class="form-control"></textarea>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
