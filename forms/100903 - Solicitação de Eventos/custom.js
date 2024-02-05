@@ -630,3 +630,20 @@ function addRateioz() {
 function fnCustomDelete(elem) {
     fnWdkRemoveChild(elem);
 }
+
+function controlarCamposCheckbox() {
+    var checkbox = document.getElementById("Eventos");
+    var eventos = document.getElementById("myTab");
+    var projetos = document.getElementById("projetos");
+    
+    if (checkbox.checked) {
+        eventos.style.display = "block"; // Mostra o campo Equipamento Solicitado
+        projetos.style.display = "none"; // Mostra o campo Valor Estimado
+    } else {
+        eventos.style.display = "none"; // Oculta o campo Equipamento Solicitado
+        projetos.style.display = "none"; // Oculta o campo Valor Estimado
+    }
+}
+
+checkbox.addEventListener("change", controlarCamposCheckbox);
+controlarCamposCheckbox();
