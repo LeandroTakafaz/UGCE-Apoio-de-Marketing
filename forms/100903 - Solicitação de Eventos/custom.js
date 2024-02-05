@@ -631,19 +631,39 @@ function fnCustomDelete(elem) {
     fnWdkRemoveChild(elem);
 }
 
-function controlarCamposCheckbox() {
-    var checkbox = document.getElementById("Eventos");
-    var eventos = document.getElementById("myTab");
-    var projetos = document.getElementById("projetos");
-    
-    if (checkbox.checked) {
-        eventos.style.display = "block"; // Mostra o campo Equipamento Solicitado
-        projetos.style.display = "none"; // Mostra o campo Valor Estimado
-    } else {
-        eventos.style.display = "none"; // Oculta o campo Equipamento Solicitado
-        projetos.style.display = "none"; // Oculta o campo Valor Estimado
-    }
-}
+$(document).ready(function () {
+    $('#myTab a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    });
+});
 
-checkbox.addEventListener("change", controlarCamposCheckbox);
-controlarCamposCheckbox();
+
+
+
+
+$(document).ready(function() {
+    var checkboxes = ["Eventos", "Projetos", "CoffeeBreak", "LandingPage", "LogoIdentidadeVisual"];
+    var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];
+
+    checkboxes.forEach(function(checkboxId, index) {
+        $('#' + checkboxId).change(function() {
+            if (this.checked) {
+                $('#' + campos[index]).show(); // Mostra o campo correspondente
+                $('a[href="#' + campos[index] + '"]').parent().show(); // Mostra a aba de navegação correspondente
+            } else {
+                $('#' + campos[index]).hide(); // Oculta o campo correspondente
+                $('a[href="#' + campos[index] + '"]').parent().hide(); // Oculta a aba de navegação correspondente
+            }
+        }).change(); // Chama a função change para configurar a visibilidade inicial dos campos e das abas de navegação
+    });
+
+    // Adiciona a função para verificar as classes 'active in' e 'in active show'
+    $('.tab-pane').each(function() {
+        if ($(this).hasClass('active in') || $(this).hasClass('in active show')) {
+            $(this).show(); // Altera o display para 'block' no atributo 'style'
+        } else {
+            $(this).hide(); // Altera o display para 'none' no atributo 'style'
+        }
+    });
+});

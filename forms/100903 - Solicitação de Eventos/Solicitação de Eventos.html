@@ -33,7 +33,7 @@
 
 	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
 	<script type="text/javascript" src="painel.js"></script>
-	<script type="text/javascript" src="Custom.js"></script>
+	<script type="text/javascript" src="custom.js"></script>
 	<script type="text/javascript" src="slc_dotacao.js"></script>
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -126,16 +126,16 @@
 			</div>
 			<div class="panel-body">
 				<div class="form-group row">
-					<div class="col-md-5">
-						<input type="checkbox" id="Eventos" name="Eventos">
+					<div class="col-md-12">
+						<br><input type="checkbox" id="Eventos" name="Eventos">
 						<label for="Eventos">Eventos Digitais</label>
-						<input type="checkbox" id="Projetos" name="Projetos">
+						<br><input type="checkbox" id="Projetos" name="Projetos">
 						<label for="Projetos">Projetos</label>
-						<input type="checkbox" id="CoffeeBreak" name="CoffeeBreak">
+						<br><input type="checkbox" id="CoffeeBreak" name="CoffeeBreak">
 						<label for="CoffeeBreak">Coffee Break</label>
-						<input type="checkbox" id="LandingPage" name="LandingPage">
+						<br><input type="checkbox" id="LandingPage" name="LandingPage">
 						<label for="LandingPage">Landing Page</label>
-						<input type="checkbox" id="LogoIdentidadeVisual" name="LogoIdentidadeVisual">
+						<br><input type="checkbox" id="LogoIdentidadeVisual" name="LogoIdentidadeVisual">
 						<label for="LogoIdentidadeVisual">Logo/Identidade Visual</label>
 					</div>
 				</div>
@@ -143,7 +143,7 @@
 				<div class="col-md-8">
 					<!-- Abas -->
 					<ul class="nav nav-tabs" role="tablist" id="myTab">
-						<li class="active"><a href="#eventos" role="tab" data-toggle="tab">Eventos Digitais</a></li>
+						<li><a href="#eventos" role="tab" data-toggle="tab">Eventos Digitais</a></li>
 						<li><a href="#projetos" role="tab" data-toggle="tab">Projetos</a></li>
 						<li><a href="#coffee" role="tab" data-toggle="tab">Coffee Break</a></li>
 						<li><a href="#landingPage" role="tab" data-toggle="tab">Landing Page</a></li>
@@ -152,7 +152,7 @@
 
 					<!-- Conteúdo das abas -->
 					<div class="tab-content">
-						<div id="eventos" class="tab-pane fade in active">
+						<div id="eventos" class="tab-pane fade active in" style="display: none;">
 							<h3>Eventos Digitais</h3>
 							<div class="form-group row">
 								<div class="col-md-3">
@@ -224,7 +224,7 @@
 										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
 						</div>
-						<div id="projetos" class="tab-pane fade">
+						<div id="projetos" class="tab-pane fade" style="display: none;">
 							<h3>Projetos</h3>
 							<div class="form-group row">
 								<div class="col-md-3">
@@ -285,7 +285,7 @@
 								</div>
 							</div>
 						</div>
-						<div id="coffee" class="tab-pane fade">
+						<div id="coffee" class="tab-pane fade" style="display: none;">
 							<h3>Coffee Break</h3>
 							<div class="form-group row">
 								<div class="col-md-3">
@@ -316,7 +316,7 @@
 								</div>
 							</div>
 						</div>
-						<div id="landingPage" class="tab-pane fade">
+						<div id="landingPage" class="tab-pane fade" style="display: none;">
 							<h3>Landing Page</h3>
 							<div class="form-group row">
 								<div class="col-md-3">
@@ -352,7 +352,7 @@
 								</div>
 							</div>
 						</div>
-						<div id="logo" class="tab-pane fade">
+						<div id="logo" class="tab-pane fade" style="display: none;">
 							<div class="form-group row col-md-10">
 								<h3>Logo/Identidade Visual</h3>
 								<div class="form-group row">
@@ -426,6 +426,9 @@
 										<ol>
 											<li><strong>Landing Page - Deve enviar por email a apresentação do projeto ou material que deverá ser fonte principal de pesquisa para desdobrarmos o texto da LP].</strong>
 											</li><br>
+
+
+											
 											<li><strong>Eventos Digitais - Defina a mensagem principal que será transmitida na campanha, destacando os benefícios e diferencias do evento. Faça isso no Campo de Mensagem-Chave.</strong></li><br>
 											<li><strong>Coloque adequadamente o aumento previsto em atendimento
 													e
@@ -747,14 +750,6 @@
 	console.log(document.getElementById('SolicitacaoEvento'))
 </script>
 
-<script>
-	$(document).ready(function () {
-		$('#myTab a').click(function (e) {
-			e.preventDefault();
-			$(this).tab('show');
-		});
-	});
-</script>
 <script>
 	function umce() {
 		var source = []
