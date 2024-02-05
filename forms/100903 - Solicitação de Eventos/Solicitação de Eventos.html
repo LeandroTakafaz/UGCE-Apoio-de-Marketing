@@ -75,28 +75,29 @@
 			</div>
 
 			<div class="panel-body">
-				<div class="form-group row">
-					<div class="col-md-3">
-						<label for="cmb_NomeSolicitante">Nome Solicitante</label>
-						<select name="cmb_NomeSolicitante" id="cmb_NomeSolicitante" dataset="colleague"
-							datasetkey="colleagueId" datasetvalue="colleagueName" class="form-control" readonly>
-						</select>
+				<div class="panel-body col-md-8">
+					<div class="form-group row">
+						<div class="col-md-3">
+							<label for="cmb_NomeSolicitante">Nome Solicitante</label>
+							<select name="cmb_NomeSolicitante" id="cmb_NomeSolicitante" dataset="colleague"
+								datasetkey="colleagueId" datasetvalue="colleagueName" class="form-control" readonly>
+							</select>
+						</div>
+						<div class="col-md-3">
+							<label for="dt_DataSolicit">Data e Hora</label>
+							<input type="text" class="form-control" name="dt_DataSolicit" id="dt_DataSolicit">
+						</div>
+						<div class="col-md-3">
+							<label for="txt_NumProc">Numero da Solicitação</label>
+							<input type="text" class="form-control" name="txt_NumProc" id="txt_NumProc">
+						</div>
 					</div>
-					<div class="col-md-2">
-						<label for="dt_DataSolicit">Data e Hora</label>
-						<input type="text" class="form-control" name="dt_DataSolicit" id="dt_DataSolicit">
-					</div>
-					<div class="col-md-2">
-						<label for="txt_NumProc">Numero da Solicitação</label>
-						<input type="text" class="form-control" name="txt_NumProc" id="txt_NumProc">
-					</div>
-				</div>
-				<div class="form-group row">
-					<div class="col-md-3">
-						<label for="cmb_GerenteSolicitante">Gerente / Diretor</label>
-						<input type="text" class="form-control" name="cmb_GerenteSolicitante"
-							id="cmb_GerenteSolicitante" readonly>
-						<!--<select 
+					<div class="form-group row">
+						<div class="col-md-3">
+							<label for="cmb_GerenteSolicitante">Gerente / Diretor</label>
+							<input type="text" class="form-control" name="cmb_GerenteSolicitante"
+								id="cmb_GerenteSolicitante" readonly>
+							<!--<select 
 								name="cmb_GerenteSolicitante" 
 								id="cmb_GerenteSolicitante" 
 								dataset="dsc_Unidades" 
@@ -104,11 +105,12 @@
 								datasetvalue="NomeGerente" 
 								class="form-control">
 							 </select>-->
-					</div>
-					<div class="col-md-4">
-						<label for="zm_UnidadeSolicitante">Unidade Solicitante</label>
-						<input type="text" class="form-control" name="cmb_UnidadeSolicitante"
-							id="cmb_UnidadeSolicitante" readonly>
+						</div>
+						<div class="col-md-4">
+							<label for="zm_UnidadeSolicitante">Unidade Solicitante</label>
+							<input type="text" class="form-control" name="cmb_UnidadeSolicitante"
+								id="cmb_UnidadeSolicitante" readonly>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -138,7 +140,7 @@
 					</div>
 				</div>
 
-				<div>
+				<div class="col-md-8">
 					<!-- Abas -->
 					<ul class="nav nav-tabs" role="tablist">
 						<li class="active"><a href="#eventos" role="tab" data-toggle="tab">Eventos Digitais</a></li>
@@ -235,12 +237,12 @@
 									<input type="text" name="objetivoCampanha" id="objetivoCampanha"
 										class="form-control">
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-3">
 									<label for="dtProjInicio">Data Inicial do Projeto:</label>
 									<input type="datetime-local" name="dtProjInicio" id="dtProjInicio"
 										class="form-control">
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-3">
 									<label for="dtProjFinal">Data Final do Projeto:</label>
 									<input type="datetime-local" name="dtProjFinal" id="dtProjFinal"
 										class="form-control">
@@ -290,11 +292,11 @@
 									<label for="nomeBreak">Nome do Evento:</label>
 									<input type="text" name="nomeBreak" id="nomeBreak" class="form-control">
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-3">
 									<label for="dataBreak">Data do Evento:</label>
 									<input type="date" name="dataBreak" id="dataBreak" class="form-control">
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-3">
 									<label for="quantBreak">Quantidade de Pessoas:</label>
 									<input type="number" name="quantBreak" id="quantBreak" class="form-control">
 								</div>
@@ -354,41 +356,43 @@
 							<div class="form-group row col-md-10">
 								<h3>Logo/Identidade Visual</h3>
 								<div class="form-group row">
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<label for="nomeLogo">Nome do Evento/Projeto:</label>
 										<input type="text" name="nomeLogo" id="nomeLogo" class="form-control">
 									</div>
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<label for="chaveLogo">Palavras-Chave para a Marca:</label>
 										<input type="text" name="chaveLogo" id="chaveLogo" class="form-control">
 									</div>
 									<div class="col-md-4">
-										<label for="mensagemLogo">Mensagem ou Próposito da Marca:</label>
+										<label for="mensagemLogo">Próposito da Marca:</label>
 										<input type="text" name="mensagemLogo" id="mensagemLogo" class="form-control">
 									</div>
 								</div>
 								<div class="form-group row">
-									<div class="col-md-2">
+									<div class="col-md-4">
 										<label for="tipoServico">Tipo de Serviço Solicitado:</label>
 										<select name="tipoServico" id="tipoServico" class="form-control">
 											<option value="logo">Criação de Logo</option>
 											<option value="identidade">Identidade Visual Completa</option>
 										</select>
 									</div>
-									<div class="col-md-2">
+									<div class="col-md-4">
 										<label for="designLogo">Estilo de Design Desejado:</label>
 										<input type="text" name="designLogo" id="designLogo" class="form-control">
 									</div>
-									<div class="col-md-2">
+									<div class="col-md-4">
 										<label for="coresLogo">Cores Preferenciais:</label>
 										<input type="text" name="coresLogo" id="coresLogo" class="form-control">
 									</div>
-									<div class="col-md-2">
+								</div>
+								<div class="form-group row">
+									<div class="col-md-3">
 										<label for="visualLogo">Elementos Visuais:</label>
 										<input type="text" name="visualLogo" id="visualLogo" class="form-control">
 									</div>
-									<div class="col-md-2">
-										<label for="tipografiaLogo">Tipografia:</label>
+									<div class="col-md-3">
+										<label for="tipografiaLogo">Tipografia Escolhida:</label>
 										<input type="text" name="tipografiaLogo" id="tipografiaLogo"
 											class="form-control">
 									</div>
@@ -404,7 +408,48 @@
 						</div>
 					</div>
 				</div>
-
+				<div class="col-md-4">
+					<div class="panel-body">
+						<div class="card" id="card_dimi">
+							<div class="card-body">
+								<h3 class="card-title">
+									<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+									<lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop"
+										colors="primary:#722F37" style="width: 25px;height:25px;padding-top: 4px;">
+									</lord-icon>
+									Observação:
+								</h3>
+								<p class="card-text">Caso precise solicitar mais de um item, marque os itens desejados e preencha os campos de cada um.</p>
+								<ul>
+									<div id="ad">
+										<li><strong><u>Instruções:</u></strong></li>
+										<ol>
+											<li><strong>Landing Page - Deve enviar por email a apresentação do projeto ou material que deverá ser fonte principal de pesquisa para desdobrarmos o texto da LP].</strong>
+											</li><br>
+											<li><strong>Eventos Digitais - Defina a mensagem principal que será transmitida na campanha, destacando os benefícios e diferencias do evento. Faça isso no Campo de Mensagem-Chave.</strong></li><br>
+											<li><strong>Coloque adequadamente o aumento previsto em atendimento
+													e
+													público para os
+													valores acréscentados.</strong></li><br>
+											<li><strong>Indique o Valor de Receita REB ou Convênio corretamente,
+													caso
+													seja utilizado
+													de
+													somente um deles preencha o outro com um número 0.</strong>
+											</li><br>
+											<li><strong>Caso a Dotação Orçamentária possua mais de 1, deve ser
+													sempre
+													preenchido o mesmo PROJETO e UNIDADE para eles,
+													podendo ser apenas trocado a AÇÃO entre os campos</strong>
+											</li>
+										</ol>
+									</div>
+								</ul>
+								
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
