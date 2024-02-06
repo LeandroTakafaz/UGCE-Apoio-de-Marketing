@@ -58,9 +58,6 @@
 		if(form.getValue("dh_fim")==""){
 			msg += "Error : Campo 'Data e Hora Final' não foi preeenchido!\n";
 		}
-		if(form.getValue("briefing")==""){
-			msg += "Error : Campo 'Briefing' não foi preeenchido!\n";
-		}
 		if(hoje>Inicio){
 			msg += "Error : Data de 'Inicio' inválida!\n"
 		}

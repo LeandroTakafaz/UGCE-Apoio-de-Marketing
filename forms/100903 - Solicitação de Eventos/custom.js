@@ -638,7 +638,17 @@ $(document).ready(function () {
     });
 });
 
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    var target = $(e.target).attr("href"); // Obtenha o ID do novo tab-pane ativo
 
+    $(target).each(function() {
+        if ($(this).hasClass('in active')) {
+            $(this).removeAttr('style'); // Remove o atributo 'style'
+        } else {
+            console.log("Te odeio Fluig");
+        }
+    });
+});
 
 
 
@@ -657,13 +667,5 @@ $(document).ready(function() {
             }
         }).change(); // Chama a função change para configurar a visibilidade inicial dos campos e das abas de navegação
     });
-
-    // Adiciona a função para verificar as classes 'active in' e 'in active show'
-    $('.tab-pane').each(function() {
-        if ($(this).hasClass('active in') || $(this).hasClass('in active show')) {
-            $(this).show(); // Altera o display para 'block' no atributo 'style'
-        } else {
-            $(this).hide(); // Altera o display para 'none' no atributo 'style'
-        }
-    });
+    
 });
