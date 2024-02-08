@@ -36,6 +36,7 @@
 	<script type="text/javascript" src="custom.js"></script>
 	<script type="text/javascript" src="slc_dotacao.js"></script>
 
+	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 	<style type="text/css">
@@ -127,18 +128,29 @@
 			<div class="panel-body">
 				<div class="form-group row">
 					<div class="col-md-12">
-						<br><input type="checkbox" id="Eventos" name="Eventos">
-						<label for="Eventos">Eventos Digitais</label>
-						<br><input type="checkbox" id="Projetos" name="Projetos">
-						<label for="Projetos">Projetos</label>
-						<br><input type="checkbox" id="CoffeeBreak" name="CoffeeBreak">
-						<label for="CoffeeBreak">Coffee Break</label>
-						<br><input type="checkbox" id="LandingPage" name="LandingPage">
-						<label for="LandingPage">Landing Page</label>
-						<br><input type="checkbox" id="LogoIdentidadeVisual" name="LogoIdentidadeVisual">
-						<label for="LogoIdentidadeVisual">Logo/Identidade Visual</label>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="Eventos" name="Eventos">
+							<label for="Eventos">Eventos Digitais</label>
+						</div>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="Projetos" name="Projetos">
+							<label for="Projetos">Projetos</label>
+						</div>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="Coffee" name="Coffee">
+							<label for="Coffee">Coffee Break</label>
+						</div>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="LandingPage" name="LandingPage">
+							<label for="LandingPage">Landing Page</label>
+						</div>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="Logo" name="Logo">
+							<label for="Logo">Logo/Identidade Visual</label>
+						</div>
 					</div>
 				</div>
+				
 
 				<div class="col-md-8">
 					<!-- Abas -->
@@ -152,7 +164,7 @@
 
 					<!-- Conteúdo das abas -->
 					<div class="tab-content">
-						<div class="tab-pane fade active in" id="eventos">
+						<div class="tab-pane fade" id="eventos">
 							<h3>Eventos Digitais</h3>
 							<div class="form-group row">
 								<div class="col-md-3">
@@ -419,17 +431,22 @@
 									</lord-icon>
 									Observação:
 								</h3>
-								<p class="card-text">Caso precise solicitar mais de um item, marque os itens desejados e preencha os campos de cada um.</p>
+								<p class="card-text">Caso precise solicitar mais de um item, marque os itens desejados e
+									preencha os campos de cada um.</p>
 								<ul>
 									<div id="ad">
 										<li><strong><u>Instruções:</u></strong></li>
 										<ol>
-											<li><strong>Landing Page - Deve enviar por email a apresentação do projeto ou material que deverá ser fonte principal de pesquisa para desdobrarmos o texto da LP].</strong>
+											<li><strong>Landing Page - Deve enviar por email a apresentação do projeto
+													ou material que deverá ser fonte principal de pesquisa para
+													desdobrarmos o texto da LP].</strong>
 											</li><br>
 
 
-											
-											<li><strong>Eventos Digitais - Defina a mensagem principal que será transmitida na campanha, destacando os benefícios e diferencias do evento. Faça isso no Campo de Mensagem-Chave.</strong></li><br>
+
+											<li><strong>Eventos Digitais - Defina a mensagem principal que será
+													transmitida na campanha, destacando os benefícios e diferencias do
+													evento. Faça isso no Campo de Mensagem-Chave.</strong></li><br>
 											<li><strong>Coloque adequadamente o aumento previsto em atendimento
 													e
 													público para os
@@ -448,7 +465,7 @@
 										</ol>
 									</div>
 								</ul>
-								
+
 							</div>
 						</div>
 					</div>

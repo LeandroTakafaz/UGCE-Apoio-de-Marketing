@@ -638,22 +638,9 @@ $(document).ready(function () {
     });
 });
 
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    var target = $(e.target).attr("href"); // Obtenha o ID do novo tab-pane ativo
-
-    $(target).each(function() {
-        if ($(this).hasClass('in active')) {
-            $(this).removeAttr('style'); // Remove o atributo 'style'
-        } else {
-            console.log("Te odeio Fluig");
-        }
-    });
-});
-
-
 
 $(document).ready(function() {
-    var checkboxes = ["Eventos", "Projetos", "CoffeeBreak", "LandingPage", "LogoIdentidadeVisual"];
+    var checkboxes = ["Eventos", "Projetos", "Coffee", "LandingPage", "Logo"];
     var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];
 
     checkboxes.forEach(function(checkboxId, index) {
@@ -669,3 +656,220 @@ $(document).ready(function() {
     });
     
 });
+
+$(document).ready(function() {
+    var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];
+
+    campos.forEach(function(campo) {
+        $('a[href="#' + campo + '"]').on('show.bs.tab', function() {
+            // Esconde os campos dos outros IDs
+            campos.forEach(function(outroCampo) {
+                if (outroCampo !== campo) {
+                    $('#' + outroCampo).hide();
+                }
+            });
+        }).on('hide.bs.tab', function() {
+            // Mostra os campos dos outros IDs
+            campos.forEach(function(outroCampo) {
+                if (outroCampo !== campo) {
+                    $('#' + outroCampo).show();
+                }
+            });
+        });
+    });
+});
+
+
+
+/* $(document).ready(function() {
+    var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];
+
+    campos.forEach(function(campo) {
+        $('a[href="#' + campo + '"]').parent().removeAttr('style'); // Remove o atributo style
+    });
+}); */
+
+
+
+
+/* function habilitar() {
+	var valor = document.getElementById("slc_NaturezaServico").value;
+	if (valor == "0") {
+		document.getElementById("AgendaServicos").style.display = "none";
+		//document.getElementById("NC").style.display = "none"
+		//document.getElementById("CPF").style.display = "none"
+	}
+	if (valor == "Consultoria") {
+		//document.getElementById("NC").style.display = "block"
+		//document.getElementById("CPF").style.display = "block"
+
+		document.getElementById("CustoTotalContracao").style.display = "block";
+		document.getElementById("AgendaServicos").style.display = "block";
+		document.getElementById("Instrutoriaa").style.display = "none";
+		document.getElementById("Consultoriaa").style.display = "block";
+		document.getElementById("tab_NaN").style.display = "none";
+
+		var ct = document.getElementById("txt_CustoTotal")
+		if (ct.onchange != null) {
+			document.getElementById("txt_CustoTotal").setAttribute("readonly", true);
+			//document.getElementById("txt_CustoTotal").onchange = null ;
+		}
+		document.getElementById("txt_CustoTotal").onchange = function () { formatarMoeda(this) };
+
+		//var Instrutoria = document.getElementById("Instrutoriaa");
+		//Instrutoria.attributes.removeNamedItem("class");
+		var Instrutoria = document.getElementById("Instrutoriaa");
+		var ativa = document.createAttribute("class");
+		ativa.value = "";
+		Instrutoria.attributes.setNamedItem(ativa);
+		var Instrutoria = document.getElementById("Instrutoria");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane"
+		Instrutoria.attributes.setNamedItem(ativa);
+		var NaN = document.getElementById("tab_NaN");
+		var ativa = document.createAttribute("class");
+		ativa.value = ""
+		NaN.attributes.setNamedItem(ativa);
+		var NaNN = document.getElementById("NaNN");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane"
+		NaNN.attributes.setNamedItem(ativa);
+
+		var Consultoria = document.getElementById("Consultoriaa");
+		var ativa = document.createAttribute("class");
+		ativa.value = "active"
+		Consultoria.attributes.setNamedItem(ativa);
+		var Consultoria = document.getElementById("Consultoria");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane active"
+		Consultoria.attributes.setNamedItem(ativa);
+	}
+	if (valor == "Instrutoria") {
+
+		//document.getElementById("NC").style.display = "none"
+		//document.getElementById("CPF").style.display = "none"
+
+		document.getElementById("CustoTotalContracao").style.display = "block";
+		document.getElementById("AgendaServicos").style.display = "block";
+		document.getElementById("Consultoriaa").style.display = "none";
+		document.getElementById("Instrutoriaa").style.display = "block";
+		document.getElementById("tab_NaN").style.display = "none";
+
+		var ct = document.getElementById("txt_CustoTotal")
+		if (ct.onchange != null) {
+			document.getElementById("txt_CustoTotal").setAttribute("readonly", true);
+			//document.getElementById("txt_CustoTotal").onchange = null ;
+		}
+		//var Consultoria = document.getElementById("Consultoriaa");
+		//Consultoria.attributes.removeNamedItem("class");
+		var Consultoria = document.getElementById("Consultoriaa");
+		var ativa = document.createAttribute("class");
+		ativa.value = ""
+		Consultoria.attributes.setNamedItem(ativa);
+		var Consultoria = document.getElementById("Consultoria");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane"
+		Consultoria.attributes.setNamedItem(ativa);
+		var NaN = document.getElementById("tab_NaN");
+		var ativa = document.createAttribute("class");
+		ativa.value = ""
+		NaN.attributes.setNamedItem(ativa);
+		var NaNN = document.getElementById("NaNN");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane"
+		NaNN.attributes.setNamedItem(ativa);
+
+		var Instrutoria = document.getElementById("Instrutoriaa");
+		var ativa = document.createAttribute("class");
+		ativa.value = "active"
+		Instrutoria.attributes.setNamedItem(ativa);
+		var Instrutoria = document.getElementById("Instrutoria");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane active"
+		Instrutoria.attributes.setNamedItem(ativa);
+	}
+	if (valor == "Negocio/Negocio") {
+
+		//document.getElementById("NC").style.display = "none"
+		//document.getElementById("CPF").style.display = "none"
+
+		document.getElementById("AgendaServicos").style.display = "block";
+		document.getElementById("Consultoriaa").style.display = "none";
+		document.getElementById("Instrutoriaa").style.display = "none";
+		document.getElementById("tab_NaN").style.display = "block";
+		document.getElementById("txt_CustoTotal").removeAttribute("readonly");
+		document.getElementById("txt_CustoTotal").onchange = function () { formatarMoeda(this) };
+
+		var Instrutoriaa = document.getElementById("Instrutoriaa");
+		var Consultoriaa = document.getElementById("Consultoriaa");
+		var Instrutoria = document.getElementById("Instrutoria");
+		var Consultoria = document.getElementById("Consultoria");
+
+		//Instrutoriaa.attributes.removeNamedItem("class");
+		var classAtual_C = document.createAttribute("class");
+		classAtual_C.value = ""
+		Consultoriaa.attributes.setNamedItem(classAtual_C);
+		var classAtual_I = document.createAttribute("class");
+		classAtual_I.value = ""
+		Instrutoriaa.attributes.setNamedItem(classAtual_I);
+		var classAtual_I = document.createAttribute("class");
+		classAtual_I.value = "tab-pane"
+		Instrutoria.attributes.setNamedItem(classAtual_I);
+		var classAtual_C = document.createAttribute("class");
+		classAtual_C.value = "tab-pane"
+		Consultoria.attributes.setNamedItem(classAtual_C);
+
+		var NaNN = document.getElementById("tab_NaN");
+		var ativa = document.createAttribute("class");
+		ativa.value = "active"
+		NaNN.attributes.setNamedItem(ativa);
+		var NaNN = document.getElementById("NaNN");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane active"
+		NaNN.attributes.setNamedItem(ativa);
+	}
+	if (valor == "Consultoria e Instrutoria") {
+
+		//document.getElementById("NC").style.display = "block"
+		//document.getElementById("CPF").style.display = "block"
+
+		document.getElementById("CustoTotalContracao").style.display = "block";
+		document.getElementById("AgendaServicos").style.display = "block";
+		document.getElementById("Consultoriaa").style.display = "block";
+		document.getElementById("Instrutoriaa").style.display = "block";
+		document.getElementById("tab_NaN").style.display = "none";
+		var ct = document.getElementById("txt_CustoTotal")
+		if (ct.onchange != null) {
+			document.getElementById("txt_CustoTotal").setAttribute("readonly", true);
+			//document.getElementById("txt_CustoTotal").onchange = null ;
+		}
+
+		//var Consultoria = document.getElementById("Consultoriaa");
+		//Consultoria.attributes.removeNamedItem("class");
+		var Consultoria = document.getElementById("Consultoriaa");
+		var ativa = document.createAttribute("class");
+		ativa.value = ""
+		Consultoria.attributes.setNamedItem(ativa);
+		var Consultoria = document.getElementById("Consultoria");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane"
+		Consultoria.attributes.setNamedItem(ativa);
+		var NaN = document.getElementById("tab_NaN");
+		var ativa = document.createAttribute("class");
+		ativa.value = ""
+		NaN.attributes.setNamedItem(ativa);
+		var NaNN = document.getElementById("NaNN");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane"
+		NaNN.attributes.setNamedItem(ativa);
+
+		var Instrutoria = document.getElementById("Instrutoriaa");
+		var ativa = document.createAttribute("class");
+		ativa.value = "active"
+		Instrutoria.attributes.setNamedItem(ativa);
+		var Instrutoria = document.getElementById("Instrutoria");
+		var ativa = document.createAttribute("class");
+		ativa.value = "tab-pane active"
+		Instrutoria.attributes.setNamedItem(ativa);
+	}
+} */
