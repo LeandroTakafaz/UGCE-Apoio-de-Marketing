@@ -657,7 +657,7 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
+/* $(document).ready(function() {
     var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];
 
     campos.forEach(function(campo) {
@@ -668,6 +668,7 @@ $(document).ready(function() {
                     $('#' + outroCampo).hide();
                 }
             });
+            
         }).on('hide.bs.tab', function() {
             // Mostra os campos dos outros IDs
             campos.forEach(function(outroCampo) {
@@ -677,7 +678,7 @@ $(document).ready(function() {
             });
         });
     });
-});
+}); */
 
 
 
