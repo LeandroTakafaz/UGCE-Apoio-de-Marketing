@@ -66,7 +66,7 @@
 
 		<div class="panel panel-info" id="SolicitacaoEvento">
 			<div class="panel-heading">
-				<h1><i class="flaticon flaticon-live-tv icon-thumbnail-xs"></i> Solicitação de Apoio da UMCE</h1>
+				<h1><i class="flaticon flaticon-live-tv icon-thumbnail-xs"></i> Solicitação de Apoio da UGCE</h1>
 			</div>
 		</div>
 		<div class="panel panel-info" id="DadoSolicitante">
@@ -120,12 +120,13 @@
 		<!-- Fim do Painel -->
 
 		<!-- Painel Dados da Solicitação -->
+
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<h3 class="panel-title"><i class="material-icons" style="font-size:32px">event</i> Dados da Solicitação
 				</h3>
 			</div>
-			<div class="panel-body">
+			<div class="panel-body col-md-8">
 				<div class="form-group row">
 					<div class="col-md-12">
 						<div class="checkbox-inline">
@@ -150,94 +151,108 @@
 						</div>
 					</div>
 				</div>
-				
 
-				<div class="col-md-8">
-					<!-- Abas -->
-					<ul class="nav nav-tabs" role="tablist" id="myTab">
-						<li><a href="#eventos" role="tab" data-toggle="tab">Eventos Digitais</a></li>
-						<li><a href="#projetos" role="tab" data-toggle="tab">Projetos</a></li>
-						<li><a href="#coffee" role="tab" data-toggle="tab">Coffee Break</a></li>
-						<li><a href="#landingPage" role="tab" data-toggle="tab">Landing Page</a></li>
-						<li><a href="#logo" role="tab" data-toggle="tab">Logo/Identidade Visual</a></li>
-					</ul>
+				<!-- Eventos Digitais -->
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
+									href="#Eventos">
+									<strong>Eventos Digitais</strong>
+								</a>
+							</h4>
+						</div>
+						<div id="eventos" class="panel-collapse collapse">
+							<div class="panel-body">
+								<div class="form-group row">
+									<div class="col-md-3">
+										<label for="nomeEvento">Nome do Evento:</label>
+										<input type="text" name="nomeEvento" id="nomeEvento" class="form-control">
+									</div>
+									<div class="col-md-3">
+										<label for="publicoEvento">Público-Alvo:</label>
+										<input type="text" name="publicoEvento" id="publicoEvento" class="form-control">
+									</div>
+									<div class="col-md-2">
+										<label for="CidUF">Cidade/Uf: <span class="Obrigatorio"></label>
+										<input type="text" name="CidUF" id="CidUF" class="form-control">
+									</div>
+									<div class="col-md-2">
+										<label for="dtEvtInicio">Data Inicio do Evento</label>
+										<input type="datetime-local" name="dtEvtInicio" id="dtEvtInicio"
+											class="form-control">
+									</div>
+									<div class="col-md-2">
+										<label for="dtEvtFinal">Data Final do Evento:</label>
+										<input type="datetime-local" name="dtEvtFinal" id="dtEvtFinal"
+											class="form-control">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-md-3">
+										<label for="LocalEvento">Local do Evento: </label>
+										<input type="text" name="LocalEvento" id="LocalEvento" class="form-control">
+									</div>
+									<div class="col-md-5">
+										<label for="linkEvento">Link da Inscrição: </label>
+										<input type="text" name="linkEvento" id="linkEvento" class="form-control">
+									</div>
+									<div class="col-md-2">
+										<label for="metaEvento">Meta de Inscrição: </label>
+										<input type="number" name="metaEvento" id="metaEvento" class="form-control">
+									</div>
+									<div class="col-md-2" id="responsavel">
+										<label for="respDemanda">Responsável: <span
+												class="Obrigatorio"><strong>*</strong></span></label>
+										<select name="cmb_Responsavel" id="cmb_Responsavel" dataset="colleague"
+											datasetkey="colleagueId" datasetvalue="colleagueName" class="form-control">
+										</select>
+									</div>
+								</div>
 
-					<!-- Conteúdo das abas -->
-					<div class="tab-content">
-						<div class="tab-pane fade" id="eventos">
-							<h3>Eventos Digitais</h3>
-							<div class="form-group row">
-								<div class="col-md-3">
-									<label for="nomeEvento">Nome do Evento:</label>
-									<input type="text" name="nomeEvento" id="nomeEvento" class="form-control">
+								<div class="form-group row">
+									<div class="col-md-3">
+										<label for="identidadeEvento">Estilo Visual Desejado: </label>
+										<input type="text" name="identidadeEvento" id="identidadeEvento"
+											class="form-control">
+									</div>
+									<div class="col-md-5">
+										<label for="mensagemEvento">Mensagem-Chave: </label>
+										<input type="text" name="mensagemEvento" id="mensagemEvento"
+											class="form-control">
+									</div>
+									<div class="col-md-4">
+										<label for="coresEvento">Cores Preferenciais: </label>
+										<input type="text" name="coresEvento" id="coresEvento" class="form-control">
+									</div>
 								</div>
-								<div class="col-md-3">
-									<label for="publicoEvento">Público-Alvo:</label>
-									<input type="text" name="publicoEvento" id="publicoEvento" class="form-control">
+								<div class="form-group row">
+									<div class="col-md-6">
+										<label for="progEvento">Programação/Palestrantes:</label>
+										<textarea rows="5" name="progEvento" id="progEvento"
+											class="form-control"></textarea>
+									</div>
+									<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+												name="portalEventos" id="portalEventos">
+											Conteúdo será postado no Portal SEBRAE</label></div>
 								</div>
-								<div class="col-md-2">
-									<label for="CidUF">Cidade/Uf: <span class="Obrigatorio"></label>
-									<input type="text" name="CidUF" id="CidUF" class="form-control">
-								</div>
-								<div class="col-md-2">
-									<label for="dtEvtInicio">Data Inicio do Evento</label>
-									<input type="datetime-local" name="dtEvtInicio" id="dtEvtInicio"
-										class="form-control">
-								</div>
-								<div class="col-md-2">
-									<label for="dtEvtFinal">Data Final do Evento:</label>
-									<input type="datetime-local" name="dtEvtFinal" id="dtEvtFinal" class="form-control">
-								</div>
-							</div>
-							<div class="form-group row">
-								<div class="col-md-3">
-									<label for="LocalEvento">Local do Evento: </label>
-									<input type="text" name="LocalEvento" id="LocalEvento" class="form-control">
-								</div>
-								<div class="col-md-5">
-									<label for="linkEvento">Link da Inscrição: </label>
-									<input type="text" name="linkEvento" id="linkEvento" class="form-control">
-								</div>
-								<div class="col-md-2">
-									<label for="metaEvento">Meta de Inscrição: </label>
-									<input type="number" name="metaEvento" id="metaEvento" class="form-control">
-								</div>
-								<div class="col-md-2" id="responsavel">
-									<label for="respDemanda">Responsável: <span
-											class="Obrigatorio"><strong>*</strong></span></label>
-									<input name="respDemanda" id="respDemanda" class="form-control"
-										onchange="matriculaResp()">
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<div class="col-md-3">
-									<label for="identidadeEvento">Estilo Visual Desejado: </label>
-									<input type="text" name="identidadeEvento" id="identidadeEvento"
-										class="form-control">
-								</div>
-								<div class="col-md-5">
-									<label for="mensagemEvento">Mensagem-Chave: </label>
-									<input type="text" name="mensagemEvento" id="mensagemEvento" class="form-control">
-								</div>
-								<div class="col-md-2">
-									<label for="coresEvento">Cores Preferenciais: </label>
-									<input type="text" name="coresEvento" id="coresEvento" class="form-control">
-								</div>
-							</div>
-							<div class="form-group row">
-								<div class="col-md-6">
-									<label for="progEvento">Programação/Palestrantes:</label>
-									<textarea rows="5" name="progEvento" id="progEvento"
-										class="form-control"></textarea>
-								</div>
-								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
-											name="Portal" id="Portal">
-										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
 						</div>
-						<div class="tab-pane fade" id="projetos">
-							<h3>Projetos</h3>
+					</div>
+				</div>
+
+				<!-- Inicio da Seção de Projetos -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Projetos">
+								<strong>Projetos</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="projetos" class="panel-collapse collapse">
+						<div class="panel-body">
 							<div class="form-group row">
 								<div class="col-md-3">
 									<label for="nomeProjeto">Nome do Projeto/Programa:</label>
@@ -249,12 +264,12 @@
 									<input type="text" name="objetivoCampanha" id="objetivoCampanha"
 										class="form-control">
 								</div>
-								<div class="col-md-3">
+								<div class="col-md-2">
 									<label for="dtProjInicio">Data Inicial do Projeto:</label>
 									<input type="datetime-local" name="dtProjInicio" id="dtProjInicio"
 										class="form-control">
 								</div>
-								<div class="col-md-3">
+								<div class="col-md-2">
 									<label for="dtProjFinal">Data Final do Projeto:</label>
 									<input type="datetime-local" name="dtProjFinal" id="dtProjFinal"
 										class="form-control">
@@ -284,7 +299,7 @@
 									<input type="text" name="identidadeProjeto" id="identidadeProjeto"
 										class="form-control">
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-4">
 									<label for="coresProjeto">Cores Preferenciais: </label>
 									<input type="text" name="coresProjeto" id="coresProjeto" class="form-control">
 								</div>
@@ -295,10 +310,26 @@
 									<textarea rows="5" name="descProjeto" id="descProjeto"
 										class="form-control"></textarea>
 								</div>
+								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+											name="portalProjeto" id="portalProjeto">
+										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
 						</div>
-						<div class="tab-pane fade" id="coffee">
-							<h3>Coffee Break</h3>
+					</div>
+				</div>
+				<!-- Fim da Seção de Projetos -->
+
+				<!-- Inicio da Seção Coffee Break -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Coffee">
+								<strong>Coffee Break</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="coffee" class="panel-collapse collapse">
+						<div class="panel-body">
 							<div class="form-group row">
 								<div class="col-md-3">
 									<label for="nomeBreak">Nome do Evento:</label>
@@ -326,10 +357,27 @@
 									<label for="horarioBreak">Horário do Coffee Break:</label>
 									<input type="time" name="horarioBreak" id="horarioBreak" class="form-control">
 								</div>
+								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+											name="portalCoffee" id="portalCoffee">
+										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
 						</div>
-						<div class="tab-pane fade" id="landingPage">
-							<h3>Landing Page</h3>
+					</div>
+				</div>
+				<!-- Fim da Seção Coffee Break -->
+
+				<!-- Inicio da Seção Landing Page -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
+								href="#LandingPage">
+								<strong>Landing Page</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="landingPage" class="panel-collapse collapse">
+						<div class="panel-body">
 							<div class="form-group row">
 								<div class="col-md-3">
 									<label for="nomeLanding">Nome do Projeto:</label>
@@ -358,121 +406,135 @@
 									<label for="actionLanding">Call-to-Action Principal: </label>
 									<input type="text" name="actionLanding" id="actionLanding" class="form-control">
 								</div>
-								<div class="col-md-2">
+								<div class="col-md-3">
 									<label for="coresLanding">Cores Preferenciais: </label>
 									<input type="text" name="coresLanding" id="coresLanding" class="form-control">
 								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="logo">
-							<div class="form-group row col-md-10">
-								<h3>Logo/Identidade Visual</h3>
-								<div class="form-group row">
-									<div class="col-md-4">
-										<label for="nomeLogo">Nome do Evento/Projeto:</label>
-										<input type="text" name="nomeLogo" id="nomeLogo" class="form-control">
-									</div>
-									<div class="col-md-4">
-										<label for="chaveLogo">Palavras-Chave para a Marca:</label>
-										<input type="text" name="chaveLogo" id="chaveLogo" class="form-control">
-									</div>
-									<div class="col-md-4">
-										<label for="mensagemLogo">Próposito da Marca:</label>
-										<input type="text" name="mensagemLogo" id="mensagemLogo" class="form-control">
-									</div>
-								</div>
-								<div class="form-group row">
-									<div class="col-md-4">
-										<label for="tipoServico">Tipo de Serviço Solicitado:</label>
-										<select name="tipoServico" id="tipoServico" class="form-control">
-											<option value="logo">Criação de Logo</option>
-											<option value="identidade">Identidade Visual Completa</option>
-										</select>
-									</div>
-									<div class="col-md-4">
-										<label for="designLogo">Estilo de Design Desejado:</label>
-										<input type="text" name="designLogo" id="designLogo" class="form-control">
-									</div>
-									<div class="col-md-4">
-										<label for="coresLogo">Cores Preferenciais:</label>
-										<input type="text" name="coresLogo" id="coresLogo" class="form-control">
-									</div>
-								</div>
-								<div class="form-group row">
-									<div class="col-md-3">
-										<label for="visualLogo">Elementos Visuais:</label>
-										<input type="text" name="visualLogo" id="visualLogo" class="form-control">
-									</div>
-									<div class="col-md-3">
-										<label for="tipografiaLogo">Tipografia Escolhida:</label>
-										<input type="text" name="tipografiaLogo" id="tipografiaLogo"
-											class="form-control">
-									</div>
-								</div>
-								<div class="form-group row">
-									<div class="col-md-6">
-										<label for="descLogo">Descrição do Evento/Projeto:</label>
-										<textarea rows="5" name="descLogo" id="descLogo"
-											class="form-control"></textarea>
-									</div>
-								</div>
+								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+											name="portalLanding" id="portalLanding">
+										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<div class="panel-body">
-						<div class="card" id="card_dimi">
-							<div class="card-body">
-								<h3 class="card-title">
-									<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-									<lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop"
-										colors="primary:#722F37" style="width: 25px;height:25px;padding-top: 4px;">
-									</lord-icon>
-									Observação:
-								</h3>
-								<p class="card-text">Caso precise solicitar mais de um item, marque os itens desejados e
-									preencha os campos de cada um.</p>
-								<ul>
-									<div id="ad">
-										<li><strong><u>Instruções:</u></strong></li>
-										<ol>
-											<li><strong>Landing Page - Deve enviar por email a apresentação do projeto
-													ou material que deverá ser fonte principal de pesquisa para
-													desdobrarmos o texto da LP].</strong>
-											</li><br>
+				<!-- Fim da Seção Landing Page -->
 
-
-
-											<li><strong>Eventos Digitais - Defina a mensagem principal que será
-													transmitida na campanha, destacando os benefícios e diferencias do
-													evento. Faça isso no Campo de Mensagem-Chave.</strong></li><br>
-											<li><strong>Coloque adequadamente o aumento previsto em atendimento
-													e
-													público para os
-													valores acréscentados.</strong></li><br>
-											<li><strong>Indique o Valor de Receita REB ou Convênio corretamente,
-													caso
-													seja utilizado
-													de
-													somente um deles preencha o outro com um número 0.</strong>
-											</li><br>
-											<li><strong>Caso a Dotação Orçamentária possua mais de 1, deve ser
-													sempre
-													preenchido o mesmo PROJETO e UNIDADE para eles,
-													podendo ser apenas trocado a AÇÃO entre os campos</strong>
-											</li>
-										</ol>
-									</div>
-								</ul>
-
+				<!-- Inicio da Seção Logo/Identidade Visual -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Logo">
+								<strong>Logo/Identidade Visual</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="logo" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-md-4">
+									<label for="nomeLogo">Nome do Evento/Projeto:</label>
+									<input type="text" name="nomeLogo" id="nomeLogo" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="chaveLogo">Palavras-Chave para a Marca:</label>
+									<input type="text" name="chaveLogo" id="chaveLogo" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="mensagemLogo">Próposito da Marca:</label>
+									<input type="text" name="mensagemLogo" id="mensagemLogo" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-4">
+									<label for="tipoServico">Tipo de Serviço Solicitado:</label>
+									<select name="tipoServico" id="tipoServico" class="form-control">
+										<option value="logo">Criação de Logo</option>
+										<option value="identidade">Identidade Visual Completa</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<label for="designLogo">Estilo de Design Desejado:</label>
+									<input type="text" name="designLogo" id="designLogo" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="coresLogo">Cores Preferenciais:</label>
+									<input type="text" name="coresLogo" id="coresLogo" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-4">
+									<label for="visualLogo">Elementos Visuais:</label>
+									<input type="text" name="visualLogo" id="visualLogo" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="tipografiaLogo">Tipografia Escolhida:</label>
+									<input type="text" name="tipografiaLogo" id="tipografiaLogo" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-6">
+									<label for="descLogo">Descrição do Evento/Projeto:</label>
+									<textarea rows="5" name="descLogo" id="descLogo" class="form-control"></textarea>
+								</div>
+								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+											name="portalLogo" id="portalLogo">
+										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
 						</div>
+					</div>
+				</div>
+				<!-- Fim da Seção Logo/Identidade Visual -->
+			</div>
+			<div class="panel-body">
+				<div class="card" id="card_dimi">
+					<div class="card-body">
+						<h3 class="card-title">
+							<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+							<lord-icon src="https://cdn.lordicon.com/wdqztrtx.json" trigger="loop"
+								colors="primary:#722F37" style="width: 25px;height:25px;padding-top: 4px;">
+							</lord-icon>
+							Observação:
+						</h3>
+						<p class="card-text">Caso precise solicitar mais de um item, marque os itens desejados e
+							preencha os campos de cada um. Cada instrução tem seu nome indicando para qual aba se
+							refere.</p>
+						<ul>
+							<div id="ad">
+								<li><strong><u>Instruções:</u></strong></li>
+								<ol>
+									<li><strong>Eventos Digitais - Defina a mensagem principal que será
+											transmitida na campanha, destacando os benefícios e diferencias do
+											evento. Faça isso no Campo de Mensagem-Chave.</strong></li><br>
+
+									<li><strong>Projetos - Canais de Atendimento devem conter os meios que serão
+											utilizados para contato, como por exemplo: Whatsapp: (92)
+											00000-0000</strong>
+									</li><br>
+
+									<li><strong>Landing Page - Deve enviar por email a apresentação do projeto
+											ou material que deverá ser fonte principal de pesquisa para
+											desdobrarmos o texto da LP.</strong>
+									</li><br>
+
+									<li><strong>Landing Page Call-to-Action - Especifique qual a ação principal que
+											os visitantes devem realizar na Landing Page, como preencher um
+											formulário,
+											fazer uma inscrição, agendar um atendimento, etc.</strong></li><br>
+
+									<li><strong>Logo/Identidade Visual - Estilo de Design Desejado, deve ser
+											descrito
+											o estilo de design que você imagina para o Logotipo/Identidade Visual,
+											como
+											minimalista, elegante, lúdico, etc.</strong>
+									</li>
+								</ol>
+							</div>
+						</ul>
+
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- Fim do Painel -->
 
 		<!-- Painel Detalhes da Demanda -->
