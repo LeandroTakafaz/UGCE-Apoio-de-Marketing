@@ -14,9 +14,14 @@ function enableFields(form){
 	}
     else if(Now_State == 5 ){
         disableAllFields(form)
-		fields = ['responsavel','respDemanda']
+		fields = ['responsavel','respDemanda', 'Eventos', 'Projetos','Coffee', 'LandingPage', 'Logo']
 		enableFieldsFromList(form,fields)
 	}   
+	else if(Now_State == 10 || Now_State == 78 || Now_State == 85 || Now_State == 89 || Now_State == 93){
+			disableAllFields(form)
+			fields = ['Eventos', 'Projetos','Coffee', 'LandingPage', 'Logo']
+			enableFieldsFromList(form, fields)
+		}
     else{
     	disableAllFields(form)
     }
