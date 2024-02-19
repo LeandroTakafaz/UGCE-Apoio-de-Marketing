@@ -640,8 +640,8 @@ $(document).ready(function () {
 
 
 $(document).ready(function() {
-    var checkboxes = ["Eventos", "Projetos", "Coffee", "LandingPage", "Logo"];
-    var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];
+    var checkboxes = ["Eventos", "EventosPresenciais", "Coffee", "LandingPage", "Logo"];
+    var campos = ["eventos", "eventosPresenciais", "coffee", "landingPage", "logo"];
 
     checkboxes.forEach(function(checkboxId, index) {
         $('#' + checkboxId).change(function() {

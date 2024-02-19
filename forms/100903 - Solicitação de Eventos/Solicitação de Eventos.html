@@ -66,9 +66,17 @@
 
 		<div class="panel panel-info" id="SolicitacaoEvento">
 			<div class="panel-heading">
-				<h1><i class="flaticon flaticon-live-tv icon-thumbnail-xs"></i> Solicitação de Apoio da UGCE</h1>
+				<div style="display: flex; justify-content: space-between; align-items: center;">
+					<h1 style="background-color:rgb(84, 164, 221); margin-right: auto;"> Solicitação de Apoio da UGCE</h1>
+					<div style="background-color:rgb(84, 164, 221); margin-left: auto;">
+						<img src="imagens/Logo Branca UGCE.png" title="Logo do SEBRAE" width="105" height="65">
+					</div>
+				</div>
 			</div>
 		</div>
+		
+		
+		
 		<div class="panel panel-info" id="DadoSolicitante">
 			<div class="panel-heading">
 				<h3 class="panel-title"><i class="flaticon flaticon-account-circle icon-lg"></i> Dados do Solicitante
@@ -134,8 +142,8 @@
 							<label for="Eventos">Eventos Digitais</label>
 						</div>
 						<div class="checkbox-inline">
-							<input type="checkbox" id="Projetos" name="Projetos">
-							<label for="Projetos">Projetos</label>
+							<input type="checkbox" id="EventosPresenciais" name="EventosPresenciais">
+							<label for="EventosPresenciais">Eventos Presenciais</label>
 						</div>
 						<div class="checkbox-inline">
 							<input type="checkbox" id="Coffee" name="Coffee">
@@ -152,125 +160,126 @@
 					</div>
 				</div>
 
-				<!-- Eventos Digitais -->
+				<!-- Inicio da Seção de Eventos Digitais -->
 				<div class="panel panel-default">
-						<div class="panel-heading" id="painelEventos">
-							<h4 class="panel-title">
-								<a class="collapse-icon collapsed" data-toggle="collapse" data-parent="#accordion"
-									href="#Eventos">
-									<strong>Eventos Digitais</strong>
-								</a>
-							</h4>
-						</div>
-						<div id="eventos" class="panel-collapse collapse">
-							<div class="panel-body">
-								<div class="form-group row">
-									<div class="col-md-3">
-										<label for="nomeEvento">Nome do Evento:</label>
-										<input type="text" name="nomeEvento" id="nomeEvento" class="form-control">
-									</div>
-									<div class="col-md-3">
-										<label for="publicoEvento">Público-Alvo:</label>
-										<input type="text" name="publicoEvento" id="publicoEvento" class="form-control">
-									</div>
-									<div class="col-md-2">
-										<label for="CidUF">Cidade/Uf: <span class="Obrigatorio"></label>
-										<input type="text" name="CidUF" id="CidUF" class="form-control">
-									</div>
-									<div class="col-md-2">
-										<label for="dtEvtInicio">Data Inicio do Evento</label>
-										<input type="datetime-local" name="dtEvtInicio" id="dtEvtInicio"
-											class="form-control">
-									</div>
-									<div class="col-md-2">
-										<label for="dtEvtFinal">Data Final do Evento:</label>
-										<input type="datetime-local" name="dtEvtFinal" id="dtEvtFinal"
-											class="form-control">
-									</div>
-								</div>
-								<div class="form-group row">
-									<div class="col-md-3">
-										<label for="LocalEvento">Local do Evento: </label>
-										<input type="text" name="LocalEvento" id="LocalEvento" class="form-control">
-									</div>
-									<div class="col-md-5">
-										<label for="linkEvento">Link da Inscrição: </label>
-										<input type="text" name="linkEvento" id="linkEvento" class="form-control">
-									</div>
-									<div class="col-md-2">
-										<label for="metaEvento">Meta de Inscrição: </label>
-										<input type="number" name="metaEvento" id="metaEvento" class="form-control">
-									</div>
-									<div class="col-md-2" id="responsavel">
-										<label for="respDemanda">Responsável: <span
-												class="Obrigatorio"><strong>*</strong></span></label>
-										<select name="cmb_Responsavel" id="cmb_Responsavel" dataset="colleague"
-											datasetkey="colleagueId" datasetvalue="colleagueName" class="form-control">
-										</select>
-									</div>
-								</div>
-
-								<div class="form-group row">
-									<div class="col-md-3">
-										<label for="identidadeEvento">Estilo Visual Desejado: </label>
-										<input type="text" name="identidadeEvento" id="identidadeEvento"
-											class="form-control">
-									</div>
-									<div class="col-md-5">
-										<label for="mensagemEvento">Mensagem-Chave: </label>
-										<input type="text" name="mensagemEvento" id="mensagemEvento"
-											class="form-control">
-									</div>
-									<div class="col-md-4">
-										<label for="coresEvento">Cores Preferenciais: </label>
-										<input type="text" name="coresEvento" id="coresEvento" class="form-control">
-									</div>
-								</div>
-								<div class="form-group row">
-									<div class="col-md-6">
-										<label for="progEvento">Programação/Palestrantes:</label>
-										<textarea rows="5" name="progEvento" id="progEvento"
-											class="form-control"></textarea>
-									</div>
-									<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
-												name="portalEventos" id="portalEventos">
-											Conteúdo será postado no Portal SEBRAE</label></div>
-								</div>
-							</div>
-						</div>
-				</div>
-
-				<!-- Inicio da Seção de Projetos -->
-				<div class="panel panel-default">
-					<div class="panel-heading" id="painelProjetos">
+					<div class="panel-heading" id="painelEventos">
 						<h4 class="panel-title">
-							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Projetos">
-								<strong>Projetos</strong>
+							<a class="collapse-icon collapsed" data-toggle="collapse" data-parent="#accordion"
+								href="#Eventos">
+								<strong>Eventos Digitais</strong>
 							</a>
 						</h4>
 					</div>
-					<div id="projetos" class="panel-collapse collapse">
+					<div id="eventos" class="panel-collapse collapse">
 						<div class="panel-body">
 							<div class="form-group row">
 								<div class="col-md-3">
-									<label for="nomeProjeto">Nome do Projeto/Programa:</label>
-									<input type="text" name="nomeProjeto" id="nomeProjeto" class="form-control">
+									<label for="nomeEvento">Nome do Evento:</label>
+									<input type="text" name="nomeEvento" id="nomeEvento" class="form-control">
 								</div>
 								<div class="col-md-3">
-									<label for="objetivoCampanha">Objetivo da Campanha: <span
-											class="Obrigatorio"></label>
-									<input type="text" name="objetivoCampanha" id="objetivoCampanha"
+									<label for="publicoEvento">Público-Alvo:</label>
+									<input type="text" name="publicoEvento" id="publicoEvento" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="CidUF">Cidade/Uf: <span class="Obrigatorio"></label>
+									<input type="text" name="CidUF" id="CidUF" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="dtEvtInicio">Data Inicio do Evento</label>
+									<input type="datetime-local" name="dtEvtInicio" id="dtEvtInicio"
 										class="form-control">
 								</div>
 								<div class="col-md-2">
-									<label for="dtProjInicio">Data Inicial do Projeto:</label>
-									<input type="datetime-local" name="dtProjInicio" id="dtProjInicio"
+									<label for="dtEvtFinal">Data Final do Evento:</label>
+									<input type="datetime-local" name="dtEvtFinal" id="dtEvtFinal" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="LocalEvento">Local do Evento: </label>
+									<input type="text" name="LocalEvento" id="LocalEvento" class="form-control">
+								</div>
+								<div class="col-md-5">
+									<label for="linkEvento">Link da Inscrição: </label>
+									<input type="text" name="linkEvento" id="linkEvento" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="metaEvento">Meta de Inscrição: </label>
+									<input type="number" name="metaEvento" id="metaEvento" class="form-control">
+								</div>
+								<div class="col-md-2" id="responsavel">
+									<label for="respDemanda">Responsável: <span
+											class="Obrigatorio"><strong>*</strong></span></label>
+									<select name="cmb_Responsavel" id="cmb_Responsavel" dataset="colleague"
+										datasetkey="colleagueId" datasetvalue="colleagueName" class="form-control">
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="identidadeEvento">Estilo Visual Desejado: </label>
+									<input type="text" name="identidadeEvento" id="identidadeEvento"
+										class="form-control">
+								</div>
+								<div class="col-md-5">
+									<label for="mensagemEvento">Mensagem-Chave: </label>
+									<input type="text" name="mensagemEvento" id="mensagemEvento" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="coresEvento">Cores Preferenciais: </label>
+									<input type="text" name="coresEvento" id="coresEvento" class="form-control">
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-6">
+									<label for="progEvento">Programação/Palestrantes:</label>
+									<textarea rows="5" name="progEvento" id="progEvento"
+										class="form-control"></textarea>
+								</div>
+								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+											name="portalEventos" id="portalEventos">
+										Conteúdo será postado no Portal SEBRAE</label></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim da Seção de Eventos Digitais -->
+
+				<!-- Inicio da Seção de Eventos Presenciais -->
+				<div class="panel panel-default">
+					<div class="panel-heading" id="painelProjetos">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
+								href="#EventosPresenciais">
+								<strong>Eventos Presenciais</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="eventosPresenciais" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="nomeEventoPresencial">Nome do Evento:</label>
+									<input type="text" name="nomeEventoPresencial" id="nomeEventoPresencial" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="publicoEventoPresencial">Público-Alvo:</label>
+									<input type="text" name="publicoEventoPresencial" id="publicoEventoPresencial" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="CidUFPresencial">Cidade/Uf: <span class="Obrigatorio"></label>
+									<input type="text" name="CidUFPresencial" id="CidUFPresencial" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<label for="dtEvtInicioPresencial">Data Inicio do Evento</label>
+									<input type="datetime-local" name="dtEvtInicioPresencial" id="dtEvtInicioPresencial"
 										class="form-control">
 								</div>
 								<div class="col-md-2">
-									<label for="dtProjFinal">Data Final do Projeto:</label>
-									<input type="datetime-local" name="dtProjFinal" id="dtProjFinal"
-										class="form-control">
+									<label for="dtEvtFinalPresencial">Data Final do Evento:</label>
+									<input type="datetime-local" name="dtEvtFinalPresencial" id="dtEvtFinalPresencial" class="form-control">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -315,7 +324,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- Fim da Seção de Projetos -->
+				<!-- Fim da Seção de Eventos Presenciais -->
 
 				<!-- Inicio da Seção Coffee Break -->
 				<div class="panel panel-default">
@@ -798,7 +807,7 @@
 
 		<div class="form-group">
 			<div class="col-md-10" style="text-align:left;background-color: rgb(84, 164, 221);">
-				<img src="atic-branco.png" title="Logo do ATIC REAL OFFICIAL" width="80" height="37">
+				<img src="imagens/Logo_NTIC.jpg" title="Logo do ATIC REAL OFFICIAL" width="80" height="37">
 			</div>
 			<div class="col-md-2" style="text-align:right;background-color:rgb(84, 164, 221)">
 				<img src="sebrae-branco.png" title="Logo do SEBRAE" width="80" height="37">
