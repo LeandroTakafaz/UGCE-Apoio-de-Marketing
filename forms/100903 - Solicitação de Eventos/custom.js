@@ -656,6 +656,16 @@ $(document).ready(function() {
     });
 });
 
+$(document).ready(function() {
+    $('#estiloDigital').change(function() {
+        if ($(this).val() == 'nao') {
+            $('#identidadeEvento').prop('disabled', false);
+        } else {
+            $('#identidadeEvento').prop('disabled', true);
+        }
+    });
+});
+
 
 /* $(document).ready(function() {
     var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];

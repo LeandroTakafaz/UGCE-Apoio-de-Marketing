@@ -79,7 +79,7 @@
 		
 		<div class="panel panel-info" id="DadoSolicitante">
 			<div class="panel-heading">
-				<h3 class="panel-title"><i class="flaticon flaticon-account-circle icon-lg"></i> Dados do Solicitante
+				<h3 class="panel-title"><i class="flaticon flaticon-account-circle icon-md"></i> Dados do Solicitante
 				</h3>
 			</div>
 
@@ -131,7 +131,8 @@
 
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title"><i class="material-icons" style="font-size:32px">event</i> Dados da Solicitação
+				<h3 class="panel-title"><i class="flaticon flaticon-form-list icon-md" aria-hidden="true"></i>
+					Dados da Solicitação
 				</h3>
 			</div>
 			<div class="panel-body col-md-8">
@@ -219,10 +220,14 @@
 
 							<div class="form-group row">
 								<div class="col-md-3">
-									<label for="identidadeEvento">Estilo Visual Desejado: </label>
-									<input type="text" name="identidadeEvento" id="identidadeEvento"
-										class="form-control">
+									<label for="estiloDigital">Possui um Estilo Visual? </label>
+									<select type="text" name="estiloDigital" id="estiloDigital" class="form-control">
+										<option value=""selected disabled>Selecione uma Opção</option>
+										<option value="sim">Sim</option>
+										<option value="nao">Não</option>
+									</select>
 								</div>
+								
 								<div class="col-md-5">
 									<label for="mensagemEvento">Mensagem-Chave: </label>
 									<input type="text" name="mensagemEvento" id="mensagemEvento" class="form-control">
@@ -237,6 +242,11 @@
 									<label for="progEvento">Programação/Palestrantes:</label>
 									<textarea rows="5" name="progEvento" id="progEvento"
 										class="form-control"></textarea>
+								</div>
+								<div class="col-md-3">
+									<label for="identidadeEvento">Estilo Visual Desejado: </label>
+									<input type="text" name="identidadeEvento" id="identidadeEvento"
+										class="form-control">
 								</div>
 								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
 											name="portalEventos" id="portalEventos">
@@ -548,7 +558,7 @@
 
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title"><i class="material-icons" style="font-size:32px">add_to_queue</i> Detalhes
+				<h3 class="panel-title"><i class="material-icons" style="font-size:24px">add_to_queue</i> Detalhes
 					da
 					Demanda</h3>
 			</div>
@@ -602,7 +612,7 @@
 															<label for="slc_FonteRecursos">Fonte de Recurso:</label>
 															<select class="form-control" name="slc_FonteRecursos"
 																id="slc_FonteRecursos">
-																<option value="0" selected disabled>Selecione
+																<option value="" selected disabled>Selecione
 																</option>
 																<option value="CSO">Contribuição Social Ordinária -
 																	CSO

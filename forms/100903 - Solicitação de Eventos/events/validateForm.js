@@ -1,5 +1,5 @@
 function validateForm(form){
-    var Now_State = parseInt(getValue("WKNumState"));
+    var Now = parseInt(getValue("WKNumState"));
 	var msg = '';
 
 	Date.prototype.addDays = function(days) {
@@ -22,10 +22,6 @@ function validateForm(form){
 	
 	if(form.getValue("codRecurso") == ''){
 		msg += "Error : Campo 'Unidade' não foi preenchido!\n";
-	}
-
-	if(form.getValue("slc_FonteRecursos") == '0'){
-		msg += "Error : Campo 'Fonte de Recurso' não foi Preenchido"
 	}
 
 	if(msg!=""){
@@ -90,4 +86,64 @@ function validateForm(form){
 		}
 	}
 
+}
+
+function validateboleto() {
+	var urlInd = "https://myweb.am.sebrae.com.br/portal/p/1/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID="
+	var urlSec = "&app_ecm_workflowview_taskUserId="
+	var x = 0
+	var arrayNumSol = []
+	var matricula = getValue("WKUser");
+	//errorMsg += matricula + endofline;
+	var c = DatasetFactory.createConstraint("cmb_NomeSolicita", matricula, matricula, ConstraintType.MUST);
+	var constraint = new Array(c);
+	var dataset = DatasetFactory.getDataset("FormuláriodeSolicitaçãodeevento747", null, constraint, null);
+	for (i = 0; i < dataset.rowsCount; i++) {
+		var Nsol = dataset.getValue(i, "txt_NumProcess");
+		//errorMsg += "*"+dataset.rowsCount + endofline;
+		if (Nsol != null || Nsol != "") {
+			var c3 = DatasetFactory.createConstraint("processInstanceId", Nsol, Nsol, ConstraintType.MUST);
+			var constraints = new Array(c3);
+			var ddataset = DatasetFactory.getDataset("processTask", null, constraints, null);
+			//errorMsg += "."+ddataset + endofline;
+			for (j = 0; j < ddataset.rowsCount; j++) {
+				//errorMsg += "."+x+matricula + endofline;
+				var status = ddataset.getValue(j, "status");
+				var colleague = ddataset.getValue(j, "processTaskPK.colleagueId");
+				if (status == 0 && colleague == matricula) {
+					arrayNumSol.push(ddataset.getValue(j, "processTaskPK.processInstanceId"))
+					//errorMsg += matricula+ '  '+a + endofline;
+					x++
+				}
+			}
+		}
+	}
+	if (x != 0) {
+		errorMsg = '';
+		errorMsg += "<h2 style=\"color:black\">Existe uma ou mais solicitações de boleto em sua responsabilidade que não estão finalizadas. As seguintes solicitações:</h2>" + endofline;
+		//errorMsg += "<h2 style=\"color:black\">As seguintes solicitações:</h2>" + endofline;
+		var arraySec = [1]
+		for (i = 0; i < arrayNumSol.length; i++) {
+			x = 0
+			for (j = 0; j < arraySec.length; j++) {
+				if (arrayNumSol[i] == arraySec[j]) {
+					x++
+					//arraySec.push(arrayNumSol[i])
+				}
+			}
+			if (x == 0) {
+				if (arraySec[0] == 1) {
+					arraySec[0] = arrayNumSol[i]
+				} else {
+					arraySec.push(arrayNumSol[i])
+				}
+			}
+		}
+		for (k = 0; k < arraySec.length; k++) {
+			//errorMsg += "<h2 style=\"color:black\">"+arrayNumSol[i]+"</h2>" + endofline;
+			errorMsg += "<h2>" + "<a href=\"" + urlInd + arraySec[k] + urlSec + matricula + "\"" + "class=\"cad-link\"" + "target=\"_blank\"" + "style=\"color:blue\">" + "<i class=\"flaticon flaticon-link icon-md\"></i>" +
+				arrayNumSol[k] + "</a>" + "</h2>" + endofline;
+		}
+		//<a href="LISTA DE INSCRITOS NA ETAPA DE PRÉ-SELEÇÃO - MESTRADO FGV.pdf" class="cad-link" target="_blank" style="color:blue"><i class="flaticon flaticon-link icon-sm"></i>Click aqui para baixar</a>
+	} //https://myweb.am.sebrae.com.br/portal/p/1/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID=24878&app_ecm_workflowview_taskUserId=00000514
 }
