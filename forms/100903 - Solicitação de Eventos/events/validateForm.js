@@ -95,7 +95,7 @@ function validateboleto() {
 	var arrayNumSol = []
 	var matricula = getValue("WKUser");
 	//errorMsg += matricula + endofline;
-	var c = DatasetFactory.createConstraint("cmb_NomeSolicita", matricula, matricula, ConstraintType.MUST);
+	var c = DatasetFactory.createConstraint("cmb_NomeSolicitante", matricula, matricula, ConstraintType.MUST);
 	var constraint = new Array(c);
 	var dataset = DatasetFactory.getDataset("FormuláriodeSolicitaçãodeevento747", null, constraint, null);
 	for (i = 0; i < dataset.rowsCount; i++) {

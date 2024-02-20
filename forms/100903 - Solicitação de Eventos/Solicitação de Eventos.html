@@ -67,16 +67,17 @@
 		<div class="panel panel-info" id="SolicitacaoEvento">
 			<div class="panel-heading">
 				<div style="display: flex; justify-content: space-between; align-items: center;">
-					<h1 style="background-color:rgb(84, 164, 221); margin-right: auto;"> Solicitação de Apoio da UGCE</h1>
+					<h1 style="background-color:rgb(84, 164, 221); margin-right: auto;"> Solicitação de Apoio da UGCE
+					</h1>
 					<div style="background-color:rgb(84, 164, 221); margin-left: auto;">
 						<img src="imagens/Logo Branca UGCE.png" title="Logo do SEBRAE" width="105" height="65">
 					</div>
 				</div>
 			</div>
 		</div>
-		
-		
-		
+
+
+
 		<div class="panel panel-info" id="DadoSolicitante">
 			<div class="panel-heading">
 				<h3 class="panel-title"><i class="flaticon flaticon-account-circle icon-md"></i> Dados do Solicitante
@@ -151,8 +152,8 @@
 							<label for="Coffee">Coffee Break</label>
 						</div>
 						<div class="checkbox-inline">
-							<input type="checkbox" id="LandingPage" name="LandingPage">
-							<label for="LandingPage">Landing Page</label>
+							<input type="checkbox" id="MarketingCloud" name="MarketingCloud">
+							<label for="MarketingCloud">Marketing Cloud</label>
 						</div>
 						<div class="checkbox-inline">
 							<input type="checkbox" id="Logo" name="Logo">
@@ -222,12 +223,12 @@
 								<div class="col-md-3">
 									<label for="estiloDigital">Possui um Estilo Visual? </label>
 									<select type="text" name="estiloDigital" id="estiloDigital" class="form-control">
-										<option value=""selected disabled>Selecione uma Opção</option>
+										<option value="" selected disabled>Selecione uma Opção</option>
 										<option value="sim">Sim</option>
 										<option value="nao">Não</option>
 									</select>
 								</div>
-								
+
 								<div class="col-md-5">
 									<label for="mensagemEvento">Mensagem-Chave: </label>
 									<input type="text" name="mensagemEvento" id="mensagemEvento" class="form-control">
@@ -272,24 +273,27 @@
 							<div class="form-group row">
 								<div class="col-md-3">
 									<label for="nomeEventoPresencial">Nome do Evento:</label>
-									<input type="text" name="nomeEventoPresencial" id="nomeEventoPresencial" class="form-control">
+									<input type="text" name="nomeEventoPresencial" id="nomeEventoPresencial"
+										class="form-control">
 								</div>
 								<div class="col-md-3">
 									<label for="publicoEventoPresencial">Público-Alvo:</label>
-									<input type="text" name="publicoEventoPresencial" id="publicoEventoPresencial" class="form-control">
+									<input type="text" name="publicoEventoPresencial" id="publicoEventoPresencial"
+										class="form-control">
 								</div>
 								<div class="col-md-2">
 									<label for="CidUFPresencial">Cidade/Uf: <span class="Obrigatorio"></label>
 									<input type="text" name="CidUFPresencial" id="CidUFPresencial" class="form-control">
 								</div>
 								<div class="col-md-2">
-									<label for="dtEvtInicioPresencial">Data Inicio do Evento</label>
+									<label for="dtEvtInicioPresencial">Data Inicial</label>
 									<input type="datetime-local" name="dtEvtInicioPresencial" id="dtEvtInicioPresencial"
 										class="form-control">
 								</div>
 								<div class="col-md-2">
-									<label for="dtEvtFinalPresencial">Data Final do Evento:</label>
-									<input type="datetime-local" name="dtEvtFinalPresencial" id="dtEvtFinalPresencial" class="form-control">
+									<label for="dtEvtFinalPresencial">Data Final:</label>
+									<input type="datetime-local" name="dtEvtFinalPresencial" id="dtEvtFinalPresencial"
+										class="form-control">
 								</div>
 							</div>
 							<div class="form-group row">
@@ -322,9 +326,19 @@
 								</div>
 							</div>
 							<div class="form-group row">
-								<div class="col-md-6">
-									<label for="descProjeto">Descrição do Projeto/Programa:</label>
-									<textarea rows="5" name="descProjeto" id="descProjeto"
+								<div class="col-md-4">
+									<label for="descPresencial">Descrição do Projeto/Programa:</label>
+									<textarea rows="5" name="descPresencial" id="descPresencial"
+										class="form-control"></textarea>
+								</div>
+								<div class="col-md-4">
+									<label for="estruturaPresencial">Estrutura Física e Sonorização:</label>
+									<textarea rows="5" name="estruturaPresencial" id="estruturaPresencial"
+										class="form-control"></textarea>
+								</div>
+								<div class="col-md-4">
+									<label for="pessoalPresencial">Pessoal Necessário:</label>
+									<textarea rows="5" name="pessoalPresencial" id="pessoalPresencial"
 										class="form-control"></textarea>
 								</div>
 								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
@@ -382,59 +396,6 @@
 					</div>
 				</div>
 				<!-- Fim da Seção Coffee Break -->
-
-				<!-- Inicio da Seção Landing Page -->
-				<div class="panel panel-default">
-					<div class="panel-heading" id="painelLanding">
-						<h4 class="panel-title">
-							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
-								href="#LandingPage">
-								<strong>Landing Page</strong>
-							</a>
-						</h4>
-					</div>
-					<div id="landingPage" class="panel-collapse collapse">
-						<div class="panel-body">
-							<div class="form-group row">
-								<div class="col-md-3">
-									<label for="nomeLanding">Nome do Projeto:</label>
-									<input type="text" name="nomeLanding" id="nomeLanding" class="form-control">
-								</div>
-								<div class="col-md-3">
-									<label for="objetivoLanding">Objetivo da Landing Page: <span
-											class="Obrigatorio"></label>
-									<input type="text" name="objetivoLanding" id="objetivoLanding" class="form-control">
-								</div>
-								<div class="col-md-3">
-									<label for="metasLanding">Metas de Conversão: </label>
-									<input type="text" name="metasLanding" id="metasLanding" class="form-control">
-								</div>
-								<div class="col-md-3">
-									<label for="publicoLanding">Público-Alvo:</label>
-									<input type="text" name="publicoLanding" id="publicoLanding" class="form-control">
-								</div>
-							</div>
-							<div class="form-group row">
-								<div class="col-md-3">
-									<label for="tituloLanding">Título da Landing Page: </label>
-									<input type="text" name="tituloLanding" id="tituloLanding" class="form-control">
-								</div>
-								<div class="col-md-3">
-									<label for="actionLanding">Call-to-Action Principal: </label>
-									<input type="text" name="actionLanding" id="actionLanding" class="form-control">
-								</div>
-								<div class="col-md-3">
-									<label for="coresLanding">Cores Preferenciais: </label>
-									<input type="text" name="coresLanding" id="coresLanding" class="form-control">
-								</div>
-								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
-											name="portalLanding" id="portalLanding">
-										Conteúdo será postado no Portal SEBRAE</label></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Fim da Seção Landing Page -->
 
 				<!-- Inicio da Seção Logo/Identidade Visual -->
 				<div class="panel panel-default">
@@ -501,7 +462,76 @@
 					</div>
 				</div>
 				<!-- Fim da Seção Logo/Identidade Visual -->
+
+				<!-- Inicio da Seção Marketing Cloud -->
+				<div class="panel panel-default">
+					<div class="panel-heading" id="painelLanding">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
+								href="#MarketingCloud">
+								<strong>Marketing Cloud</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="marketingCloud" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="form-group row">
+
+								<div class="col-md-3">
+									<label for="trilhaMarketing">Qual trilha deseja seguir?</label>
+									<select type="text" name="trilhaMarketing" id="trilhaMarketing" class="form-control">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="cloud">Cloud Pages</option>
+										<option value="disp">Disparo de SMS</option>
+										<option value="email">Email Marketing</option>
+										<option value="jornadas">Jornadas</option>
+									</select>
+								</div>
+								<!-- <div class="col-md-3">
+									<label for="nomeMarketing">Nome do Projeto:</label>
+									<input type="text" name="nomeMarketing" id="nomeMarketing" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="objetivoMarketing">Objetivo da Landing Page: <span
+											class="Obrigatorio"></label>
+									<input type="text" name="objetivoMarketing" id="objetivoMarketing" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="metasLanding">Metas de Conversão: </label>
+									<input type="text" name="metasLanding" id="metasLanding" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="publicoLanding">Público-Alvo:</label>
+									<input type="text" name="publicoLanding" id="publicoLanding" class="form-control">
+								</div> -->
+							</div>
+							<div class="form-group row">
+
+
+								<!-- <div class="col-md-3">
+									<label for="tituloLanding">Título da Landing Page: </label>
+									<input type="text" name="tituloLanding" id="tituloLanding" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="actionLanding">Call-to-Action Principal: </label>
+									<input type="text" name="actionLanding" id="actionLanding" class="form-control">
+								</div>
+								<div class="col-md-3">
+									<label for="coresLanding">Cores Preferenciais: </label>
+									<input type="text" name="coresLanding" id="coresLanding" class="form-control">
+								</div>
+								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+											name="portalLanding" id="portalLanding">
+										Conteúdo será postado no Portal SEBRAE</label></div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim da Seção Landing Page -->
+
 			</div>
+
+			<!-- Inicio da Seção do Card de Informações -->
 			<div class="panel-body">
 				<div class="card" id="card_dimi">
 					<div class="card-body">
@@ -519,13 +549,15 @@
 							<div id="ad">
 								<li><strong><u>Instruções:</u></strong></li>
 								<ol>
+									<li><strong>Caso possua um Estilo Visual já desenvolvido não marque e preencha o
+											campo de Logo/Identidade Visual</strong></li><br>
+
 									<li><strong>Eventos Digitais - Defina a mensagem principal que será
 											transmitida na campanha, destacando os benefícios e diferencias do
 											evento. Faça isso no Campo de Mensagem-Chave.</strong></li><br>
 
-									<li><strong>Projetos - Canais de Atendimento devem conter os meios que serão
-											utilizados para contato, como por exemplo: Whatsapp: (92)
-											00000-0000</strong>
+									<li><strong>O Campo de Pessoal Necessário deve ser preenchido com o número de de
+											garçons, recepcionistas e etc...</strong>
 									</li><br>
 
 									<li><strong>Landing Page - Deve enviar por email a apresentação do projeto
@@ -551,6 +583,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Fim da Seção do Card de Informações -->
 		</div>
 		<!-- Fim do Painel -->
 
