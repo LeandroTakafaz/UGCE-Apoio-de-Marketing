@@ -33,7 +33,6 @@
 
 	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
 	<script type="text/javascript" src="painel.js"></script>
-	<script type="text/javascript" src="custom.js"></script>
 	<script type="text/javascript" src="slc_dotacao.js"></script>
 
 	<link rel="stylesheet" href="index.css">
@@ -152,12 +151,12 @@
 							<label for="Coffee">Coffee Break</label>
 						</div>
 						<div class="checkbox-inline">
-							<input type="checkbox" id="MarketingCloud" name="MarketingCloud">
-							<label for="MarketingCloud">Marketing Cloud</label>
-						</div>
-						<div class="checkbox-inline">
 							<input type="checkbox" id="Logo" name="Logo">
 							<label for="Logo">Logo/Identidade Visual</label>
+						</div>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="MarketingCloud" name="MarketingCloud">
+							<label for="MarketingCloud">Marketing Cloud</label>
 						</div>
 					</div>
 				</div>
@@ -249,7 +248,7 @@
 									<input type="text" name="identidadeEvento" id="identidadeEvento"
 										class="form-control">
 								</div>
-								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+								<div class="col-md-2"><label style="text-align: center;"> <br> <input type="checkbox"
 											name="portalEventos" id="portalEventos">
 										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
@@ -341,7 +340,7 @@
 									<textarea rows="5" name="pessoalPresencial" id="pessoalPresencial"
 										class="form-control"></textarea>
 								</div>
-								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+								<div class="col-md-2"><label style="text-align: center;"> <br> <input type="checkbox"
 											name="portalProjeto" id="portalProjeto">
 										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
@@ -377,20 +376,18 @@
 							</div>
 							<div class="form-group row">
 								<div class="col-md-2">
-									<label for="horaInicioBreak">Hora Inicial do Evento:</label>
+									<label for="horaInicioBreak">Horário
+										 Inicial do Evento:</label>
 									<input type="time" name="horaInicioBreak" id="horaInicioBreak" class="form-control">
 								</div>
 								<div class="col-md-2">
-									<label for="horaFinalBreak">Hora Final do Evento:</label>
+									<label for="horaFinalBreak">Horário Final do Evento:</label>
 									<input type="time" name="horaFinalBreak" id="horaFinalBreak" class="form-control">
 								</div>
 								<div class="col-md-2">
 									<label for="horarioBreak">Horário do Coffee Break:</label>
 									<input type="time" name="horarioBreak" id="horarioBreak" class="form-control">
 								</div>
-								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
-											name="portalCoffee" id="portalCoffee">
-										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
 						</div>
 					</div>
@@ -454,7 +451,7 @@
 									<label for="descLogo">Descrição do Evento/Projeto:</label>
 									<textarea rows="5" name="descLogo" id="descLogo" class="form-control"></textarea>
 								</div>
-								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
+								<div class="col-md-2"><label style="text-align: center;"> <br> <input type="checkbox"
 											name="portalLogo" id="portalLogo">
 										Conteúdo será postado no Portal SEBRAE</label></div>
 							</div>
@@ -482,53 +479,108 @@
 									<select type="text" name="trilhaMarketing" id="trilhaMarketing" class="form-control">
 										<option value="" selected disabled>Selecione uma Opção</option>
 										<option value="cloud">Cloud Pages</option>
+										<option value="landing">Landing Page</option>
 										<option value="disp">Disparo de SMS</option>
 										<option value="email">Email Marketing</option>
-										<option value="jornadas">Jornadas</option>
+										<option value="jornadas">Jornada Completa/option>
 									</select>
 								</div>
-								<!-- <div class="col-md-3">
-									<label for="nomeMarketing">Nome do Projeto:</label>
+								 <div class="col-md-3">
+									<label for="nomeMarketing">Nome do Evento/Ação:</label>
 									<input type="text" name="nomeMarketing" id="nomeMarketing" class="form-control">
 								</div>
 								<div class="col-md-3">
-									<label for="objetivoMarketing">Objetivo da Landing Page: <span
-											class="Obrigatorio"></label>
-									<input type="text" name="objetivoMarketing" id="objetivoMarketing" class="form-control">
+									<label for="dtMarketing">Data e Hora do Evento</label>
+									<input type="datetime-local" name="dtMarketing" id="dtMarketing"
+										class="form-control">
 								</div>
 								<div class="col-md-3">
-									<label for="metasLanding">Metas de Conversão: </label>
-									<input type="text" name="metasLanding" id="metasLanding" class="form-control">
+									<label for="LocalMarketing">Local do Evento:</label>
+									<input type="text" name="LocalMarketing" id="LocalMarketing" class="form-control">
 								</div>
-								<div class="col-md-3">
-									<label for="publicoLanding">Público-Alvo:</label>
-									<input type="text" name="publicoLanding" id="publicoLanding" class="form-control">
-								</div> -->
 							</div>
 							<div class="form-group row">
-
-
-								<!-- <div class="col-md-3">
-									<label for="tituloLanding">Título da Landing Page: </label>
-									<input type="text" name="tituloLanding" id="tituloLanding" class="form-control">
+								<div class="col-md-3">
+									<label for="tipoMarketing">Será Presencial ou Digital?</label>
+									<select type="text" name="tipoMarketing" id="tipoMarketing" class="form-control">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="presencial">Presencial</option>
+										<option value="digital">Digital</option>
+									</select>
 								</div>
 								<div class="col-md-3">
-									<label for="actionLanding">Call-to-Action Principal: </label>
-									<input type="text" name="actionLanding" id="actionLanding" class="form-control">
+									<label for="publicoMarketing">Público-Alvo:</label>
+									<input type="text" name="publicoMarketing" id="publicoMarketing" class="form-control">
 								</div>
 								<div class="col-md-3">
-									<label for="coresLanding">Cores Preferenciais: </label>
-									<input type="text" name="coresLanding" id="coresLanding" class="form-control">
+									<label for="metaMarketing">Meta de Atendimento: </label>
+									<input type="number" name="metaMarketing" id="metaMarketing" class="form-control">
 								</div>
-								<div class="col-md-2"><label style="text-align: center;"><input type="checkbox"
-											name="portalLanding" id="portalLanding">
-										Conteúdo será postado no Portal SEBRAE</label></div> -->
+								<div class="col-md-3">
+									<label for="baseMarketing">Possui Dados dara Divulgação?</label>
+									<select type="text" name="baseMarketing" id="baseMarketing" class="form-control">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="Sim">Sim</option>
+										<option value="Não">Não</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-3">
+									<br>
+									<label for="decisaoConsultoria">Deseja Suporte de Consultor?</label>
+									<select type="text" class="form-control" name="decisaoConsultoria" id="decisaoConsultoria">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="1">Sim, Desejo</option>
+										<option value="2">Não é necessário</option>
+									</select>
+								</div>
+								<div class="col-md-3" id="nomeEventoConsultoria">
+									<br>
+									<label for="nomeConsultoria">Nome do Evento ou Ação:</label>
+									<input type="text" name="nomeConsultoria" id="nomeConsultoria" class="form-control">
+								</div>
+								<div class="col-md-3" id="dtEventoConsultoria">
+									<br>
+									<label for="dtConsultoria">Data e Hora do Evento</label>
+									<input type="datetime-local" name="dtConsultoria" id="dtConsultoria"
+										class="form-control">
+								</div>
+							</div>
+							<div class="form-group row" id="camposConsultoria">
+								<div class="col-md-3" id="campoConsultoria">
+									<label for="tipoConsultoria">Será Presencial ou Digital?</label>
+									<select type="text" name="tipoConsultoria" id="tipoConsultoria" class="form-control">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="presencial">Presencial</option>
+										<option value="digital">Digital</option>
+									</select>
+								</div>
+								<div class="col-md-3 metaAtendConsultoria">
+									<label for="metaConsultoria">Possui Meta de Atendimento?</label>
+									<select type="text" name="metaConsultoria" id="metaConsultoria" class="form-control">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="Sim">Sim</option>
+										<option value="Não">Não</option>
+									</select>
+								</div>
+								<div class="col-md-3" id="valoresConsultoria">
+									<label for="valorConsultoria">Evento gratuito ou pago?</label>
+									<select type="text" name="valorConsultoria" id="valorConsultoria" class="form-control">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="gratuito">Gratuito</option>
+										<option value="pago">Pago</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- Fim da Seção Landing Page -->
+				<!-- Fim da Seção Marketing Cloud -->
+					
 
+
+				<!-- Fim da Seção Consultoria Comercial -->
 			</div>
 
 			<!-- Inicio da Seção do Card de Informações -->
@@ -556,25 +608,28 @@
 											transmitida na campanha, destacando os benefícios e diferencias do
 											evento. Faça isso no Campo de Mensagem-Chave.</strong></li><br>
 
-									<li><strong>O Campo de Pessoal Necessário deve ser preenchido com o número de de
-											garçons, recepcionistas e etc...</strong>
+									<li><strong>Eventos Presenciais - O Campo de Pessoal Necessário deve ser preenchido
+										 com o número de garçons, recepcionistas e etc...</strong>
 									</li><br>
-
-									<li><strong>Landing Page - Deve enviar por email a apresentação do projeto
-											ou material que deverá ser fonte principal de pesquisa para
-											desdobrarmos o texto da LP.</strong>
-									</li><br>
-
-									<li><strong>Landing Page Call-to-Action - Especifique qual a ação principal que
-											os visitantes devem realizar na Landing Page, como preencher um
-											formulário,
-											fazer uma inscrição, agendar um atendimento, etc.</strong></li><br>
 
 									<li><strong>Logo/Identidade Visual - Estilo de Design Desejado, deve ser
 											descrito
 											o estilo de design que você imagina para o Logotipo/Identidade Visual,
 											como
 											minimalista, elegante, lúdico, etc.</strong>
+									</li><br>
+
+									<li><strong>Marketing Cloud - Escolha uma opção de trilha baseado no que deseja,
+										 caso precise de todos os citados escolha a opção de Jornada Completa. 
+										 Assim terá todas as opções definidas.</strong>
+									</li><br>
+
+									<li><strong>Marketing Cloud - Outras Informações necessárias à campanha serão
+										 solicitadas via e-mail pelo devido responsável pela tarefa na UGCE</strong>
+									</li><br>
+
+									<li><strong>Caso deseje receber de Suporte de um consultor especializado em estratégia
+										 comercial, selecione a opção e preencha os campos que aparecerão para prosseguir com a consultoria.</strong>
 									</li>
 								</ol>
 							</div>
@@ -588,7 +643,6 @@
 		<!-- Fim do Painel -->
 
 		<!-- Painel Detalhes da Demanda -->
-
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<h3 class="panel-title"><i class="material-icons" style="font-size:24px">add_to_queue</i> Detalhes
@@ -773,7 +827,6 @@
 				<hr>
 			</div>
 		</div>
-
 		<!-- Fim do Painel -->
 
 		<script>
@@ -850,7 +903,7 @@
 
 		<div class="form-group">
 			<div class="col-md-10" style="text-align:left;background-color: rgb(84, 164, 221);">
-				<img src="imagens/Logo_NTIC.jpg" title="Logo do ATIC REAL OFFICIAL" width="80" height="37">
+				<img src="imagens/Logo_NTIC_Branca.png" title="Logo do ATIC REAL OFFICIAL" width="80" height="37">
 			</div>
 			<div class="col-md-2" style="text-align:right;background-color:rgb(84, 164, 221)">
 				<img src="sebrae-branco.png" title="Logo do SEBRAE" width="80" height="37">
@@ -932,5 +985,5 @@
 	}
 
 </script>
-
+<script type="text/javascript" src="custom.js"></script>
 </html>

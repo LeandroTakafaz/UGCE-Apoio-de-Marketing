@@ -627,6 +627,7 @@ function addRateioz() {
     //insertINPun()
 }
 
+
 function fnCustomDelete(elem) {
     fnWdkRemoveChild(elem);
 }
@@ -665,6 +666,38 @@ $(document).ready(function() {
         }
     });
 });
+
+
+function BloquearCampos() {
+
+    var decisaoSelect = document.getElementById("decisaoConsultoria");
+    var nomeSelect = document.getElementById("nomeEventoConsultoria");
+    var dtSelect = document.getElementById("dtEventoConsultoria");
+    var campoSelect = document.getElementById("camposConsultoria");
+
+
+    
+    if (decisaoSelect.value === ""){
+        nomeSelect.style.display = "none";
+        dtSelect.style.display = "none";
+        campoSelect.style.display = "none";
+        
+    } else if (decisaoSelect.value === "1") {
+        nomeSelect.style.display = "block";
+        dtSelect.style.display = "block";
+        campoSelect.style.display = "block";
+
+    } else if (decisaoSelect.value === "2") {
+        nomeSelect.style.display = "none";
+        dtSelect.style.display = "none";
+        campoSelect.style.display = "none";
+        
+    }
+}
+
+var decisaoSelect = document.getElementById("decisaoConsultoria");
+decisaoSelect.addEventListener("change", BloquearCampos);
+BloquearCampos();
 
 
 /* $(document).ready(function() {
