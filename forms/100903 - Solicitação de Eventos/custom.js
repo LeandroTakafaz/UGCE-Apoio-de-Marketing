@@ -681,7 +681,7 @@ function BloquearCampos() {
         nomeSelect.style.display = "none";
         dtSelect.style.display = "none";
         campoSelect.style.display = "none";
-        
+
     } else if (decisaoSelect.value === "1") {
         nomeSelect.style.display = "block";
         dtSelect.style.display = "block";
