@@ -158,6 +158,10 @@
 							<input type="checkbox" id="MarketingCloud" name="MarketingCloud">
 							<label for="MarketingCloud">Marketing Cloud</label>
 						</div>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="Consultoria" name="Consultoria">
+							<label for="Consultoria">Consultoria Especializada</label>
+						</div>
 					</div>
 				</div>
 
@@ -451,9 +455,7 @@
 									<label for="descLogo">Descrição do Evento/Projeto:</label>
 									<textarea rows="5" name="descLogo" id="descLogo" class="form-control"></textarea>
 								</div>
-								<div class="col-md-2"><label style="text-align: center;"> <br> <input type="checkbox"
-											name="portalLogo" id="portalLogo">
-										Conteúdo será postado no Portal SEBRAE</label></div>
+							
 							</div>
 						</div>
 					</div>
@@ -478,7 +480,6 @@
 									<label for="trilhaMarketing">Qual trilha deseja seguir?</label>
 									<select type="text" name="trilhaMarketing" id="trilhaMarketing" class="form-control">
 										<option value="" selected disabled>Selecione uma Opção</option>
-										<option value="cloud">Cloud Pages</option>
 										<option value="landing">Landing Page</option>
 										<option value="disp">Disparo de SMS</option>
 										<option value="email">Email Marketing</option>
@@ -517,7 +518,7 @@
 									<input type="number" name="metaMarketing" id="metaMarketing" class="form-control">
 								</div>
 								<div class="col-md-3">
-									<label for="baseMarketing">Possui Dados dara Divulgação?</label>
+									<label for="baseMarketing">Possui Dados para Divulgação?</label>
 									<select type="text" name="baseMarketing" id="baseMarketing" class="form-control">
 										<option value="" selected disabled>Selecione uma Opção</option>
 										<option value="Sim">Sim</option>
@@ -525,16 +526,24 @@
 									</select>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim da Seção Marketing Cloud -->
+				
+				<!-- Inicio da Seção Consultoria Especializada -->
+				<div class="panel panel-default">
+					<div class="panel-heading" id="painelConsultoria">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
+								href="#Consultoria">
+								<strong>Consultoria Especializada</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="consultoria" class="panel-collapse collapse">
+						<div class="panel-body">
 							<div class="form-group row">
-								<div class="col-md-3">
-									<br>
-									<label for="decisaoConsultoria">Deseja Suporte de Consultor?</label>
-									<select type="text" class="form-control" name="decisaoConsultoria" id="decisaoConsultoria">
-										<option value="" selected disabled>Selecione uma Opção</option>
-										<option value="1">Sim, Desejo</option>
-										<option value="2">Não é necessário</option>
-									</select>
-								</div>
 								<div class="col-md-3" id="nomeEventoConsultoria">
 									<br>
 									<label for="nomeConsultoria">Nome do Evento ou Ação:</label>
@@ -545,6 +554,14 @@
 									<label for="dtConsultoria">Data e Hora do Evento</label>
 									<input type="datetime-local" name="dtConsultoria" id="dtConsultoria"
 										class="form-control">
+								</div>
+								<div class="col-md-3" id="valoresConsultoria">
+									<label for="valorConsultoria">Evento gratuito ou pago?</label>
+									<select type="text" name="valorConsultoria" id="valorConsultoria" class="form-control">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="gratuito">Gratuito</option>
+										<option value="pago">Pago</option>
+									</select>
 								</div>
 							</div>
 							<div class="form-group row" id="camposConsultoria">
@@ -564,22 +581,10 @@
 										<option value="Não">Não</option>
 									</select>
 								</div>
-								<div class="col-md-3" id="valoresConsultoria">
-									<label for="valorConsultoria">Evento gratuito ou pago?</label>
-									<select type="text" name="valorConsultoria" id="valorConsultoria" class="form-control">
-										<option value="" selected disabled>Selecione uma Opção</option>
-										<option value="gratuito">Gratuito</option>
-										<option value="pago">Pago</option>
-									</select>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- Fim da Seção Marketing Cloud -->
-					
-
-
 				<!-- Fim da Seção Consultoria Comercial -->
 			</div>
 
