@@ -3,26 +3,52 @@
     margin-right: 10px;
 }
 
+#SolicitacaoEvento {
+    background: linear-gradient(to right, #FF8290, #f2b705);
+    color: #fff;
+}
+
+#headingSolicitante {
+    background: linear-gradient(to right, #FF8290, #f2b705);
+    color: #fff;
+}
+
+#headingSolicitacao {
+    background: linear-gradient(to right, #FF8290, #f2b705);
+    color: #fff;
+}
+
 #painelEventos {
-    background-color: #45d7fc;
+    background-color:#f2b705;
+    color: #fff;
 }
 
 #painelProjetos {
-    background-color: #45d7fc;
+    background-color:#f2b705;
+    color: #fff;
 }
 
 #painelCoffee {
-    background-color: #45d7fc;
+    background-color:#f2b705;
+    color: #fff
 }
 
 #painelLanding {
-    background-color: #45d7fc;
+    background-color:#f2b705;
+    color: #fff
 }
 
 #painelLogo {
-    background-color: #45d7fc;
+    background-color:#f2b705;
+    color: #fff
 }
 
 #painelConsultoria {
-    background-color: #45d7fc;
+    background-color:#f2b705;
+    color: #fff
+}
+
+#headingDetalhes {
+    background-color:#FF8290;
+    color: #fff;
 }

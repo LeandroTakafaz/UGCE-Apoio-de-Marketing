@@ -63,22 +63,19 @@
 
 		<!-- Painel Dados do Solicitante -->
 
-		<div class="panel panel-info" id="SolicitacaoEvento">
+		<div class="panel panel-default" id="SolicitacaoEvento">
 			<div class="panel-heading">
 				<div style="display: flex; justify-content: space-between; align-items: center;">
-					<h1 style="background-color:rgb(84, 164, 221); margin-right: auto;"> Solicitação de Apoio da UGCE
-					</h1>
-					<div style="background-color:rgb(84, 164, 221); margin-left: auto;">
+					<h1 style="color: #fff;"> Solicitação de Apoio da UGCE</h1>
+					<div style="background-color: #f2b705; margin-left: auto;">
 						<img src="imagens/Logo Branca UGCE.png" title="Logo do SEBRAE" width="105" height="65">
 					</div>
 				</div>
 			</div>
 		</div>
 
-
-
-		<div class="panel panel-info" id="DadoSolicitante">
-			<div class="panel-heading">
+		<div class="panel panel-default" id="DadoSolicitante">
+			<div class="panel-heading" id="headingSolicitante">
 				<h3 class="panel-title"><i class="flaticon flaticon-account-circle icon-md"></i> Dados do Solicitante
 				</h3>
 			</div>
@@ -124,13 +121,12 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- Fim do Painel -->
 
 		<!-- Painel Dados da Solicitação -->
 
-		<div class="panel panel-info">
-			<div class="panel-heading">
+		<div class="panel panel-default">
+			<div class="panel-heading" id="headingSolicitacao">
 				<h3 class="panel-title"><i class="flaticon flaticon-form-list icon-md" aria-hidden="true"></i>
 					Dados da Solicitação
 				</h3>
@@ -152,7 +148,7 @@
 						</div>
 						<div class="checkbox-inline">
 							<input type="checkbox" id="Logo" name="Logo">
-							<label for="Logo">Logo/Identidade Visual</label>
+							<label for="Logo">Identidade Visual</label>
 						</div>
 						<div class="checkbox-inline">
 							<input type="checkbox" id="MarketingCloud" name="MarketingCloud">
@@ -160,7 +156,7 @@
 						</div>
 						<div class="checkbox-inline">
 							<input type="checkbox" id="Consultoria" name="Consultoria">
-							<label for="Consultoria">Consultoria Especializada</label>
+							<label for="Consultoria">Consultoria</label>
 						</div>
 					</div>
 				</div>
@@ -531,13 +527,13 @@
 				</div>
 				<!-- Fim da Seção Marketing Cloud -->
 				
-				<!-- Inicio da Seção Consultoria Especializada -->
+				<!-- Inicio da Seção Consultoria Comercial -->
 				<div class="panel panel-default">
 					<div class="panel-heading" id="painelConsultoria">
 						<h4 class="panel-title">
 							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
 								href="#Consultoria">
-								<strong>Consultoria Especializada</strong>
+								<strong>Consultoria Comercial</strong>
 							</a>
 						</h4>
 					</div>
@@ -545,12 +541,10 @@
 						<div class="panel-body">
 							<div class="form-group row">
 								<div class="col-md-3" id="nomeEventoConsultoria">
-									<br>
 									<label for="nomeConsultoria">Nome do Evento ou Ação:</label>
 									<input type="text" name="nomeConsultoria" id="nomeConsultoria" class="form-control">
 								</div>
 								<div class="col-md-3" id="dtEventoConsultoria">
-									<br>
 									<label for="dtConsultoria">Data e Hora do Evento</label>
 									<input type="datetime-local" name="dtConsultoria" id="dtConsultoria"
 										class="form-control">
@@ -586,6 +580,42 @@
 					</div>
 				</div>
 				<!-- Fim da Seção Consultoria Comercial -->
+
+				<!-- Inicio da Seção Imprensa -->
+				<div class="panel panel-default">
+					<div class="panel-heading" id="painelImprensa">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
+								href="#Imprensa">
+								<strong>Imprensa</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="imprensa" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-md-3">
+									<label for="textoJornalistico">Texto Jornalistico:</label>
+									<input type="text" name="textoJornalistico" id="textoJornalistico" class="form-control">
+								</div>
+								<div class="col-md-3" id="coberturaJornalistica">
+									<label for="cobertura">Estilo de Cobertura:</label>
+									<select type="text" name="cobertura" id="cobertura" class="form-control">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="fotografica">Cobertura Fotográfica</option>
+										<option value="jornalistica">Cobertura Jornalistica</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group row">
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim da Seção Imprensa -->
 			</div>
 
 			<!-- Inicio da Seção do Card de Informações -->
@@ -648,8 +678,8 @@
 		<!-- Fim do Painel -->
 
 		<!-- Painel Detalhes da Demanda -->
-		<div class="panel panel-info">
-			<div class="panel-heading">
+		<div class="panel panel-default">
+			<div class="panel-heading" id="headingDetalhes">
 				<h3 class="panel-title"><i class="material-icons" style="font-size:24px">add_to_queue</i> Detalhes
 					da
 					Demanda</h3>
