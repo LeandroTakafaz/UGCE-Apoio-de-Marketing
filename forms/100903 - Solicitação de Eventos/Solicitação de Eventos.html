@@ -53,7 +53,6 @@
 		<input type="hidden" name="hdn_lastState" id="hdn_lastState">
 		<input type="hidden" name="hdn_State" id="hdn_State">
 		<input type="hidden" name="hdn_diretoria" id="hdn_diretoria">
-
 		<input type="hidden" name="matriculaResponsavel" id="matriculaResponsavel">
 
 		<!-- Hidden Dotação Orçamentária -->
@@ -67,7 +66,7 @@
 			<div class="panel-heading">
 				<div style="display: flex; justify-content: space-between; align-items: center;">
 					<h1 style="color: #fff;"> Solicitação de Apoio da UGCE</h1>
-					<div style="background-color: #f2b705; margin-left: auto;">
+					<div style="margin-left: auto;">
 						<img src="imagens/Logo Branca UGCE.png" title="Logo do SEBRAE" width="105" height="65">
 					</div>
 				</div>
@@ -80,7 +79,7 @@
 				</h3>
 			</div>
 
-			<div class="panel-body">
+			<div class="panel-body" id="borda1">
 				<div class="panel-body col-md-8">
 					<div class="form-group row">
 						<div class="col-md-3">
@@ -157,6 +156,14 @@
 						<div class="checkbox-inline">
 							<input type="checkbox" id="Consultoria" name="Consultoria">
 							<label for="Consultoria">Consultoria</label>
+						</div>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="Imprensa" name="Imprensa">
+							<label for="Imprensa">Imprensa</label>
+						</div>
+						<div class="checkbox-inline"> <br>
+							<input type="checkbox" id="Grafica" name="Grafica">
+							<label for="Grafica">Serviços Gráficos</label>
 						</div>
 					</div>
 				</div>
@@ -257,6 +264,69 @@
 				</div>
 				<!-- Fim da Seção de Eventos Digitais -->
 
+
+				<!-- Painel da Tabela de Demanda -->
+				<div class="panel panel-default" style="display: none">
+					<div class="panel-heading">
+						<h3 class="panel-title">SolicitaÃ§Ã£o</h3>
+					</div>
+					<div class="panel-body" style="display: none">
+						<div class="form-group table-responsive">
+							<div class="table">
+								<tbody>
+									<!--<tr>
+											<td><button type="button" class="addItem" id="addItem" onclick="addItens();">Inserir SolicitaÃ§Ã£o <b>+</b></button></td>
+											
+										</tr>-->
+									<tr>
+										<td>
+											<table id="dadosItem" tablename="dadosItem" class="table table-hover"
+												noaddbutton="true" nodeletebutton="true">
+												<thead>
+													<tr>
+														<td></td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															<span class="fluig-style-guide fs-display-block fs-md-space">
+																<i type="button"
+																	class="fluigicon fluigicon-trash fluigicon-md delItem"
+																	id="delItem" name="delItem"
+																	onclick="Javascript:fnCustomDeleteItem(this);"
+																	style="cursor:pointer"></i>
+															</span>
+														</td>
+														<td>
+															<div class="form-group">
+																<label for="tipo_solicitacao">Tipo de SolicitaÃ§Ã£o <span
+																		class="Obrigatorio"><strong>*</strong></span>:</label>
+																<input class="form-control" name="tipo_solicitacao"
+																	id="tipo_solicitacao">
+		
+															</div>
+														</td>
+														<td>
+															<div class="form-group">
+																<label for="detalhes">Detalhes da SolicitaÃ§Ã£o</label>
+																<textarea rows=2 name="detalhe" id="detalhe"
+																	class="form-control"></textarea>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Painel -->
+
+
 				<!-- Inicio da Seção de Eventos Presenciais -->
 				<div class="panel panel-default">
 					<div class="panel-heading" id="painelProjetos">
@@ -330,19 +400,66 @@
 									<textarea rows="5" name="descPresencial" id="descPresencial"
 										class="form-control"></textarea>
 								</div>
-								<div class="col-md-4">
-									<label for="estruturaPresencial">Estrutura Física e Sonorização:</label>
-									<textarea rows="5" name="estruturaPresencial" id="estruturaPresencial"
-										class="form-control"></textarea>
-								</div>
-								<div class="col-md-4">
-									<label for="pessoalPresencial">Pessoal Necessário:</label>
-									<textarea rows="5" name="pessoalPresencial" id="pessoalPresencial"
-										class="form-control"></textarea>
-								</div>
 								<div class="col-md-2"><label style="text-align: center;"> <br> <input type="checkbox"
-											name="portalProjeto" id="portalProjeto">
-										Conteúdo será postado no Portal SEBRAE</label></div>
+									name="portalProjeto" id="portalProjeto">
+								Conteúdo será postado no Portal SEBRAE</label></div>
+								<div class="form-group table-responsive">
+								
+									<div class="table">
+										<thead>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="col-md-3">
+														<div class="form-group" id="input1">
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-group" id="input2">
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="col-md-2">
+														<div class="form-group row">
+															<div class="bs-docs-popover-hover">
+																<br>
+																<button type="button" class="btn btn-default" data-comp-show-modal="small"
+																	id="addItem" onclick="adicionarItem();">Inserir Solicitação
+																	<b>+</b></button>
+															</div>
+				
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="col-md-7">
+														<table class="table table-bordered table-striped table-hover certa"
+															noaddbutton="true" nodeletebutton="true">
+															<thead>
+																<tr>
+																	<td class="col-md-3">Serviços
+																	</td>
+																	<td class="col-md-6">Detalhes</td>
+																	<td class="col-md-1">Remove</td>
+																</tr>
+															</thead>
+				
+															<tbody>
+															</tbody>
+				
+														</table>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -385,7 +502,7 @@
 									<input type="time" name="horaFinalBreak" id="horaFinalBreak" class="form-control">
 								</div>
 								<div class="col-md-2">
-									<label for="horarioBreak">Horário do Coffee Break:</label>
+									<label for="horarioBreak">Horário á ser servido o Coffee Break:</label>
 									<input type="time" name="horarioBreak" id="horarioBreak" class="form-control">
 								</div>
 							</div>
@@ -594,11 +711,15 @@
 					<div id="imprensa" class="panel-collapse collapse">
 						<div class="panel-body">
 							<div class="form-group row">
-								<div class="col-md-3">
-									<label for="textoJornalistico">Texto Jornalistico:</label>
+								<div class="col-md-4">
+									<label for="prodJornalistico">Produção Jornalistica:</label>
+									<input type="text" name="prodJornalistico" id="prodJornalistico" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="textoJornalistico">Texto Jornalistico - Comunicado:</label>
 									<input type="text" name="textoJornalistico" id="textoJornalistico" class="form-control">
 								</div>
-								<div class="col-md-3" id="coberturaJornalistica">
+								<div class="col-md-4" id="coberturaJornalistica">
 									<label for="cobertura">Estilo de Cobertura:</label>
 									<select type="text" name="cobertura" id="cobertura" class="form-control">
 										<option value="" selected disabled>Selecione uma Opção</option>
@@ -608,9 +729,11 @@
 								</div>
 							</div>
 							<div class="form-group row">
-
-
-
+								<div class="col-md-5">
+									<label for="ReleaseJornalistico">Release (Sugestão de Pauta):</label>
+									<textarea rows="5" name="ReleaseJornalistico" id="ReleaseJornalistico"
+										class="form-control"></textarea>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -937,10 +1060,10 @@
 		</script>
 
 		<div class="form-group">
-			<div class="col-md-10" style="text-align:left;background-color: rgb(84, 164, 221);">
+			<div class="col-md-10" style="text-align:left;background: linear-gradient(to right, #FF8290, #f2b705);">
 				<img src="imagens/Logo_NTIC_Branca.png" title="Logo do ATIC REAL OFFICIAL" width="80" height="37">
 			</div>
-			<div class="col-md-2" style="text-align:right;background-color:rgb(84, 164, 221)">
+			<div class="col-md-2" style="text-align:right;background: linear-gradient(to right, #f2b705, #FF8290);">
 				<img src="sebrae-branco.png" title="Logo do SEBRAE" width="80" height="37">
 			</div>
 		</div>

@@ -24,41 +24,47 @@
 }
 
 #painelEventos {
-    background-color:#ffda05;
+    background: linear-gradient(to right, #ffa6b0, #f8dd40);
     color: #fff;
 }
 
 #painelProjetos {
-    background-color:#ffda05;
+    background: linear-gradient(to right, #ffa6b0, #f8dd40);
     color: #fff;
 }
 
 #painelCoffee {
-    background-color:#ffda05;
+    background: linear-gradient(to right, #ffa6b0, #f8dd40);
     color: #fff;
 }
 
 #painelLanding {
-    background-color:#ffda05;
+    background: linear-gradient(to right, #ffa6b0, #f8dd40);
     color: #fff;
 }
 
 #painelLogo {
-    background-color:#ffda05;
+    background: linear-gradient(to right, #ffa6b0, #f8dd40);
     color: #fff;
 }
 
 #painelConsultoria {
-    background-color:#ffda05;
+    background: linear-gradient(to right, #ffa6b0, #f8dd40);
     color: #fff
 }
 
 #painelImprensa {
-    background-color:#ffda05;
+    background: linear-gradient(to right, #ffa6b0, #f8dd40);
     color: #fff
 }
 
 #addRateio {
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-color:#ffda05;
+    color: #fff
+}
+
+#addItem {
     border: 3px solid rgba(0, 0, 0, 0);
     background-color:#ffda05;
     color: #fff

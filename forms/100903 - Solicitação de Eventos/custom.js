@@ -115,9 +115,7 @@ function adicionarItem() {
     var numeroLinhas = tabela.rows.length;
     var tp = document.getElementById("tp_soli");
     var dt = document.getElementById("dt");
-    var tt = document.getElementById("teste");
     if (tp.value != '' && dt.value != '') {
-        console.log(tt);
         addItens()
         var index = getRow()
         var linha = tabela.tBodies[0].insertRow(numeroLinhas - 1);
@@ -327,6 +325,8 @@ function panelInput() {
     divaAll2.appendChild(vtextarea)
 }
 
+
+
 function returnTable() {
     var tabela = document.getElementById('dadosItem');
     var numeroLinhas = tabela.tBodies[0].rows.length;
@@ -434,7 +434,6 @@ function validatePanel() {
     }*/
 }
 window.addEventListener('load', validatePanel)
-
 function email(){
 
     var settings = {
@@ -641,8 +640,8 @@ $(document).ready(function () {
 
 
 $(document).ready(function() {
-    var checkboxes = ["Eventos", "EventosPresenciais", "Coffee", "MarketingCloud", "Logo", "Consultoria"];
-    var campos = ["eventos", "eventosPresenciais", "coffee", "marketingCloud", "logo", "consultoria"];
+    var checkboxes = ["Eventos", "EventosPresenciais", "Coffee", "MarketingCloud", "Logo", "Consultoria", "Imprensa"];
+    var campos = ["eventos", "eventosPresenciais", "coffee", "marketingCloud", "logo", "consultoria", "imprensa"];
 
     checkboxes.forEach(function(checkboxId, index) {
         $('#' + checkboxId).change(function() {
