@@ -640,8 +640,8 @@ $(document).ready(function () {
 
 
 $(document).ready(function() {
-    var checkboxes = ["Eventos", "EventosPresenciais", "Coffee", "Jornada", "Logo", "Estrategia", "Imprensa", "Grafica"];
-    var campos = ["eventos", "eventosPresenciais", "coffee", "jornada", "logo", "estrategia", "imprensa", "grafica"];
+    var checkboxes = ["Eventos", "Coffee", "Jornada", "Logo", "Estrategia", "Imprensa", "Grafica"];
+    var campos = ["eventos", "coffee", "jornada", "logo", "estrategia", "imprensa", "grafica"];
 
     checkboxes.forEach(function(checkboxId, index) {
         $('#' + checkboxId).change(function() {
@@ -668,33 +668,207 @@ $(document).ready(function() {
 
 
 function BloquearCampos() {
+    /* Padrão */
+    var decisaoSelect = document.getElementById("digitalPresencial");
+    var nomeSelect = document.getElementById("nomeEventoComercial");
+    var publicoSelect = document.getElementById("publicoEventoComercial");
+    var cidadeSelect = document.getElementById("CidUFComercial");
+    var dtInicialSelect = document.getElementById("dtInicialComercial");
+    var dtFinalSelect = document.getElementById("dtFinalComercial");
+    var portalSelect = document.getElementById("portalProjetoComercial");
+    var portalProjSelect = document.getElementById("portalProjDigital");
 
-    var decisaoSelect = document.getElementById("decisaoConsultoria");
-    var nomeSelect = document.getElementById("nomeEventoConsultoria");
-    var dtSelect = document.getElementById("dtEventoConsultoria");
-    var campoSelect = document.getElementById("camposConsultoria");
+    /* Digital */
+    var localSelect = document.getElementById("localEventoComercial");
+    var linkSelect = document.getElementById("linkEventoComercial");
+    var metaEventoSelect = document.getElementById("metaEventoComercial");
+    var metaFaturaSelect = document.getElementById("metaFaturamentoComercial");
+    var estiloSelect = document.getElementById("estiloDigitalComercial");
+    var mensagemSelect = document.getElementById("mensagemEventoComercial");
+    var coresSelect = document.getElementById("coresEventoComercial");
+    var identidadeSelect = document.getElementById("identidadeEventoComercial");
+    var responsavelSelect = document.getElementById("responsavelEventoComercial");
+    var progSelect = document.getElementById("progEventoComercial");
+    var DigitalNameSelect = document.getElementById("DigitalName");
 
+    /* Presencial */
+    var qualiSelect = document.getElementById("qualiEventoComercial");
+    var quantSelect = document.getElementById("quantEventoComercial");
+    var canalSelect = document.getElementById("canalEventoComercial");
+    var publicoProjSelect = document.getElementById("publicoProjetoComercial");
+    var identidadeProjSelect = document.getElementById("identidadeProjetoComercial");
+    var coresProjSelect = document.getElementById("coresProjetoComercial");
+    var tableProjSelect = document.getElementById("tableProjComercial");
+    var PresencialNameSelect = document.getElementById("PresencialName");
+    var nomeEventoPresSelect = document.getElementById("nomeEventoPresencial");
+    var publicoEventoPresSelect = document.getElementById("publicoEventoPresencial");
+    var cidUFEventoPresSelect = document.getElementById("CidUFPresencial");
+    var dtInicialEventoPresSelect = document.getElementById("dtInicialPresencial");
+    var dtFinalEventoPresSelect = document.getElementById("dtFinalPresencial");
+
+    
 
     
     if (decisaoSelect.value === ""){
-        nomeSelect.style.display = "none";
-        dtSelect.style.display = "none";
-        campoSelect.style.display = "none";
+        /* Ambos */
+        nomeSelect.style.display = "none"
+        publicoSelect.style.display = "none"
+        cidadeSelect.style.display = "none"
+        dtInicialSelect.style.display = "none"
+        dtFinalSelect.style.display = "none"
+        portalSelect.style.display = "none"
+        portalProjSelect.style.display = "none"
+        /* Digital */
+        localSelect.style.display = "none";
+        linkSelect.style.display = "none";
+        metaEventoSelect.style.display = "none";
+        metaFaturaSelect.style.display = "none";
+        estiloSelect.style.display = "none";
+        mensagemSelect.style.display = "none";
+        coresSelect.style.display = "none";
+        identidadeSelect.style.display = "none";
+        responsavelSelect.style.display = "none";
+        progSelect.style.display = "none";
+        DigitalNameSelect.style.display = "none";
+        /* Presencial */
+        qualiSelect.style.display = "none";
+        quantSelect.style.display = "none";
+        canalSelect.style.display = "none";
+        publicoProjSelect.style.display = "none";
+        identidadeProjSelect.style.display = "none";
+        coresProjSelect.style.display = "none";
+        descProjComercial.style.display = "none";
+        coresProjSelect.style.display = "none";
+        tableProjSelect.style.display = "none";
+        PresencialNameSelect.style.display = "none";
+        nomeEventoPresSelect.style.display = "none";
+        publicoEventoPresSelect.style.display = "none";
+        cidUFEventoPresSelect.style.display = "none";
+        dtInicialEventoPresSelect.style.display = "none";
+        dtFinalEventoPresSelect.style.display = "none";
 
+     /* Seleção Presencial */
     } else if (decisaoSelect.value === "1") {
-        nomeSelect.style.display = "block";
-        dtSelect.style.display = "block";
-        campoSelect.style.display = "block";
+        /* Ambos */
+        nomeSelect.style.display = "none"
+        publicoSelect.style.display = "none"
+        cidadeSelect.style.display = "none"
+        dtInicialSelect.style.display = "none"
+        dtFinalSelect.style.display = "none"
+        portalSelect.style.display = "none"
+        /* Digital */
+        localSelect.style.display = "none";
+        linkSelect.style.display = "none";
+        metaEventoSelect.style.display = "none";
+        metaFaturaSelect.style.display = "none";
+        estiloSelect.style.display = "none";
+        mensagemSelect.style.display = "none";
+        coresSelect.style.display = "none";
+        identidadeSelect.style.display = "none";
+        responsavelSelect.style.display = "none";
+        progSelect.style.display = "none";
+        DigitalNameSelect.style.display = "none";
+        /* Presencial */
+        qualiSelect.style.display = "block";
+        quantSelect.style.display = "block";
+        canalSelect.style.display = "block";
+        publicoProjSelect.style.display = "block";
+        identidadeProjSelect.style.display = "block";
+        coresProjSelect.style.display = "block";
+        descProjComercial.style.display = "block";
+        coresProjSelect.style.display = "block";
+        tableProjSelect.style.display = "block";
+        portalProjSelect.style.display = "block";
+        PresencialNameSelect.style.display = "block";
+        nomeEventoPresSelect.style.display = "block";
+        publicoEventoPresSelect.style.display = "block";
+        cidUFEventoPresSelect.style.display = "block";
+        dtInicialEventoPresSelect.style.display = "block";
+        dtFinalEventoPresSelect.style.display = "block";
 
+    /* Seleção Digital */
     } else if (decisaoSelect.value === "2") {
-        nomeSelect.style.display = "none";
-        dtSelect.style.display = "none";
-        campoSelect.style.display = "none";
+        /* Ambos */
+        nomeSelect.style.display = "block"
+        publicoSelect.style.display = "block"
+        cidadeSelect.style.display = "block"
+        dtInicialSelect.style.display = "block"
+        dtFinalSelect.style.display = "block"
+        portalSelect.style.display = "block"
+        portalProjSelect.style.display = "none"
+        /* Digital */
+        localSelect.style.display = "block";
+        linkSelect.style.display = "block";
+        metaEventoSelect.style.display = "block";
+        metaFaturaSelect.style.display = "block";
+        estiloSelect.style.display = "block";
+        mensagemSelect.style.display = "block";
+        coresSelect.style.display = "block";
+        identidadeSelect.style.display = "block";
+        responsavelSelect.style.display = "block";
+        progSelect.style.display = "block";
+        DigitalNameSelect.style.display = "block";
+        /* Presencial */
+        qualiSelect.style.display = "none";
+        quantSelect.style.display = "none";
+        canalSelect.style.display = "none";
+        publicoProjSelect.style.display = "none";
+        identidadeProjSelect.style.display = "none";
+        coresProjSelect.style.display = "none";
+        descProjComercial.style.display = "none";
+        coresProjSelect.style.display = "none";
+        tableProjSelect.style.display = "none";
+        PresencialNameSelect.style.display = "none";
+        nomeEventoPresSelect.style.display = "none";
+        publicoEventoPresSelect.style.display = "none";
+        cidUFEventoPresSelect.style.display = "none";
+        dtInicialEventoPresSelect.style.display = "none";
+        dtFinalEventoPresSelect.style.display = "none";
         
+    /* Seleção Híbrida */
+    } else if (decisaoSelect.value === "3") {
+        /* Ambos */
+        nomeSelect.style.display = "block"
+        publicoSelect.style.display = "block"
+        cidadeSelect.style.display = "block"
+        dtInicialSelect.style.display = "block"
+        dtFinalSelect.style.display = "block"
+        portalSelect.style.display = "block"
+        portalProjSelect.style.display = "none"
+        DigitalNameSelect.style.display = "block"
+        /* Digital */
+        localSelect.style.display = "block";
+        linkSelect.style.display = "block";
+        metaEventoSelect.style.display = "block";
+        metaFaturaSelect.style.display = "block";
+        estiloSelect.style.display = "block";
+        mensagemSelect.style.display = "block";
+        coresSelect.style.display = "block";
+        identidadeSelect.style.display = "block";
+        responsavelSelect.style.display = "block";
+        progSelect.style.display = "block";
+        /* Presencial */    
+
+        qualiSelect.style.display = "block";
+        quantSelect.style.display = "block";
+        canalSelect.style.display = "block";
+        publicoProjSelect.style.display = "none";
+        identidadeProjSelect.style.display = "none";
+        descProjComercial.style.display = "block";
+        coresProjSelect.style.display = "none";
+        tableProjSelect.style.display = "block";
+        PresencialNameSelect.style.display = "block";
+        nomeEventoPresSelect.style.display = "none";
+        publicoEventoPresSelect.style.display = "none";
+        cidUFEventoPresSelect.style.display = "none";
+        dtInicialEventoPresSelect.style.display = "none";
+        dtFinalEventoPresSelect.style.display = "none";
+        
+
     }
 }
 
-var decisaoSelect = document.getElementById("decisaoConsultoria");
+var decisaoSelect = document.getElementById("digitalPresencial");
 decisaoSelect.addEventListener("change", BloquearCampos);
 BloquearCampos();
 
