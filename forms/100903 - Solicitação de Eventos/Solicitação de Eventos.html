@@ -32,10 +32,7 @@
 	<script src="/style-guide/js/fluig-style-guide-filter.min.js"></script>
 
 	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
-	<script type="text/javascript" src="painel.js"></script>
-	<script type="text/javascript" src="painelT.js"></script>
 	<script type="text/javascript" src="slc_dotacao.js"></script>
-	<script type="text/javascript" src="tabela.js"></script>
 
 
 	<link rel="stylesheet" href="index.css">
@@ -198,7 +195,7 @@
 															<span class="fluig-style-guide fs-display-block fs-md-space">
 																<i type="button"
 																	class="fluigicon fluigicon-trash fluigicon-md delItem"
-																	id="delGrafica" name="delGrafica"
+																	id="delItem" name="delItem"
 																	onclick="Javascript:fnCustomDeleteItem(this);"
 																	style="cursor:pointer"></i>
 															</span>
@@ -771,7 +768,7 @@
 															<span class="fluig-style-guide fs-display-block fs-md-space">
 																<i type="button"
 																	class="fluigicon fluigicon-trash fluigicon-md delItem"
-																	id="delItem" name="delItem"
+																	id="delGrafica" name="delGrafica"
 																	onclick="Javascript:fnCustomDeleteItem(this);"
 																	style="cursor:pointer"></i>
 															</span>
@@ -865,7 +862,7 @@
 														<div class="bs-docs-popover-hover">
 															<br>
 															<button type="button" class="btn btn-default" data-comp-show-modal="small"
-																id="addGrafica" onclick="adicionarItem();">Inserir Solicitação
+																id="addGrafica" onclick="adicionarItem2();">Inserir Solicitação
 																<b>+</b></button>
 														</div>
 													</div>
@@ -875,7 +872,7 @@
 										<tr>
 											<td>
 												<div class="col-md-7">
-													<table class="table table-bordered table-striped table-hover certa"
+													<table class="table table-bordered table-striped table-hover errada"
 														noaddbutton="true" nodeletebutton="true">
 														<thead>
 															<tr>
@@ -1306,4 +1303,5 @@
 
 </script>
 <script type="text/javascript" src="custom.js"></script>
+<script type="text/javascript" src="tabela.js"></script>
 </html>

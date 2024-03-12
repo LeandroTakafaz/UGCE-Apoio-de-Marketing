@@ -401,39 +401,6 @@ function returnTable() {
     }
 }
 
-function validatePanel() {
-    var Now = window.parent.ECM.workflowView.sequence
-    var visualizacao = window.parentOBJ.ECM.workflowView.stateDescription
-    console.log(visualizacao)
-    if (Now == 5 || Now == 10 || Now == 24 || Now == 38 || Now == 43) {
-        //console.log(document.getElementById('addItem'))
-        document.getElementById('addItem').style.display = 'none'
-        returnTable();
-    }
-    else if (visualizacao == 'Detalhes da Solicitação') {
-        document.getElementById('addItem').style.display = 'none'
-        returnTable();
-    }
-    else {
-        returnTable();
-        panelInput();
-    }
-
-    if (Now == 5 || Now == 7) {
-        document.getElementById('responsavel').style.display = "block";
-    }
-    else if (Now == 0 || Now == 4 || Now == 10 || Now == 14) {
-        document.getElementById('responsavel').style.display = "none";
-        email();
-    }
-
-    /*if(visualizacao == 'Detalhes da Solicitação'){
-        //console.log(document.getElementById('addItem'))
-        document.getElementById('addItem').style.display = 'none'
-        returnTable();
-    }*/
-}
-window.addEventListener('load', validatePanel)
 function email(){
 
     var settings = {
@@ -458,6 +425,40 @@ function email(){
       });      
       
 }
+
+function validatePanel() {
+    var Now = window.parent.ECM.workflowView.sequence
+    var visualizacao = window.parentOBJ.ECM.workflowView.stateDescription
+    console.log(visualizacao)
+    if (Now == 5 || Now == 10 || Now == 24 || Now == 38 || Now == 43) {
+        //console.log(document.getElementById('addItem'))
+        document.getElementById('addItem').style.display = 'none'
+        returnTable();
+    }
+    else if (visualizacao == 'Detalhes da Solicitação') {
+        document.getElementById('addItem').style.display = 'none'
+        returnTable();
+    }
+    else {
+        returnTable();
+        panelInput();
+    }
+
+    if (Now == 5 || Now == 7) {
+        document.getElementById('responsavel').style.display = "block"
+    }
+    else if (Now == 0 || Now == 4 || Now == 10 || Now == 14) {
+        document.getElementById('responsavel').style.display = "none"
+        email();
+    }
+
+    /*if(visualizacao == 'Detalhes da Solicitação'){
+        //console.log(document.getElementById('addItem'))
+        document.getElementById('addItem').style.display = 'none'
+        returnTable();
+    }*/
+}
+window.addEventListener('load', validatePanel)
 
 /***********FOMATAÇÃO DE NUMERO STRING******************/
 

@@ -1,4 +1,4 @@
-function getRow() {
+function getRow2() {
     var table = document.getElementById('dadosItemGrafica')
     var tbody = table.tBodies[0]
     var rows = tbody.rows
@@ -10,7 +10,7 @@ function getRow() {
 }
 
 
-function addItens() {
+function addItens2() {
     wdkAddChild("dadosItemGrafica");
 }
 
@@ -21,28 +21,28 @@ function fnCustomDeleteItem(elem) {
 //var guardTipo = [''];
 //var guardDetalhe = [''];
 
-function adicionarItem() {
-    var tabela = document.getElementsByClassName('certa')[0];
+function adicionarItem2() {
+    var tabela = document.getElementsByClassName('errada')[0];
     var numeroLinhas = tabela.rows.length;
-    var tp = document.getElementById("tp_soli2");
-    var dt = document.getElementById("dt");
-    if (tp.value != '' && dt.value != '') {
-        addItens()
-        var index = getRow()
+    var tp2 = document.getElementById("tp_soli2");
+    var dt2 = document.getElementById("dt2");
+    if (tp2.value != '' && dt2.value != '') {
+        addItens2()
+        var index = getRow2()
         var linha = tabela.tBodies[0].insertRow(numeroLinhas - 1);
         linha.id = index
-        var tipoSolicitacao = linha.insertCell(0);
+        var tipoSolicitacao2 = linha.insertCell(0);
         var det = linha.insertCell(1);
         var excloi = linha.insertCell(2);
         /*tipoSolicitacao.innerHTML = tp.value
         det.innerHTML = dt.value*/
-        document.getElementById('tipo_grafica___' + index).value = tp.value
-        document.getElementById('detalhe_grafica___' + index).value = dt.value
+        document.getElementById('tipo_grafica___' + index).value = tp2.value
+        document.getElementById('detalhe_grafica___' + index).value = dt2.value
 
 
-        tipoSolicitacao.innerHTML = document.getElementById('tipo_grafica___' + index).value
+        tipoSolicitacao2.innerHTML = document.getElementById('tipo_grafica___' + index).value
         det.innerHTML = document.getElementById('detalhe_grafica___' + index).value
-        excloi.innerHTML = "<button class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Excluir' onclick='excluirItem(this)'><i class='flaticon flaticon-trash icon-sm' style='padding: 1px;'></i></button>";
+        excloi.innerHTML = "<button class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Excluir' onclick='excluirItem2(this)'><i class='flaticon flaticon-trash icon-sm' style='padding: 1px;'></i></button>";
 
         /* guardTipo.push(tp.value)
          guardDetalhe.push(dt.value)
@@ -50,7 +50,7 @@ function adicionarItem() {
          console.log(guardDetalhe)*/
 
 
-        dt.value = '';
+        dt2.value = '';
 
     }
     else {
@@ -58,12 +58,12 @@ function adicionarItem() {
     }
 }//var a = [1, -1, 3, 4 ]
 
-function excluirItem(linha) {
+function excluirItem2(linha) {
     var index = linha.parentNode.parentNode.id;
-    var idDel = 'delGrafica___' + index
+    var idDel2 = 'delGrafica___' + index
     var n = 1
 
-    a = document.getElementById(idDel)
+    a = document.getElementById(idDel2)
     if (a == null) {
         b = document.getElementById('tipo_grafica___' + index)
         if (b) {
@@ -73,7 +73,7 @@ function excluirItem(linha) {
     }
     fnCustomDeleteItem(a)
     var i = linha.parentNode.parentNode.rowIndex;
-    document.getElementsByClassName('certa')[0].deleteRow(i);
+    document.getElementsByClassName('errada')[0].deleteRow(i);
     /*guardTipo[index] = '';
     console.log(guardTipo)
 */
@@ -87,7 +87,7 @@ function panelInput2() {
     att = document.createAttribute('for')
     att.value = 'tp_soli2'
     vlabel.setAttributeNode(att)
-    vlabel.innerText = 'Tipo de Demanda: '
+    vlabel.innerText = 'Tipo de Serviço Gráfico: '
 
     var vspan = document.createElement('span')
     att = document.createAttribute('class')
@@ -156,10 +156,10 @@ function panelInput2() {
         'Serviço de Comunicação - Plano de Comunicação'
     ]
 
-    var optgp0 = document.createElement('optgroup')
+    var optgp2 = document.createElement('optgroup')
     att = document.createAttribute('label')
     att.value = 'Demanda de Serviço/Produto'
-    optgp0.setAttributeNode(att)
+    optgp2.setAttributeNode(att)
     for (i = 0; i < arrayOption.length; i++) {
         var opt = arrayOption[i].split(' - ')
         att = document.createAttribute('label')
@@ -169,16 +169,16 @@ function panelInput2() {
             att.value = opt[1]
             voption.setAttributeNode(att)
             voption.innerText = opt[1]
-            optgp0.appendChild(voption)
+            optgp2.appendChild(voption)
         }
     }
-    vselect.appendChild(optgp0)
+    vselect.appendChild(optgp2)
 
 
-    var optgp1 = document.createElement('optgroup')
+    var optgp3 = document.createElement('optgroup')
     att = document.createAttribute('label')
     att.value = 'Serviço de Comunicação'
-    optgp1.setAttributeNode(att)
+    optgp3.setAttributeNode(att)
     for (i = 0; i < arrayOption.length; i++) {
         var opt = arrayOption[i].split(' - ')
         att = document.createAttribute('label')
@@ -188,10 +188,10 @@ function panelInput2() {
             att.value = opt[1]
             voption.setAttributeNode(att)
             voption.innerText = opt[1]
-            optgp1.appendChild(voption)
+            optgp3.appendChild(voption)
         }
     }
-    vselect.appendChild(optgp1)
+    vselect.appendChild(optgp3)
 
     divaAll.appendChild(vselect)
 
@@ -202,7 +202,7 @@ function panelInput2() {
     /***********label**************************** */
     var vlabel = document.createElement('label')
     att = document.createAttribute('for')
-    att.value = 'dt'
+    att.value = 'dt2'
     vlabel.setAttributeNode(att)
     vlabel.innerText = 'Informações Específicas: '
 
@@ -221,13 +221,13 @@ function panelInput2() {
     /**************texarea***************************** */
     var vtextarea = document.createElement('textarea')
     att = document.createAttribute('rows')
-    att.value = '2'
+    att.value = 'dt2'
     vtextarea.setAttributeNode(att)
     att = document.createAttribute('name')
-    att.value = 'dt'
+    att.value = 'dt2'
     vtextarea.setAttributeNode(att)
     att = document.createAttribute('id')
-    att.value = 'dt'
+    att.value = 'dt2'
     vtextarea.setAttributeNode(att)
     att = document.createAttribute('class')
     att.value = 'form-control'
@@ -242,7 +242,7 @@ function returnTable2() {
     var tabela = document.getElementById('dadosItemGrafica');
     var numeroLinhas = tabela.tBodies[0].rows.length;
     console.log(numeroLinhas)
-    var tableNew = document.getElementsByClassName('certa')[0];
+    var tableNew = document.getElementsByClassName('errada')[0];
     for (var i = 1; i < numeroLinhas; i++) {
         var linha = tableNew.tBodies[0].insertRow(i - 1);
         console.log(linha)
@@ -300,7 +300,7 @@ function returnTable2() {
 
         var state = window.parent.ECM.workflowView.sequence
         if (state == 14) {
-            ex.innerHTML = "<button class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Excluir' onclick='excluirItem(this)'><i class='flaticon flaticon-trash icon-sm' style='padding: 1px;'></i></button>";
+            ex.innerHTML = "<button class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Excluir' onclick='excluirItem2(this)'><i class='flaticon flaticon-trash icon-sm' style='padding: 1px;'></i></button>";
         } else {
             ex.innerHTML = '----'
         }
