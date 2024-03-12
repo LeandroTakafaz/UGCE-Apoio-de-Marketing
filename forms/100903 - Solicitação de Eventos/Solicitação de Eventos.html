@@ -33,7 +33,10 @@
 
 	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
 	<script type="text/javascript" src="painel.js"></script>
+	<script type="text/javascript" src="painelT.js"></script>
 	<script type="text/javascript" src="slc_dotacao.js"></script>
+	<script type="text/javascript" src="tabela.js"></script>
+
 
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -195,7 +198,7 @@
 															<span class="fluig-style-guide fs-display-block fs-md-space">
 																<i type="button"
 																	class="fluigicon fluigicon-trash fluigicon-md delItem"
-																	id="delItem" name="delItem"
+																	id="delGrafica" name="delGrafica"
 																	onclick="Javascript:fnCustomDeleteItem(this);"
 																	style="cursor:pointer"></i>
 															</span>
@@ -740,6 +743,69 @@
 				</div>
 				<!-- Fim da Seção Imprensa -->
 
+				<!-- Painel da Tabela de Serviços Gráficos -->
+				<div class="panel panel-default" style="display: none">
+					<div class="panel-heading">
+						<h3 class="panel-title">SolicitaÃ§Ã£o</h3>
+					</div>
+					<div class="panel-body" style="display: none">
+						<div class="form-group table-responsive">
+							<div class="table">
+								<tbody>
+									<!--<tr>
+											<td><button type="button" class="addItem" id="addItem" onclick="addItens();">Inserir SolicitaÃ§Ã£o <b>+</b></button></td>
+											
+										</tr>-->
+									<tr>
+										<td>
+											<table id="dadosItemGrafica" tablename="dadosItemGrafica" class="table table-hover"
+												noaddbutton="true" nodeletebutton="true">
+												<thead>
+													<tr>
+														<td></td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>
+															<span class="fluig-style-guide fs-display-block fs-md-space">
+																<i type="button"
+																	class="fluigicon fluigicon-trash fluigicon-md delItem"
+																	id="delItem" name="delItem"
+																	onclick="Javascript:fnCustomDeleteItem(this);"
+																	style="cursor:pointer"></i>
+															</span>
+														</td>
+														<td>
+															<div class="form-group">
+																<label for="tipo_grafica">Tipo de SolicitaÃ§Ã£o <span
+																		class="Obrigatorio"><strong>*</strong></span>:</label>
+																<input class="form-control" name="tipo_grafica"
+																	id="tipo_grafica">
+		
+															</div>
+														</td>
+														<td>
+															<div class="form-group">
+																<label for="detalhe_grafica">Detalhes da SolicitaÃ§Ã£o</label>
+																<textarea rows=2 name="detalhe_grafica" id="detalhe_grafica"
+																	class="form-control"></textarea>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim do Painel -->
+
+				<!-- Inicio da Seção Serviços Gráficos -->
+
 				<div class="panel panel-default">
 					<div class="panel-heading" id="painelGrafica">
 						<h4 class="panel-title">
@@ -773,9 +839,68 @@
 									</select>
 								</div>
 							</div>
+
+							<div class="form-group table-responsive">
+									
+								<div class="table" id="tableGraficaComercial">
+									<thead>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="col-md-3">
+													<div class="form-group" id="inputGrafica1">
+													</div>
+												</div>
+												<div class="col-md-4">
+													<div class="form-group" id="inputGrafica2">
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="col-md-2">
+													<div class="form-group row">
+														<div class="bs-docs-popover-hover">
+															<br>
+															<button type="button" class="btn btn-default" data-comp-show-modal="small"
+																id="addGrafica" onclick="adicionarItem();">Inserir Solicitação
+																<b>+</b></button>
+														</div>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="col-md-7">
+													<table class="table table-bordered table-striped table-hover certa"
+														noaddbutton="true" nodeletebutton="true">
+														<thead>
+															<tr>
+																<td class="col-md-3">Serviços Gráficos</td>
+																<td class="col-md-6">Detalhes</td>
+																<td class="col-md-1">Remove</td>
+															</tr>
+														</thead>
+			
+														<tbody>
+														</tbody>
+			
+													</table>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
+
+				<!-- Fim da Seção de Serviços Gráficos -->
+
 			</div>
 
 			<!-- Inicio da Seção do Card de Informações -->

@@ -1,5 +1,5 @@
 function getRow() {
-    var table = document.getElementById('dadosItem')
+    var table = document.getElementById('dadosItemGrafica')
     var tbody = table.tBodies[0]
     var rows = tbody.rows
     var slc = rows[rows.length - 1].getElementsByTagName('input')
@@ -11,7 +11,7 @@ function getRow() {
 
 
 function addItens() {
-    wdkAddChild("dadosItem");
+    wdkAddChild("dadosItemGrafica");
 }
 
 function fnCustomDeleteItem(elem) {
@@ -24,7 +24,7 @@ function fnCustomDeleteItem(elem) {
 function adicionarItem() {
     var tabela = document.getElementsByClassName('certa')[0];
     var numeroLinhas = tabela.rows.length;
-    var tp = document.getElementById("tp_soli");
+    var tp = document.getElementById("tp_soli2");
     var dt = document.getElementById("dt");
     if (tp.value != '' && dt.value != '') {
         addItens()
@@ -36,12 +36,12 @@ function adicionarItem() {
         var excloi = linha.insertCell(2);
         /*tipoSolicitacao.innerHTML = tp.value
         det.innerHTML = dt.value*/
-        document.getElementById('tipo_solicitacao___' + index).value = tp.value
-        document.getElementById('detalhe___' + index).value = dt.value
+        document.getElementById('tipo_grafica___' + index).value = tp.value
+        document.getElementById('detalhe_grafica___' + index).value = dt.value
 
 
-        tipoSolicitacao.innerHTML = document.getElementById('tipo_solicitacao___' + index).value
-        det.innerHTML = document.getElementById('detalhe___' + index).value
+        tipoSolicitacao.innerHTML = document.getElementById('tipo_grafica___' + index).value
+        det.innerHTML = document.getElementById('detalhe_grafica___' + index).value
         excloi.innerHTML = "<button class='btn btn-danger' data-toggle='tooltip' data-placement='top' title='Excluir' onclick='excluirItem(this)'><i class='flaticon flaticon-trash icon-sm' style='padding: 1px;'></i></button>";
 
         /* guardTipo.push(tp.value)
@@ -60,12 +60,12 @@ function adicionarItem() {
 
 function excluirItem(linha) {
     var index = linha.parentNode.parentNode.id;
-    var idDel = 'delItem___' + index
+    var idDel = 'delGrafica___' + index
     var n = 1
 
     a = document.getElementById(idDel)
     if (a == null) {
-        b = document.getElementById('tipo_solicitacao___' + index)
+        b = document.getElementById('tipo_grafica___' + index)
         if (b) {
             a = b.parentElement.parentElement.parentElement.getElementsByTagName('i')
             a = a[0]
@@ -80,12 +80,12 @@ function excluirItem(linha) {
 }
 
 
-function panelInput() {
-    var divaAll = document.getElementById('input1')
+function panelInput2() {
+    var divaAll = document.getElementById('inputGrafica1')
     /****************label************************/
     var vlabel = document.createElement('label')
     att = document.createAttribute('for')
-    att.value = 'tp_soli'
+    att.value = 'tp_soli2'
     vlabel.setAttributeNode(att)
     vlabel.innerText = 'Tipo de Demanda: '
 
@@ -107,10 +107,10 @@ function panelInput() {
     att.value = 'form-control'
     vselect.setAttributeNode(att)
     att = document.createAttribute('name')
-    att.value = 'tp_soli'
+    att.value = 'tp_soli2'
     vselect.setAttributeNode(att)
     att = document.createAttribute('id')
-    att.value = 'tp_soli'
+    att.value = 'tp_soli2'
     vselect.setAttributeNode(att)
 
     var vselecione = document.createElement('option')
@@ -197,7 +197,7 @@ function panelInput() {
 
 
     /***************************************************************** */
-    var divaAll2 = document.getElementById('input2')
+    var divaAll2 = document.getElementById('inputGrafica2')
 
     /***********label**************************** */
     var vlabel = document.createElement('label')
@@ -238,8 +238,8 @@ function panelInput() {
 
 
 
-function returnTable() {
-    var tabela = document.getElementById('dadosItem');
+function returnTable2() {
+    var tabela = document.getElementById('dadosItemGrafica');
     var numeroLinhas = tabela.tBodies[0].rows.length;
     console.log(numeroLinhas)
     var tableNew = document.getElementsByClassName('certa')[0];
@@ -260,13 +260,13 @@ function returnTable() {
                 var a = ln[j].id.split('___')[0]
                 console.log(ln.length)
                 console.log('aqui ô ' + a)
-                if (a == 'tipo_solicitacao') {
+                if (a == 'tipo_grafica') {
                     if (ln[j].id.indexOf('___') != -1) {
                         tipo.innerHTML = ln[j].innerText;
                         linha.id = ln[j].id.split('___')[1]
                     }
                 }
-                if (a == 'detalhe') {
+                if (a == 'detalhe_grafica') {
                     if (ln[j].id.indexOf('___') != -1) {
                         desc.innerHTML = ln[j].innerText;
                         //linha.id = ln[j].id.split('___')[1]
@@ -312,29 +312,29 @@ function returnTable() {
     }
 }
 
-function validatePanel() {
+function validatePanel2() {
     var Now = window.parent.ECM.workflowView.sequence
     var visualizacao = window.parentOBJ.ECM.workflowView.stateDescription
     console.log(visualizacao)
     if (Now == 5 || Now == 10 || Now == 24 || Now == 38 || Now == 43) {
         //console.log(document.getElementById('addItem'))
-        document.getElementById('addItem').style.display = 'none'
-        returnTable();
+        document.getElementById('addGrafica').style.display = 'none'
+        returnTable2();
     }
     else if (visualizacao == 'Detalhes da Solicitação') {
-        document.getElementById('addItem').style.display = 'none'
-        returnTable();
+        document.getElementById('addGrafica').style.display = 'none'
+        returnTable2();
     }
     else {
-        returnTable();
-        panelInput();
+        returnTable2();
+        panelInput2();
     }
 
     if (Now == 5 || Now == 7) {
-        document.getElementById('responsavel').style.display = "block";
+        document.getElementById('responsavel2').style.display = "block";
     }
     else if (Now == 0 || Now == 4 || Now == 10 || Now == 14) {
-        document.getElementById('responsavel').style.display = "none";
+        document.getElementById('responsavel2').style.display = "none";
         email();
     }
 
@@ -344,4 +344,4 @@ function validatePanel() {
         returnTable();
     }*/
 }
-window.addEventListener('load', validatePanel)
+window.addEventListener('load', validatePanel2);
