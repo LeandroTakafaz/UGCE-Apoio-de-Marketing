@@ -1,5 +1,6 @@
 function validateForm(form){
     var Now = parseInt(getValue("WKNumState"));
+	var errors = [];
 	var msg = '';
 
 	Date.prototype.addDays = function(days) {
@@ -8,85 +9,94 @@ function validateForm(form){
         return date;
     }
 
-	/*msg += Inicio + '\n';
-	msg += Fim + '\n';
-	msg += hoje + '\n';*/
-	
-	if(form.getValue("codProjeto") == ''){
-		msg += "Error : Campo 'Projeto' não foi preenchido!\n";
-	}
-	
-	if(form.getValue("codAcao") == ''){
-		msg += "Error : Campo 'Ação' não foi preenchido!\n";
-	}
-	
-	if(form.getValue("codRecurso") == ''){
-		msg += "Error : Campo 'Unidade' não foi preenchido!\n";
-	}
+	/* Validação do Ínicio */
 
-	if(msg!=""){
-		//document.querySelectorAll(".fluig-style-guide .modal-content .modal-header")[0].style.cssText = "background-color: rgb(84, 164, 221);color: #fff"
-		//document.querySelectorAll(".fluig-style-guide .modal-title")[0].innerHTML = 'ATENÇÃO '
-		throw msg;
+	if(Now == 0 || Now == 4)  {
+		if(form.getValue("slc_FonteRecursos___1") == "") {
+			errors.push("Campo Fonte de Recursos não foi preenchido")
+		}
+		if(form.getValue("txt_codprojeto___1") == "") {
+			errors.push("Campo Projeto não foi preenchido")
+		}
+		if(form.getValue("txt_codacao___1") == "") {
+			errors.push("Campo Ação não foi preenchido")
+		}
+		if(form.getValue("txt_codrecurso___1") == "") {
+			errors.push("Campo Unidade não foi preenchido")
+		}
+		if(form.getValue("txt_valorUtil___1") == "") {
+			errors.push("Campo Valor Utilizado não foi preenchido")
+		}
+		if(form.getValue("Eventos") == "" && form.getValue("Coffee") == "" && form.getValue("Logo") == "" && form.getValue("Jornada") == ""
+		 && form.getValue("Estrategia") == "" && form.getValue("Imprensa") == "" && form.getValue("Grafica") == "") {
+			errors.push("Nenhuma das Caixas preenchidas")
+		}
+
+		if(form.getValue("Eventos") == "" && form.getValue("digitalPresencial") == "") {
+			errors.push("Error: Selecione uma opção para Abrir o Painel")
+		}
 	}
+	
+	if (errors.length > 0) {
+		throw errors.join("\n");
+	  } 
+}
 
-	function prazoSocilitacao(){
-		var data = new Date();
-		var date = new Date()
-		var diaN = 12
-		var diaT = 12
+		function prazoSocilitacao(){
+			var data = new Date();
+			var date = new Date()
+			var diaN = 12
+			var diaT = 12
 
-		//dt1 = dataInicial.split('/')
-		//dataInicial = dt1[2] + '-' + dt1[1] + '-' + dt1[0]
-		//msg += dataInicial+"\n";
-		for(i = 0; i < diaN; i++){
-			date.setDate(date.getDate() + i);
-			var dia_N_Util = new String(date);
-			var patt1 = /Sat+/g;
-			var patt2 = /Sun+/g; 
-			if(dia_N_Util.match(patt1) || dia_N_Util.match(patt2)){
-				diaN++;
+			//dt1 = dataInicial.split('/')
+			//dataInicial = dt1[2] + '-' + dt1[1] + '-' + dt1[0]
+			//msg += dataInicial+"\n";
+			for(i = 0; i < diaN; i++){
+				date.setDate(date.getDate() + i);
+				var dia_N_Util = new String(date);
+				var patt1 = /Sat+/g;
+				var patt2 = /Sun+/g; 
+				if(dia_N_Util.match(patt1) || dia_N_Util.match(patt2)){
+					diaN++;
+				}
+			}
+			var d = data.addDays(diaN);
+			var Ano = d.getFullYear();
+			var mes = new Array();
+				mes[0] = "01"
+				mes[1] = "02"
+				mes[2] = "03"
+				mes[3] = "04"
+				mes[4] = "05"
+				mes[5] = "06"
+				mes[6] = "07"
+				mes[7] = "08"
+				mes[8] = "09"
+				mes[9] = "10"
+				mes[10] = "11"
+				mes[11] = "12"
+			var dia = new Array();
+				dia[1] = "01"
+				dia[2] = "02"
+				dia[3] = "03"
+				dia[4] = "04"
+				dia[5] = "05"
+				dia[6] = "06"
+				dia[7] = "07"
+				dia[8] = "08"
+				dia[9] = "09"
+			var Mes = mes[d.getMonth()];
+			if(d.getDate() <= 9){
+				var Dia = dia[d.getDate()];
+			}
+			else{var Dia = d.getDate()}
+
+			var dataFinal = [Ano+"-"+Mes+"-"+Dia];
+			
+			if(dataFinal  > dataInicial){
+				msg += "Alerta : Favor preencher com no minimo "+diaT+" dias úteis de antecendência!\n";        
 			}
 		}
-		var d = data.addDays(diaN);
-		var Ano = d.getFullYear();
-		var mes = new Array();
-			mes[0] = "01"
-			mes[1] = "02"
-			mes[2] = "03"
-			mes[3] = "04"
-			mes[4] = "05"
-			mes[5] = "06"
-			mes[6] = "07"
-			mes[7] = "08"
-			mes[8] = "09"
-			mes[9] = "10"
-			mes[10] = "11"
-			mes[11] = "12"
-		var dia = new Array();
-			dia[1] = "01"
-			dia[2] = "02"
-			dia[3] = "03"
-			dia[4] = "04"
-			dia[5] = "05"
-			dia[6] = "06"
-			dia[7] = "07"
-			dia[8] = "08"
-			dia[9] = "09"
-		var Mes = mes[d.getMonth()];
-		if(d.getDate() <= 9){
-			var Dia = dia[d.getDate()];
-		}
-		else{var Dia = d.getDate()}
-
-		var dataFinal = [Ano+"-"+Mes+"-"+Dia];
-		
-		if(dataFinal  > dataInicial){
-			msg += "Alerta : Favor preencher com no minimo "+diaT+" dias úteis de antecendência!\n";        
-		}
-	}
-
-}
 
 function validateboleto() {
 	var urlInd = "https://myweb.am.sebrae.com.br/portal/p/1/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID="
@@ -146,4 +156,5 @@ function validateboleto() {
 		}
 		//<a href="LISTA DE INSCRITOS NA ETAPA DE PRÉ-SELEÇÃO - MESTRADO FGV.pdf" class="cad-link" target="_blank" style="color:blue"><i class="flaticon flaticon-link icon-sm"></i>Click aqui para baixar</a>
 	} //https://myweb.am.sebrae.com.br/portal/p/1/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID=24878&app_ecm_workflowview_taskUserId=00000514
+
 }

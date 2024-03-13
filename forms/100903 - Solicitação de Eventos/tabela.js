@@ -126,46 +126,37 @@ function panelInput2() {
 
 
     var arrayOption = [
-        'Demanda de Serviço/Produto - Espaço Fisico',
-        'Demanda de Serviço/Produto - Recursos Humanos',
-        'Demanda de Serviço/Produto - Artigo de Decoração',
-        'Demanda de Serviço/Produto - Estrutura Física',
-        'Demanda de Serviço/Produto - Equipamento de Iluminação',
-        'Demanda de Serviço/Produto - Equipamento de Sonorização',
-        'Demanda de Serviço/Produto - Equipamento de Informática',
-        'Demanda de Serviço/Produto - Equipamento Áudio Visuais',
-        'Demanda de Serviço/Produto - Alimentação',
-        'Demanda de Serviço/Produto - Bebida',
-        'Serviço de Comunicação - TV',
-        'Serviço de Comunicação - Rádio',
-        'Serviço de Comunicação - Jornal',
-        //'Serviço de Comunicação - Revista',
-        'Serviço de Comunicação - Portal',
-        'Serviço de Comunicação - Google',
-        'Serviço de Comunicação - Redes Sociais',
-        //'Serviço de Comunicação - Instagram',
-        //'Serviço de Comunicação - Facebook',
-        'Serviço de Comunicação - Outdoor',
-        //'Serviço de Comunicação - Busdoor',
-        'Serviço de Comunicação - Mobiliário Urbano',
-        'Serviço de Comunicação - Propaganda Indoor',
-        'Serviço de Comunicação - Criação e Produção de Material Gráfico',
-        'Serviço de Comunicação - Cobertura Jornalistica',
-        'Serviço de Comunicação - Cobertura Fotográfica',
-        'Serviço de Comunicação - Produção de Vídeo',
-        'Serviço de Comunicação - Plano de Comunicação'
+        'Serviços Gráficos - Calendários',
+        'Serviços Gráficos - Agendas',
+        'Serviços Gráficos - Canetas',
+        'Serviços Gráficos - Copos',
+        'Serviços Gráficos - Eco Bags',
+        'Serviços Gráficos - Bonés',
+        'Serviços Gráficos - Camisas',
+        'Serviços Gráficos - Squeezes',
+        'Serviços Gráficos - Panfletos',
+        'Serviços Gráficos - Flyers',
+        'Serviços Gráficos - Revistas',
+        'Serviços Gráficos - Crachás',
+        'Serviços Gráficos - Certificados',
+        'Serviços Gráficos - Banners',
+        'Serviços Gráficos - Adesivos',
+        'Serviços Gráficos - Placas de Identificação',
+        'Serviços Gráficos - Diagramações em Geral',
+        'Serviços Gráficos - Cartazes',
+
     ]
 
     var optgp2 = document.createElement('optgroup')
     att = document.createAttribute('label')
-    att.value = 'Demanda de Serviço/Produto'
+    att.value = 'Serviços Gráficos'
     optgp2.setAttributeNode(att)
     for (i = 0; i < arrayOption.length; i++) {
         var opt = arrayOption[i].split(' - ')
         att = document.createAttribute('label')
         var voption = document.createElement('option')
         att = document.createAttribute('value')
-        if (opt[0] == 'Demanda de Serviço/Produto') {
+        if (opt[0] == 'Serviços Gráficos') {
             att.value = opt[1]
             voption.setAttributeNode(att)
             voption.innerText = opt[1]
@@ -191,7 +182,6 @@ function panelInput2() {
             optgp3.appendChild(voption)
         }
     }
-    vselect.appendChild(optgp3)
 
     divaAll.appendChild(vselect)
 

@@ -65,12 +65,18 @@
 
 #addRateio {
     border: 3px solid rgba(0, 0, 0, 0);
-    background-color:#ffda05;
+    background-color:#eb6e7d;
     color: #fff
 }
 
 #addItem {
     border: 3px solid rgba(0, 0, 0, 0);
-    background-color:#ffda05;
+    background-color:#eb6e7d;
+    color: #fff
+}
+
+#addGrafica {
+    border: 3px solid rgba(0, 0, 0, 0);
+    background-color:#eb6e7d;
     color: #fff
 }

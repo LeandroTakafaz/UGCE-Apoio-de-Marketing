@@ -874,6 +874,22 @@ decisaoSelect.addEventListener("change", BloquearCampos);
 BloquearCampos();
 
 
+document.getElementById('arteGrafica').onchange = function() {
+    if (arteGrafica.value === 'simGrafica') {
+        alert('Possuindo uma Arte para Referência, deve incluir a mesma nos anexos e agilizar o processo de criação do Design.');
+    } else if (arteGrafica.value === 'naoGrafica') {
+        console.log('ado ado ado, se leu, já sabe.');
+    }
+}
+
+document.getElementById('logoGrafica').onchange = function() {
+    if (logoGrafica.value === 'simGrafica') {
+        alert('Possuindo uma Logo para Referência, adicione ela no anexo para agilizar o processo de criação do Design.');
+    } else if (logoGrafica.value === 'naoGrafica') {
+        console.log('Duas vezes? Sério?');
+    }
+}
+
 /* $(document).ready(function() {
     var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];
 
