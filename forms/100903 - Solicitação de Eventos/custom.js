@@ -696,7 +696,6 @@ function BloquearCampos() {
     var qualiSelect = document.getElementById("qualiEventoComercial");
     var quantSelect = document.getElementById("quantEventoComercial");
     var canalSelect = document.getElementById("canalEventoComercial");
-    var publicoProjSelect = document.getElementById("publicoProjetoComercial");
     var identidadeProjSelect = document.getElementById("identidadeProjetoComercial");
     var coresProjSelect = document.getElementById("coresProjetoComercial");
     var tableProjSelect = document.getElementById("tableProjComercial");
@@ -735,7 +734,6 @@ function BloquearCampos() {
         qualiSelect.style.display = "none";
         quantSelect.style.display = "none";
         canalSelect.style.display = "none";
-        publicoProjSelect.style.display = "none";
         identidadeProjSelect.style.display = "none";
         coresProjSelect.style.display = "none";
         descProjComercial.style.display = "none";
@@ -773,7 +771,6 @@ function BloquearCampos() {
         qualiSelect.style.display = "block";
         quantSelect.style.display = "block";
         canalSelect.style.display = "block";
-        publicoProjSelect.style.display = "block";
         identidadeProjSelect.style.display = "block";
         coresProjSelect.style.display = "block";
         descProjComercial.style.display = "block";
@@ -813,7 +810,6 @@ function BloquearCampos() {
         qualiSelect.style.display = "none";
         quantSelect.style.display = "none";
         canalSelect.style.display = "none";
-        publicoProjSelect.style.display = "none";
         identidadeProjSelect.style.display = "none";
         coresProjSelect.style.display = "none";
         descProjComercial.style.display = "none";
@@ -853,7 +849,6 @@ function BloquearCampos() {
         qualiSelect.style.display = "block";
         quantSelect.style.display = "block";
         canalSelect.style.display = "block";
-        publicoProjSelect.style.display = "none";
         identidadeProjSelect.style.display = "none";
         descProjComercial.style.display = "block";
         coresProjSelect.style.display = "none";
@@ -889,6 +884,7 @@ document.getElementById('logoGrafica').onchange = function() {
         console.log('Duas vezes? Sério?');
     }
 }
+
 
 /* $(document).ready(function() {
     var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];

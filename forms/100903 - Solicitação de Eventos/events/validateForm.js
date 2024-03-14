@@ -2,7 +2,6 @@ function validateForm(form){
     var Now = parseInt(getValue("WKNumState"));
 	var errors = [];
 	var msg = '';
-
 	Date.prototype.addDays = function(days) {
         var date = new Date(this.valueOf());
         date.setDate(date.getDate() + days);
@@ -32,11 +31,33 @@ function validateForm(form){
 			errors.push("Nenhuma das Caixas preenchidas")
 		}
 
-		if(form.getValue("Eventos") == "" && form.getValue("digitalPresencial") == "") {
-			errors.push("Error: Selecione uma opção para Abrir o Painel")
+		if(form.getValue("Eventos") == "on" && form.getValue("digitalPresencial") == "") {
+			errors.push("Error: Favor preencher o Painel de Evento")
 		}
+
+		var campos = [
+			{campo: "nomeEventoPres", erro: "Campo Público Alvo não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "publicoEventoPres", erro: "Campo Nome do Evento não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "CidUFPres", erro: "Campo Cidade/Uf não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "dtEvtInicioPres", erro: "Campo Data Inicial não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "dtEvtFinalPres", erro: "Campo Data Final não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "qualiProjeto", erro: "Campo Meta Qualitativa não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "quantProjeto", erro: "Campo Meta Quantitativa não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "canalProjeto", erro: "Campo Canais de Atendimento não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "identidadeProjeto", erro: "Campo Estilo Visual Desejado não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "coresProjeto", erro: "Campo Cores Preferenciais não foi Preenchido no Painel de Eventos Comerciais"},
+			{campo: "descPresencial", erro: "Campo Descrição do Projeto/Programa não foi Preenchido no Painel de Eventos Comerciais"}
+		];
+		
+		for(var i = 0; i < campos.length; i++) {
+			if(form.getValue("Eventos") == "on" && form.getValue("digitalPresencial") == "1" && form.getValue(campos[i].campo) == "") {
+				errors.push("Error: " + campos[i].erro);
+			}
+		}
+		
 	}
 	
+
 	if (errors.length > 0) {
 		throw errors.join("\n");
 	  } 
