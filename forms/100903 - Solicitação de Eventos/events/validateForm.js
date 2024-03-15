@@ -35,7 +35,7 @@ function validateForm(form){
 			errors.push("Error: Favor preencher o Painel de Evento")
 		}
 
-		var campos = [
+		/* var campos = [
 			{campo: "nomeEventoPres", erro: "Campo Público Alvo não foi Preenchido no Painel de Eventos Comerciais"},
 			{campo: "publicoEventoPres", erro: "Campo Nome do Evento não foi Preenchido no Painel de Eventos Comerciais"},
 			{campo: "CidUFPres", erro: "Campo Cidade/Uf não foi Preenchido no Painel de Eventos Comerciais"},
@@ -53,7 +53,7 @@ function validateForm(form){
 			if(form.getValue("Eventos") == "on" && form.getValue("digitalPresencial") == "1" && form.getValue(campos[i].campo) == "") {
 				errors.push("Error: " + campos[i].erro);
 			}
-		}
+		} */
 		
 	}
 	
