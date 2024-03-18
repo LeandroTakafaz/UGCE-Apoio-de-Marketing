@@ -160,7 +160,11 @@
 						</div>
 						<div class="checkbox-inline">
 							<input type="checkbox" id="Grafica" name="Grafica">
-							<label for="Grafica">Serviços Gráficos</label>
+							<label for="Grafica">Serviços Gráficos </label>
+						</div>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="Cobertura" name="Cobertura">
+							<label for="Cobertura">Cobertura</label>
 						</div>
 					</div>
 				</div>
@@ -190,7 +194,8 @@
 												<tbody>
 													<tr>
 														<td>
-															<span class="fluig-style-guide fs-display-block fs-md-space">
+															<span
+																class="fluig-style-guide fs-display-block fs-md-space">
 																<i type="button"
 																	class="fluigicon fluigicon-trash fluigicon-md delItem"
 																	id="delItem" name="delItem"
@@ -200,11 +205,12 @@
 														</td>
 														<td>
 															<div class="form-group">
-																<label for="tipo_solicitacao">Tipo de SolicitaÃ§Ã£o <span
+																<label for="tipo_solicitacao">Tipo de SolicitaÃ§Ã£o
+																	<span
 																		class="Obrigatorio"><strong>*</strong></span>:</label>
 																<input class="form-control" name="tipo_solicitacao"
 																	id="tipo_solicitacao">
-		
+
 															</div>
 														</td>
 														<td>
@@ -241,7 +247,8 @@
 							<div class="form-group row">
 								<div class="col-md-3">
 									<label for="digitalPresencial">Será qual tipo de Evento? </label>
-									<select type="text" name="digitalPresencial" id="digitalPresencial" class="form-control">
+									<select type="text" name="digitalPresencial" id="digitalPresencial"
+										class="form-control">
 										<option value="" selected>Selecione uma Opção</option>
 										<option value="1">Presencial</option>
 										<option value="2">Digital</option>
@@ -332,9 +339,9 @@
 									<textarea rows="4" name="progEvento" id="progEvento"
 										class="form-control"></textarea><br><br>
 								</div>
-								<div class="col-md-2" id="portalProjetoComercial"><label style="text-align: center;"> <br> <input type="checkbox"
-									name="portalProjComercial" id="portalProjComercial">
-								Conteúdo será postado no Portal SEBRAE</label></div>
+								<div class="col-md-2" id="portalProjetoComercial"><label style="text-align: center;">
+										<br> <input type="checkbox" name="portalProjComercial" id="portalProjComercial">
+										Conteúdo será postado no Portal SEBRAE</label></div>
 
 								<!-- Seção Presencial  -->
 								<h1 id="PresencialName"><strong>Evento Presencial</strong></h1>
@@ -342,11 +349,13 @@
 								<div class="form-group row">
 									<div class="col-md-3" id="nomeEventoPresencial">
 										<label for="nomeEventoPres">Nome do Evento:</label>
-										<input type="text" name="nomeEventoPres" id="nomeEventoPres" class="form-control">
+										<input type="text" name="nomeEventoPres" id="nomeEventoPres"
+											class="form-control">
 									</div>
 									<div class="col-md-3" id="publicoEventoPresencial">
 										<label for="publicoEventoPres">Público-Alvo:</label>
-										<input type="text" name="publicoEventoPres" id="publicoEventoPres" class="form-control">
+										<input type="text" name="publicoEventoPres" id="publicoEventoPres"
+											class="form-control">
 									</div>
 									<div class="col-md-2" id="CidUFPresencial">
 										<label for="CidUFPres">Cidade/Uf: <span class="Obrigatorio"></label>
@@ -359,7 +368,8 @@
 									</div>
 									<div class="col-md-2" id="dtFinalPresencial">
 										<label for="dtEvtFinalPres">Data Final:</label>
-										<input type="datetime-local" name="dtEvtFinalPres" id="dtEvtFinalPres" class="form-control">
+										<input type="datetime-local" name="dtEvtFinalPres" id="dtEvtFinalPres"
+											class="form-control">
 									</div>
 								</div>
 								<div class="form-group row">
@@ -393,11 +403,11 @@
 										<textarea rows="5" name="descPresencial" id="descPresencial"
 											class="form-control"></textarea>
 									</div>
-									<div class="col-md-2" id="portalProjDigital"><label style="text-align: center;"> <br> <input type="checkbox"
-										name="portalProjeto" id="portalProjeto">
-									Conteúdo será postado no Portal SEBRAE</label></div>
+									<div class="col-md-2" id="portalProjDigital"><label style="text-align: center;">
+											<br> <input type="checkbox" name="portalProjeto" id="portalProjeto">
+											Conteúdo será postado no Portal SEBRAE</label></div>
 									<div class="form-group table-responsive">
-									
+
 										<div class="table" id="tableProjComercial">
 											<thead>
 											</thead>
@@ -420,11 +430,12 @@
 															<div class="form-group row">
 																<div class="bs-docs-popover-hover">
 																	<br>
-																	<button type="button" class="btn btn-default" data-comp-show-modal="small"
-																		id="addItem" onclick="adicionarItem();">Inserir Solicitação
+																	<button type="button" class="btn btn-default"
+																		data-comp-show-modal="small" id="addItem"
+																		onclick="adicionarItem();">Inserir Solicitação
 																		<b>+</b></button>
 																</div>
-					
+
 															</div>
 														</div>
 													</td>
@@ -432,7 +443,8 @@
 												<tr>
 													<td>
 														<div class="col-md-7">
-															<table class="table table-bordered table-striped table-hover certa"
+															<table
+																class="table table-bordered table-striped table-hover certa"
 																noaddbutton="true" nodeletebutton="true">
 																<thead>
 																	<tr>
@@ -442,10 +454,10 @@
 																		<td class="col-md-1">Remove</td>
 																	</tr>
 																</thead>
-					
+
 																<tbody>
 																</tbody>
-					
+
 															</table>
 														</div>
 													</td>
@@ -488,7 +500,7 @@
 							<div class="form-group row">
 								<div class="col-md-2">
 									<label for="horaInicioBreak">Horário
-										 Inicial do Evento:</label>
+										Inicial do Evento:</label>
 									<input type="time" name="horaInicioBreak" id="horaInicioBreak" class="form-control">
 								</div>
 								<div class="col-md-2">
@@ -562,7 +574,7 @@
 									<label for="descLogo">Descrição do Evento/Projeto:</label>
 									<textarea rows="5" name="descLogo" id="descLogo" class="form-control"></textarea>
 								</div>
-							
+
 							</div>
 						</div>
 					</div>
@@ -573,8 +585,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading" id="painelLanding">
 						<h4 class="panel-title">
-							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
-								href="#Jornada">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Jornada">
 								<strong>Jornada do Cliente</strong>
 							</a>
 						</h4>
@@ -585,7 +596,8 @@
 
 								<div class="col-md-3">
 									<label for="trilhaMarketing">Qual trilha deseja seguir?</label>
-									<select type="text" name="trilhaMarketing" id="trilhaMarketing" class="form-control">
+									<select type="text" name="trilhaMarketing" id="trilhaMarketing"
+										class="form-control">
 										<option value="" selected disabled>Selecione uma Opção</option>
 										<option value="landing">Landing Page</option>
 										<option value="disp">Disparo de SMS</option>
@@ -593,7 +605,7 @@
 										<option value="jornadas">Jornada Completa</option>
 									</select>
 								</div>
-								 <div class="col-md-3">
+								<div class="col-md-3">
 									<label for="nomeMarketing">Nome do Evento/Ação:</label>
 									<input type="text" name="nomeMarketing" id="nomeMarketing" class="form-control">
 								</div>
@@ -618,7 +630,8 @@
 								</div>
 								<div class="col-md-3">
 									<label for="publicoMarketing">Público-Alvo:</label>
-									<input type="text" name="publicoMarketing" id="publicoMarketing" class="form-control">
+									<input type="text" name="publicoMarketing" id="publicoMarketing"
+										class="form-control">
 								</div>
 								<div class="col-md-3">
 									<label for="metaMarketing">Meta de Atendimento: </label>
@@ -637,13 +650,12 @@
 					</div>
 				</div>
 				<!-- Fim da Seção Jornada do Cliente -->
-				
+
 				<!-- Inicio da Seção Estratégia Comercial -->
 				<div class="panel panel-default">
 					<div class="panel-heading" id="painelConsultoria">
 						<h4 class="panel-title">
-							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
-								href="#Estrategia">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Estrategia">
 								<strong>Estratégia Comercial</strong>
 							</a>
 						</h4>
@@ -662,7 +674,8 @@
 								</div>
 								<div class="col-md-3" id="valoresConsultoria">
 									<label for="valorConsultoria">Evento gratuito ou pago?</label>
-									<select type="text" name="valorConsultoria" id="valorConsultoria" class="form-control">
+									<select type="text" name="valorConsultoria" id="valorConsultoria"
+										class="form-control">
 										<option value="" selected disabled>Selecione uma Opção</option>
 										<option value="gratuito">Gratuito</option>
 										<option value="pago">Pago</option>
@@ -672,7 +685,8 @@
 							<div class="form-group row" id="camposConsultoria">
 								<div class="col-md-3" id="campoConsultoria">
 									<label for="tipoConsultoria">Será Presencial ou Digital?</label>
-									<select type="text" name="tipoConsultoria" id="tipoConsultoria" class="form-control">
+									<select type="text" name="tipoConsultoria" id="tipoConsultoria"
+										class="form-control">
 										<option value="" selected disabled>Selecione uma Opção</option>
 										<option value="presencial">Presencial</option>
 										<option value="digital">Digital</option>
@@ -680,7 +694,8 @@
 								</div>
 								<div class="col-md-3 metaAtendConsultoria">
 									<label for="metaConsultoria">Possui Meta de Atendimento?</label>
-									<select type="text" name="metaConsultoria" id="metaConsultoria" class="form-control">
+									<select type="text" name="metaConsultoria" id="metaConsultoria"
+										class="form-control">
 										<option value="" selected disabled>Selecione uma Opção</option>
 										<option value="Sim">Sim</option>
 										<option value="Não">Não</option>
@@ -696,8 +711,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading" id="painelImprensa">
 						<h4 class="panel-title">
-							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
-								href="#Imprensa">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Imprensa">
 								<strong>Assessoria Imprensa</strong>
 							</a>
 						</h4>
@@ -707,22 +721,14 @@
 							<div class="form-group row">
 								<div class="col-md-4">
 									<label for="prodJornalistico">Produção Jornalistica:</label>
-									<input type="text" name="prodJornalistico" id="prodJornalistico" class="form-control">
+									<input type="text" name="prodJornalistico" id="prodJornalistico"
+										class="form-control">
 								</div>
 								<div class="col-md-4">
 									<label for="textoJornalistico">Texto Jornalistico - Comunicado:</label>
-									<input type="text" name="textoJornalistico" id="textoJornalistico" class="form-control">
+									<input type="text" name="textoJornalistico" id="textoJornalistico"
+										class="form-control">
 								</div>
-								<div class="col-md-4" id="coberturaJornalistica">
-									<label for="cobertura">Estilo de Cobertura:</label>
-									<select type="text" name="cobertura" id="cobertura" class="form-control">
-										<option value="" selected disabled>Selecione uma Opção</option>
-										<option value="fotografica">Cobertura Fotográfica</option>
-										<option value="jornalistica">Cobertura Jornalistica</option>
-									</select>
-								</div>
-							</div>
-							<div class="form-group row">
 								<div class="col-md-4">
 									<label for="ReleaseJornalistico">Release (Sugestão de Pauta):</label>
 									<textarea rows="5" name="ReleaseJornalistico" id="ReleaseJornalistico"
@@ -749,8 +755,8 @@
 										</tr>-->
 									<tr>
 										<td>
-											<table id="dadosItemGrafica" tablename="dadosItemGrafica" class="table table-hover"
-												noaddbutton="true" nodeletebutton="true">
+											<table id="dadosItemGrafica" tablename="dadosItemGrafica"
+												class="table table-hover" noaddbutton="true" nodeletebutton="true">
 												<thead>
 													<tr>
 														<td></td>
@@ -759,7 +765,8 @@
 												<tbody>
 													<tr>
 														<td>
-															<span class="fluig-style-guide fs-display-block fs-md-space">
+															<span
+																class="fluig-style-guide fs-display-block fs-md-space">
 																<i type="button"
 																	class="fluigicon fluigicon-trash fluigicon-md delItem"
 																	id="delGrafica" name="delGrafica"
@@ -773,13 +780,15 @@
 																		class="Obrigatorio"><strong>*</strong></span>:</label>
 																<input class="form-control" name="tipo_grafica"
 																	id="tipo_grafica">
-		
+
 															</div>
 														</td>
 														<td>
 															<div class="form-group">
-																<label for="detalhe_grafica">Detalhes da SolicitaÃ§Ã£o</label>
-																<textarea rows=2 name="detalhe_grafica" id="detalhe_grafica"
+																<label for="detalhe_grafica">Detalhes da
+																	SolicitaÃ§Ã£o</label>
+																<textarea rows=2 name="detalhe_grafica"
+																	id="detalhe_grafica"
 																	class="form-control"></textarea>
 															</div>
 														</td>
@@ -800,8 +809,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading" id="painelGrafica">
 						<h4 class="panel-title">
-							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion"
-								href="#Grafica">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Grafica">
 								<strong>Serviços Gráficos</strong>
 							</a>
 						</h4>
@@ -832,7 +840,7 @@
 							</div>
 
 							<div class="form-group table-responsive">
-									
+
 								<div class="table" id="tableGraficaComercial">
 									<thead>
 									</thead>
@@ -855,8 +863,9 @@
 													<div class="form-group row">
 														<div class="bs-docs-popover-hover">
 															<br>
-															<button type="button" class="btn btn-default" data-comp-show-modal="small"
-																id="addGrafica" onclick="adicionarItem2();">Inserir Solicitação
+															<button type="button" class="btn btn-default"
+																data-comp-show-modal="small" id="addGrafica"
+																onclick="adicionarItem2();">Inserir Solicitação
 																<b>+</b></button>
 														</div>
 													</div>
@@ -875,10 +884,10 @@
 																<td class="col-md-1">Remove</td>
 															</tr>
 														</thead>
-			
+
 														<tbody>
 														</tbody>
-			
+
 													</table>
 												</div>
 											</td>
@@ -891,6 +900,49 @@
 				</div>
 
 				<!-- Fim da Seção de Serviços Gráficos -->
+
+				<!-- Inicio da Seção Cobertura -->
+
+				<div class="panel panel-default">
+					<div class="panel-heading" id="painelCobertura">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Cobertura">
+								<strong>Cobertura</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="cobertura" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-md-4">
+									<label for="nomeEventoCobertura">Nome do Evento:</label>
+									<input type="text" name="nomeEventoCobertura" id="nomeEventoCobertura"
+										class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="escolhaCobertura">Estilo de Cobertura escolhida:</label>
+									<select type="text" name="escolhaCobertura" id="escolhaCobertura" class="form-control">
+										<option value="" selected disabled>Selecione uma Opção</option>
+										<option value="cobertFoto">Cobertura Fotográfica</option>
+										<option value="cobertRedes">Cobertura Redes Sociais</option>
+										<option value="cobertJorn">Cobertura Jornalística</option>
+										<option value="cobertComp">Cobertura Completa</option>
+									</select>
+								</div>
+								<div class="col-md-2" id="dtInicialCobertura">
+									<label for="dtEvtInicioCobert">Data Inicial:</label>
+									<input type="datetime-local" name="dtEvtInicioCobert" id="dtEvtInicioCobert"
+										class="form-control">
+								</div>
+								<div class="col-md-2" id="dtFinalCobertura">
+									<label for="dtEvtFinalCobert">Data Final:</label>
+									<input type="datetime-local" name="dtEvtFinalCobert" id="dtEvtFinalCobert"
+										class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 			</div>
 
@@ -927,16 +979,18 @@
 									</li><br>
 
 									<li><strong>Jornada Completa - Escolha uma opção de trilha baseado no que deseja,
-										 caso precise de todos os citados escolha a opção de Jornada Completa. 
-										 Assim terá todas as opções definidas.</strong>
+											caso precise de todos os citados escolha a opção de Jornada Completa.
+											Assim terá todas as opções definidas.</strong>
 									</li><br>
 
 									<li><strong>Jornada Completa - Outras Informações necessárias à campanha serão
-										 solicitadas via e-mail pelo devido responsável pela tarefa na UGCE</strong>
+											solicitadas via e-mail pelo devido responsável pela tarefa na UGCE</strong>
 									</li><br>
 
-									<li><strong>Caso deseje receber o Suporte de um consultor especializado em estratégia
-										 comercial, selecione a opção e preencha os campos que aparecerão para prosseguir com a consultoria.</strong>
+									<li><strong>Caso deseje receber o Suporte de um consultor especializado em
+											estratégia
+											comercial, selecione a opção e preencha os campos que aparecerão para
+											prosseguir com a consultoria.</strong>
 									</li>
 								</ol>
 							</div>
@@ -1294,4 +1348,5 @@
 </script>
 <script type="text/javascript" src="custom.js"></script>
 <script type="text/javascript" src="tabela.js"></script>
+
 </html>

@@ -63,6 +63,11 @@
     color: #fff
 }
 
+#painelCobertura {
+    background: linear-gradient(to right, #ffa6b0, #f8dd40);
+    color: #fff
+}
+
 #addRateio {
     border: 3px solid rgba(0, 0, 0, 0);
     background-color:#eb6e7d;
