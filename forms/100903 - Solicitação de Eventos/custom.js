@@ -885,17 +885,16 @@ document.getElementById('logoGrafica').onchange = function() {
     }
 }
 
-function validaDataTermino() {
+/* function validaDataTermino() {
 	var inicio = document.getElementById("dtEvtInicioPres").value;
 	var Termino = document.getElementById("dtEvtFinalPres").value;
 	if (Termino == null || Termino == "") {
-		document.getElementById("Msg_GuiaErro2").style.display = "none"
+        console.warn("O Evento acaba nunca?")
 	}
 	else if (inicio > Termino) {
-		document.getElementById("Msg_GuiaErro2").innerHTML = "<div class=\"error\">Data de término não pode ser anterior a data de início.<\/div>";
-		document.getElementById("Msg_GuiaErro2").style.display = "block";
+        console.warn("O Evento começa Nunca??")
 	} else {
-		document.getElementById("Msg_GuiaErro2").style.display = "none"
+        console.warn("Definitivamente é um evento")
 	}
 }
 
@@ -951,17 +950,55 @@ function prazoSocilitacao() {
 		var dataFinal = [Ano + "-" + Mes + "-" + Dia];
 	}
 	if (dataFinal > dataInicial) {
-		document.getElementById("Msg_GuiaErro1").innerHTML =
-			"<div class=\"error\">Deve-se preencher a data de início com no mínimo 10 dias de antecendência, de acordo com a resolução N 003\/2020(IN-35).<\/div>";
-		document.getElementById("Msg_GuiaErro1").style.display = "block";
+        throw("Data Final deve ser maior que Data Inicial");
 	} else {
-		document.getElementById("Msg_GuiaErro1").style.display = "none"
+        throw("Data Final de fato existe");
 	}
 	validaDataTermino()
 }
 
-function checkControl() { document.getElementById("portalProjeto").onchange = function () { prazoSocilitacao() } }
-window.addEventListener("load", checkControl)
+var portalPrazo = document.getElementById("portalProjeto").checked;
+portalPrazo.addEventListener("change", prazoSocilitacao);
+prazoSocilitacao(); */
+
+
+function validaDataTermino() {
+    var inicio = new Date(document.getElementById("dtEvtInicioPres").value);
+    var termino = new Date(document.getElementById("dtEvtFinalPres").value);
+
+    if (!termino) {
+        console.warn("O Evento acaba nunca?");
+    } else if (inicio > termino) {
+        console.warn("O Evento começa Nunca??");
+    } else {
+        console.warn("Definitivamente é um evento");
+    }
+}
+
+function prazoSocilitacao() {
+    var valueCheck = document.getElementById("portalProjeto").checked;
+    var dataInicial = new Date(document.getElementById("dtEvtInicioPres").value);
+    var dataFinal;
+
+    if (!valueCheck) {
+        var data = new Date();
+        data.setDate(data.getDate() + 9);
+        dataFinal = data.toISOString().split('T')[0];
+    }
+
+    if (dataFinal > dataInicial) {
+        throw("Data Final deve ser maior que Data Inicial");
+    } else {
+        throw("Data Final de fato existe");
+    }
+    validaDataTermino();
+}
+
+document.getElementById("portalProjeto").addEventListener("change", prazoSocilitacao);
+prazoSocilitacao();
+
+
+
 
 /* $(document).ready(function() {
     var campos = ["eventos", "projetos", "coffee", "landingPage", "logo"];
