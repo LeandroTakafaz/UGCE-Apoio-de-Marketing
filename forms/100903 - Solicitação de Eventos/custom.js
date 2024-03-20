@@ -885,7 +885,7 @@ document.getElementById('logoGrafica').onchange = function() {
     }
 }
 
-/* function validaDataTermino() {
+ function validaDataTermino() {
 	var inicio = document.getElementById("dtEvtInicioPres").value;
 	var Termino = document.getElementById("dtEvtFinalPres").value;
 	if (Termino == null || Termino == "") {
@@ -898,105 +898,31 @@ document.getElementById('logoGrafica').onchange = function() {
 	}
 }
 
-function prazoSocilitacao() {
-	var valueCheck = document.getElementById("portalProjeto").checked;
-	var dataInicial = document.getElementById("dtEvtInicioPres").value;
-	var dataFinal = 0;
-	console.log("safsdfdsf")
-	if (valueCheck != true) {
-		var data = new Date();
-		var date = new Date()
-		var diaN = 9
-		for (i = 0; i < diaN; i++) {
-			date.setDate(date.getDate() + 1);
-			var dia_N_Util = new String(date);
-			var patt1 = /Sat+/g;
-			var patt2 = /Sun+/g;
-			if (dia_N_Util.match(patt1) || dia_N_Util.match(patt2)) {
-				diaN++
-			}
-		}
-		var d = data.addDays(diaN);
-		var Ano = d.getFullYear();
-		var mes = new Array();
-		mes[0] = "01"
-		mes[1] = "02"
-		mes[2] = "03"
-		mes[3] = "04"
-		mes[4] = "05"
-		mes[5] = "06"
-		mes[6] = "07"
-		mes[7] = "08"
-		mes[8] = "09"
-		mes[9] = "10"
-		mes[10] = "11"
-		mes[11] = "12"
-		var dia = new Array();
-		dia[1] = "01"
-		dia[2] = "02"
-		dia[3] = "03"
-		dia[4] = "04"
-		dia[5] = "05"
-		dia[6] = "06"
-		dia[7] = "07"
-		dia[8] = "08"
-		dia[9] = "09"
-		var Mes = mes[d.getMonth()];
-		if (d.getDate() <= 9) {
-			var Dia = dia[d.getDate()];
-		} else {
-			var Dia = d.getDate()
-		}
-		var dataFinal = [Ano + "-" + Mes + "-" + Dia];
-	}
-	if (dataFinal > dataInicial) {
-        throw("Data Final deve ser maior que Data Inicial");
-	} else {
-        throw("Data Final de fato existe");
-	}
-	validaDataTermino()
-}
+/* function verificaData(data) {
 
-var portalPrazo = document.getElementById("portalProjeto").checked;
-portalPrazo.addEventListener("change", prazoSocilitacao);
-prazoSocilitacao(); */
-
-
-function validaDataTermino() {
-    var inicio = new Date(document.getElementById("dtEvtInicioPres").value);
-    var termino = new Date(document.getElementById("dtEvtFinalPres").value);
-
-    if (!termino) {
-        console.warn("O Evento acaba nunca?");
-    } else if (inicio > termino) {
-        console.warn("O Evento começa Nunca??");
-    } else {
-        console.warn("Definitivamente é um evento");
-    }
-}
-
-function prazoSocilitacao() {
     var valueCheck = document.getElementById("portalProjeto").checked;
-    var dataInicial = new Date(document.getElementById("dtEvtInicioPres").value);
-    var dataFinal;
 
-    if (!valueCheck) {
-        var data = new Date();
-        data.setDate(data.getDate() + 9);
-        dataFinal = data.toISOString().split('T')[0];
-    }
+    var dtInicial = document.getElementById("dtInicialPresencial").value
 
-    if (dataFinal > dataInicial) {
-        throw("Data Final deve ser maior que Data Inicial");
+    var dataAtual = new Date();
+
+    var diferenca = dtInicial.getTime() - dataAtual.getTime();
+
+    var diferencaEmDias = diferenca / (1000 * 3600 * 24);
+
+    if (valueCheck && diferencaEmDias < 10) {
+        return "A data deve ser pelo menos 10 dias no futuro.";
     } else {
-        throw("Data Final de fato existe");
+        return "A data é válida.";
     }
-    validaDataTermino();
 }
 
-document.getElementById("portalProjeto").addEventListener("change", prazoSocilitacao);
-prazoSocilitacao();
-
+document.getElementById('portalProjeto').addEventListener('change', function() {
+    var data = document.getElementById('dtInicialPresencial').value;
+    var valueCheck = this.checked;
+    var resultado = verificaData(data, valueCheck);
+    console.log(resultado);
+}); */
 
 
 
