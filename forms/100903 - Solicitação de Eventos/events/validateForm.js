@@ -99,7 +99,7 @@ function validateForm(form){
 			{campo: "baseMarketing", erro: "Jornada do Cliente - Campo Possui Dados para Divulgação não foi selecionado"}
 		];
 		
-		for(var i = 0; i < camposMarketing.length; i++) {
+		 for(var i = 0; i < camposMarketing.length; i++) {
 			if(form.getValue("Jornada") == "on" && form.getValue(camposMarketing[i].campo) == "") {
 				errors.push("Error: " + camposMarketing[i].erro);
 			}
@@ -177,7 +177,7 @@ function validateForm(form){
 			var dataInicial = form.getValue("dtEntrega");
 			dataInicial = dataInicial.split('T')[0]
 
-			if(form.getValue("digitalPresencial") != "") {
+			if(form.getValue("Eventos") == "on" && form.getValue("digitalPresencial") != "") {
 				var data = new Date();
 				var date = new Date();
 				var diaN = 60
@@ -217,7 +217,7 @@ function validateForm(form){
 			}
 
 			if (dataAtual > dataInicial) {
-				throw("Data de Inicio do Evento deve ser de pelo menos 60 dias", dataAtual)
+				throw("Data de Inicio do Evento deve ser de pelo menos 60 dias")
 			} else{
 				console.log("parabéns, seu evento foi programado com sucessagem garantida, meu nobre")
 			}
@@ -227,13 +227,12 @@ function validateForm(form){
 	
 		/* Prazo de 45 Dias */
 		function prazoSolicitacao2() {
-			var dataAtualizada = 0;
-			var dataInicializada = form.getValue("dtEntrega");
-			dataInicializada = dataInicializada.split('T')[0]
+			var datinha = 0;
+			var newDatinhaAtual = form.getValue("dtEntrega");
+			newDatinhaAtual = newDatinhaAtual.split('T')[0]
 
-			if(form.getValue("trilhaMarketing") == "jornadas") {
+			if(form.getValue("Jornada") == "on" && form.getValue("trilhaMarketing") == "jornadas") {
 				var data = new Date();
-				var date = new Date();
 				var diaN = 45
 				var d = data.addDays(diaN);
 				var Ano = d.getFullYear();
@@ -267,10 +266,10 @@ function validateForm(form){
 					var Dia = d.getDate()
 				}
 
-				var dataAtualizada = [Ano + "-" + Mes + "-" + Dia];
+				var datinha = [Ano + "-" + Mes + "-" + Dia];
 			}
 
-			if (dataAtualizada > dataInicializada) {
+			if (datinha > newDatinhaAtual) {
 				throw("Data de Entrega para uma Jornada Completa deve ser de pelo menos 45 dias")
 			} else{
 				console.log("parabéns, seu evento foi programado com sucessagem garantida, meu nobre")
@@ -280,12 +279,12 @@ function validateForm(form){
 		prazoSolicitacao2();
 
 		/* Prazo de 30 Dias */
-		function prazoSolicitacao2() {
-			var dataAtualizada = 0;
-			var dataInicializada = form.getValue("dtEntrega");
-			dataInicializada = dataInicializada.split('T')[0]
+		function prazoSolicitacao3() {
+			var dataAtualizada2 = 0;
+			var dataInicializada2 = form.getValue("dtEntrega");
+			dataInicializada2 = dataInicializada2.split('T')[0]
 
-			if(form.getValue("trilhaMarketing") == "landing") {
+			if(form.getValue("Jornada") == "on" && form.getValue("trilhaMarketing") == "landing") {
 				var data = new Date();
 				var date = new Date();
 				var diaN = 30
@@ -321,20 +320,20 @@ function validateForm(form){
 					var Dia = d.getDate()
 				}
 
-				var dataAtualizada = [Ano + "-" + Mes + "-" + Dia];
+				var dataAtualizada2 = [Ano + "-" + Mes + "-" + Dia];
 			}
 
-			if (dataAtualizada > dataInicializada) {
+			if (dataAtualizada2 > dataInicializada2) {
 				throw("Data de Entrega de uma Landing Page deve ser de pelo menos 30 dias")
 			} else{
 				console.log("parabéns, seu evento foi programado com sucessagem garantida, meu nobre")
 			}
 			//validaDataTermino()
 		}
-		prazoSolicitacao2();
+		prazoSolicitacao3();
 
 		/* Prazo de 20 Dias */
-		function prazoSolicitacao3() {
+		function prazoSolicitacao4() {
 			var dataAtualizada3 = 0;
 			var dataInicializada3 = form.getValue("dtEntrega");
 			dataInicializada3 = dataInicializada3.split('T')[0]
@@ -385,10 +384,10 @@ function validateForm(form){
 			}
 			//validaDataTermino()
 		}
-		prazoSolicitacao3();
+		prazoSolicitacao4();
 
 		/* Prazo de 10 Dias */
-		function prazoSolicitacao4() {
+		function prazoSolicitacao5() {
 			var dataAtualizada4 = 0;
 			var dataInicializada4 = form.getValue("dtEntrega");
 			dataInicializada4 = dataInicializada4.split('T')[0]
@@ -439,10 +438,10 @@ function validateForm(form){
 			}
 			//validaDataTermino()
 		}
-		prazoSolicitacao4();
+		prazoSolicitacao5();
 
 		/* Prazo de 5 Dias */
-		function prazoSolicitacao4() {
+		function prazoSolicitacao6() {
 			var dataAtualizada4 = 0;
 			var dataInicializada4 = form.getValue("dtEntrega");
 			dataInicializada4 = dataInicializada4.split('T')[0]
@@ -493,7 +492,7 @@ function validateForm(form){
 			}
 			//validaDataTermino()
 		}
-		prazoSolicitacao4();
+		prazoSolicitacao6();
 
 	if (errors.length > 0) {
 		throw errors.join("\n");
