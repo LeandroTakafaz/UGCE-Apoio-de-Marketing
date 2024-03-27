@@ -5,7 +5,7 @@ function enableFields(form){
     var solicitante = form.getValue("cmb_NomeSolicitante")
     
     
-    if(Now_State == 0 || Now_State == 14){
+    if(Now_State == 0 || Now_State == 4 || Now_State == 14){
     	fields = ['txt_NumProc', 'cmb_NomeSolicitante', 'dt_DataSolicit']
     	disableFieldsFromList(form, fields)
     	if(usuario != solicitante){
@@ -22,7 +22,7 @@ function enableFields(form){
 			fields = ["Eventos", "Coffee", "Jornada", "Logo", "Estrategia", "Imprensa", "Grafica", "Cobertura"]
 			enableFieldsFromList(form, fields)
 		}
-else{			
+	else{			
     	disableAllFields(form)
     }
 }  

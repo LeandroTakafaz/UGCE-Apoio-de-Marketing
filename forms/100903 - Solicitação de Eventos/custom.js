@@ -641,8 +641,8 @@ $(document).ready(function () {
 
 
 $(document).ready(function() {
-    var checkboxes = ["Eventos", "Coffee", "Jornada", "Logo", "Estrategia", "Imprensa", "Grafica", "Cobertura"];
-    var campos = ["eventos", "coffee", "jornada", "logo", "estrategia", "imprensa", "grafica", "cobertura"];
+    var checkboxes = ["Eventos", "Coffee", "Jornada", "Logo", "Estrategia", "Imprensa", "Grafica", "Cobertura", "Outros"];
+    var campos = ["eventos", "coffee", "jornada", "logo", "estrategia", "imprensa", "grafica", "cobertura", "outros"];
 
     checkboxes.forEach(function(checkboxId, index) {
         $('#' + checkboxId).change(function() {

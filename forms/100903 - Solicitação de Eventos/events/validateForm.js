@@ -27,7 +27,7 @@ function validateForm(form){
 			errors.push("Campo Valor Utilizado não foi preenchido")
 		}
 		if(form.getValue("Eventos") == "" && form.getValue("Coffee") == "" && form.getValue("Logo") == "" && form.getValue("Jornada") == ""
-		 && form.getValue("Estrategia") == "" && form.getValue("Imprensa") == "" && form.getValue("Grafica") == "" && form.getValue("Cobertura") == "") {
+		 && form.getValue("Estrategia") == "" && form.getValue("Imprensa") == "" && form.getValue("Grafica") == "" && form.getValue("Cobertura") == "" && form.getValue("Outros") == "") {
 			errors.push("Nenhuma das Caixas preenchidas")
 		}
 
@@ -140,6 +140,17 @@ function validateForm(form){
 		for(var i = 0; i < camposGrafica.length; i++) {
 			if(form.getValue("Grafica") == "on" && form.getValue(camposGrafica[i].campo) == "") {
 				errors.push("Error: " + camposGrafica[i].erro);
+			}
+		}
+
+		var camposOutros = [
+			{campo: "tituloOutros", erro: "Outros - Campo Título do Pedido não foi preenchido"},
+			{campo: "descOutros", erro: "Outros - Campo Descrição do Pedido não foi selecionado"}
+		];
+		
+		for(var i = 0; i < camposOutros.length; i++) {
+			if(form.getValue("Outros") == "on" && form.getValue(camposOutros[i].campo) == "") {
+				errors.push("Error: " + camposOutros[i].erro);
 			}
 		}
 

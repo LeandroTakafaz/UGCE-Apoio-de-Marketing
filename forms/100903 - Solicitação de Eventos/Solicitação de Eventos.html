@@ -113,8 +113,7 @@
 						</div>
 						<div class="col-md-3">
 							<label for="dtEntrega">Data da Entrega para o Evento:</label>
-							<input type="datetime-local" name="dtEntrega" id="dtEntrega"
-								class="form-control">
+							<input type="datetime-local" name="dtEntrega" id="dtEntrega" class="form-control">
 						</div>
 						<div class="col-md-4">
 							<label for="zm_UnidadeSolicitante">Unidade Solicitante</label>
@@ -169,7 +168,11 @@
 						</div>
 						<div class="checkbox-inline">
 							<input type="checkbox" id="Cobertura" name="Cobertura">
-							<label for="Cobertura">Cobertura</label>
+							<label for="Cobertura">Coberturas Gerais</label>
+						</div>
+						<div class="checkbox-inline">
+							<input type="checkbox" id="Outros" name="Outros">
+							<label for="Outros">Outros</label>
 						</div>
 					</div>
 				</div>
@@ -401,7 +404,7 @@
 										<label for="coresProjeto">Cores Preferenciais: </label>
 										<input type="text" name="coresProjeto" id="coresProjeto" class="form-control">
 									</div>
-									
+
 								</div>
 								<div class="form-group row">
 									<div class="col-md-4" id="descProjComercial">
@@ -438,7 +441,7 @@
 																	<br>
 																	<button type="button" class="btn btn-default"
 																		data-comp-show-modal="small" id="addItem"
-																		onclick="adicionarItem();">Inserir Solicitação
+																		onclick="adicionarItem();">Inserir Demanda
 																		<b>+</b></button>
 																</div>
 
@@ -869,7 +872,7 @@
 															<br>
 															<button type="button" class="btn btn-default"
 																data-comp-show-modal="small" id="addGrafica"
-																onclick="adicionarItem2();">Inserir Solicitação
+																onclick="adicionarItem2();">Inserir Demanda
 																<b>+</b></button>
 														</div>
 													</div>
@@ -923,7 +926,8 @@
 								</div>
 								<div class="col-md-4">
 									<label for="escolhaCobertura">Estilo de Cobertura escolhida:</label>
-									<select type="text" name="escolhaCobertura" id="escolhaCobertura" class="form-control">
+									<select type="text" name="escolhaCobertura" id="escolhaCobertura"
+										class="form-control">
 										<option value="" selected disabled>Selecione uma Opção</option>
 										<option value="cobertFoto">Cobertura Fotográfica</option>
 										<option value="cobertRedes">Cobertura Redes Sociais</option>
@@ -940,6 +944,33 @@
 									<label for="dtEvtFinalCobert">Data Final:</label>
 									<input type="datetime-local" name="dtEvtFinalCobert" id="dtEvtFinalCobert"
 										class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim da Seção Cobertura -->
+
+				<!-- Inicio da Seção Outros -->
+				<div class="panel panel-default">
+					<div class="panel-heading" id="painelCobertura">
+						<h4 class="panel-title">
+							<a class="collapse-icon" data-toggle="collapse" data-parent="#accordion" href="#Outros">
+								<strong>Outros</strong>
+							</a>
+						</h4>
+					</div>
+					<div id="outros" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="form-group row">
+								<div class="col-md-4">
+									<label for="tituloOutros">Título do Pedido:</label>
+									<input type="text" name="tituloOutros" id="tituloOutros" class="form-control">
+								</div>
+								<div class="col-md-4">
+									<label for="descOutros">Descrição do Pedido:</label>
+									<textarea rows="5" name="descOutros" id="descOutros"
+										class="form-control"></textarea>
 								</div>
 							</div>
 						</div>
@@ -993,7 +1024,11 @@
 											estratégia
 											comercial, selecione a opção e preencha os campos que aparecerão para
 											prosseguir com a consultoria.</strong>
-									</li>
+									</li><br>
+
+									<li><strong>Caso seu pedido não se encaixe em nenhum dos indicados, marque a opção "Outros"
+										e preencha os campos com as informações necessárias para o seu pedido.</strong>
+								</li>
 								</ol>
 							</div>
 						</ul>
