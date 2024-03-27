@@ -180,7 +180,7 @@ function validateForm(form){
 			if(form.getValue("Eventos") == "on" && form.getValue("digitalPresencial") != "") {
 				var data = new Date();
 				var date = new Date();
-				var diaN = 60
+				var diaN = 20
 				var d = data.addDays(diaN);
 				var Ano = d.getFullYear();
 				var mes = new Array();
@@ -233,7 +233,7 @@ function validateForm(form){
 
 			if(form.getValue("Jornada") == "on" && form.getValue("trilhaMarketing") == "jornadas") {
 				var data = new Date();
-				var diaN = 45
+				var diaN = 10
 				var d = data.addDays(diaN);
 				var Ano = d.getFullYear();
 				var mes = new Array();
@@ -287,7 +287,7 @@ function validateForm(form){
 			if(form.getValue("Jornada") == "on" && form.getValue("trilhaMarketing") == "landing") {
 				var data = new Date();
 				var date = new Date();
-				var diaN = 30
+				var diaN = 10
 				var d = data.addDays(diaN);
 				var Ano = d.getFullYear();
 				var mes = new Array();
@@ -341,7 +341,7 @@ function validateForm(form){
 			if(form.getValue("nomeLogo") != "" || form.getValue("eventoGrafica") != "" || form.getValue("trilhaMarketing") == "email" || form.getValue("prodJornalistico") != "") {
 				var data = new Date();
 				var date = new Date();
-				var diaN = 20
+				var diaN = 5
 				var d = data.addDays(diaN);
 				var Ano = d.getFullYear();
 				var mes = new Array();
@@ -395,7 +395,7 @@ function validateForm(form){
 			if(form.getValue("escolhaCobertura") == "cobertFoto" || form.getValue("escolhaCobertura") == "cobertRedes" || form.getValue("escolhaCobertura") == "cobertComp" || form.getValue("quantBreak") != "") {
 				var data = new Date();
 				var date = new Date();
-				var diaN = 10
+				var diaN = 2
 				var d = data.addDays(diaN);
 				var Ano = d.getFullYear();
 				var mes = new Array();
@@ -449,7 +449,7 @@ function validateForm(form){
 			if(form.getValue("escolhaCobertura") == "cobertJorn" || form.getValue("trilhaMarketing") == "disp") {
 				var data = new Date();
 				var date = new Date();
-				var diaN = 5
+				var diaN = 2
 				var d = data.addDays(diaN);
 				var Ano = d.getFullYear();
 				var mes = new Array();
@@ -497,7 +497,6 @@ function validateForm(form){
 	if (errors.length > 0) {
 		throw errors.join("\n");
 	  } 
-}
 
 function validateboleto() {
 	var urlInd = "https://myweb.am.sebrae.com.br/portal/p/1/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID="
@@ -557,5 +556,7 @@ function validateboleto() {
 		}
 		//<a href="LISTA DE INSCRITOS NA ETAPA DE PRÉ-SELEÇÃO - MESTRADO FGV.pdf" class="cad-link" target="_blank" style="color:blue"><i class="flaticon flaticon-link icon-sm"></i>Click aqui para baixar</a>
 	} //https://myweb.am.sebrae.com.br/portal/p/1/pageworkflowview?app_ecm_workflowview_detailsProcessInstanceID=24878&app_ecm_workflowview_taskUserId=00000514
+
+}
 
 }
