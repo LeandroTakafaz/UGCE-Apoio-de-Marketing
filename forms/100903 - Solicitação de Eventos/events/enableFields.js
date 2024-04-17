@@ -14,12 +14,12 @@ function enableFields(form){
 	}
     else if(Now_State == 5 ){
         disableAllFields(form)
-		fields = ["responsavel","respDemanda", "Eventos", "Coffee", "Jornada", "Logo", "Estrategia", "Imprensa", "Grafica", "Cobertura"]
+		fields = ["responsavel","respDemanda", "Eventos", "Coffee", "Jornada", "Logo", "Estrategia", "Imprensa", "Grafica", "Cobertura", "Outros"]
 		enableFieldsFromList(form,fields)
 	}   
 	else if(Now_State == 10 || Now_State == 38 || Now_State == 78 || Now_State == 85 || Now_State == 89 || Now_State == 93 || Now_State == 109){
 			disableAllFields(form)
-			fields = ["Eventos", "Coffee", "Jornada", "Logo", "Estrategia", "Imprensa", "Grafica", "Cobertura"]
+			fields = ["Eventos", "Coffee", "Jornada", "Logo", "Estrategia", "Imprensa", "Grafica", "Cobertura", "Outros"]
 			enableFieldsFromList(form, fields)
 		}
 	else{			
